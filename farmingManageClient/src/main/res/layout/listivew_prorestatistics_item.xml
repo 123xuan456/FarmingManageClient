@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    >
+    <TextView 
+        android:id="@+id/tv_item_cropName"
+        style="@style/ListView_Item"
+        android:text="农作物名称"
+        />
+    <TextView 
+        android:id="@+id/tv_item_cultivatedArea"
+        style="@style/ListView_Item"
+        android:text="种植面积"
+        />
+    <TextView 
+        android:id="@+id/tv_item_harvestYield"
+        style="@style/ListView_Item"
+        android:text="收获量"
+        />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="@color/title_bground" >
+        <LinearLayout 
+		    android:id="@+id/ImageView_Linearlayout_Back"
+		     style="@style/ImageView_Linearlayout_Back"
+		    >
+		     <TextView 
+		         android:id="@+id/textView_Title_Left"
+		        style="@style/TextView_Title_Left"
+		        />
+		</LinearLayout>
+        <TextView
+            style="@style/TextView_Title"
+            android:text="@string/tv_tianyangnongshiguanli"
+            />
+        <TextView
+            style="@style/TextView_InReleativeRight"
+            android:text="添加"
+            />
+    </RelativeLayout>
+    <LinearLayout 
+        android:id="@+id/layout_datagriculture"
+        style="@style/Layout_promanage_SecList"
+        >
+        <TextView 
+            style="@style/TextView_promanage_SecList"
+            android:text="日常农事"
+            />
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/layout_fertilizeruse"
+        style="@style/Layout_promanage_SecList"
+        >
+        <TextView 
+            style="@style/TextView_promanage_SecList"
+            android:text="肥料使用"
+            />
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/layout_pesticideuse"
+        style="@style/Layout_promanage_SecList"
+        >
+        <TextView 
+            style="@style/TextView_promanage_SecList"
+            android:text="农药使用"
+            />
+    </LinearLayout>
+    
+</LinearLayout>

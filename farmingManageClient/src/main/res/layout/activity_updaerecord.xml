@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/title_bground" >
+        <LinearLayout 
+		    android:id="@+id/ImageView_Linearlayout_Back"
+		     style="@style/ImageView_Linearlayout_Back"
+		    >
+		     <ImageView
+		         android:id="@+id/img_comment_back"
+            style="@style/ImageView_Back" />
+		     <TextView 
+		        style="@style/TextView_Title_Left"
+		        />
+		</LinearLayout>
+        <TextView
+             android:id="@+id/textView_Title_Left"
+            style="@style/TextView_Title"
+            android:text="修改播种移栽"
+            />
+        <TextView
+            style="@style/TextView_InReleativeRight"
+            android:text="完成"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <ScrollView style="@style/ff" >
+
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <LinearLayout 
+                android:id="@+id/linearlayout_cropPtype"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         农作物品种:" />
+
+                <TextView 
+                    android:id="@+id/et_cropPtype"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+            <View 
+                 android:id="@+id/view_cropPtype"
+                style="@style/Sperate_view" />
+
+            <LinearLayout 
+                 android:id="@+id/linearlayout_cropType"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         农作物名称:" />
+
+                <TextView 
+                    android:id="@+id/tv_cropType"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View 
+                 android:id="@+id/view_cropType"
+                style="@style/Sperate_view" />
+
+
+            <LinearLayout 
+                 android:id="@+id/linearlayout_seeddate"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="            播种日期:" />
+
+                <TextView 
+                    android:id="@+id/tv_seeddate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_seeddate"
+                 style="@style/Sperate_view" />
+
+            <LinearLayout 
+                android:id="@+id/linearlayout_transplantdate"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="            移栽日期:" />
+
+                <TextView 
+                    android:id="@+id/tv_transplantdate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View 
+               android:id="@+id/view_transplantdate"
+                style="@style/Sperate_view" />
+
+            <LinearLayout 
+                android:id="@+id/linearlayout_recordDate"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="            登记日期:" />
+
+                <TextView
+                     android:id="@+id/tv_registdate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="2015-08-27" />
+            </LinearLayout>
+
+            <View 
+                android:id="@+id/view_registdate"
+                style="@style/Sperate_view" />
+
+            <LinearLayout 
+                 android:id="@+id/linearlayout_actionPerson"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="            实施人员:" />
+
+                <EditText
+                    android:id="@+id/tv_actionPerson"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="测试，，，" />
+            </LinearLayout>
+
+            <View 
+                android:id="@+id/view_actionPerson"
+                style="@style/Sperate_view" />
+
+            <LinearLayout 
+                 android:id="@+id/linearlayout_actionBak"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="                  备注:" />
+
+                <EditText
+                     android:id="@+id/et_actionBak"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="" />
+            </LinearLayout>
+             <View 
+                  android:id="@+id/view_actionBak"
+                 style="@style/Sperate_view" />
+            <LinearLayout
+                android:id="@+id/linearlayout_temperValue"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="                  气温:" />
+
+                <EditText
+                     android:id="@+id/tv_temperValue"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="" />
+            </LinearLayout>
+             <View 
+                 android:id="@+id/view_temperValue"
+                 style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linearlayout_weatherState"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="            天气状况:" />
+
+                <EditText
+                     android:id="@+id/tv_weatherState"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="" />
+            </LinearLayout>
+             <View 
+                   android:id="@+id/view_weatherState"
+                 style="@style/Sperate_view" />
+            <LinearLayout 
+                 android:id="@+id/linearlayout_productItem"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="            农事项目:" />
+
+                <EditText
+                     android:id="@+id/tv_productItem"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="" />
+            </LinearLayout>
+             <View
+                  android:id="@+id/view_productItem"
+                  style="@style/Sperate_view" />
+            <LinearLayout 
+                  android:id="@+id/linearlayout_agrDesc"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="农资名称及用量:" />
+
+                <EditText
+                     android:id="@+id/tv_agrDesc"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="" />
+            </LinearLayout>
+             <View 
+                  android:id="@+id/view_agrDesc"
+                 style="@style/Sperate_view" />
+              <LinearLayout
+                   android:id="@+id/linearlayout_cropState"
+                   style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   作物生长状况:" />
+
+                <EditText
+                     android:id="@+id/tv_cropState"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                  android:id="@+id/view_cropState"
+                 style="@style/Sperate_view" />
+              <LinearLayout
+                   android:id="@+id/linearlayout_receiveDate"
+                   style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         实施日期:" />
+
+                <EditText
+                     android:id="@+id/tv_receiveDate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                  android:id="@+id/view_receiveDate"
+                 style="@style/Sperate_view" />
+             
+             <LinearLayout 
+                  android:id="@+id/linearlayout_manureName"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         肥料名称:" />
+
+                <EditText
+                     android:id="@+id/tv_manureName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                 android:id="@+id/view_manureName"
+                 style="@style/Sperate_view" />
+             <LinearLayout 
+                 android:id="@+id/linearlayout_manureAmountUnit"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="肥料每亩用量:" />
+
+                <EditText
+                     android:id="@+id/tv_manureAmountUnit"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                  android:id="@+id/view_manureAmountUnit"
+                 style="@style/Sperate_view" />
+             <LinearLayout 
+                 android:id="@+id/linearlayout_manureUse"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         肥料用途:" />
+
+                <EditText
+                     android:id="@+id/tv_manureUse"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                 android:id="@+id/view_manureUse"
+                 style="@style/Sperate_view" />
+             
+             <LinearLayout 
+                  android:id="@+id/linearlayout_pesticideName"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         农药名称:" />
+
+                <EditText
+                     android:id="@+id/tv_pesticideName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                  android:id="@+id/view_pesticideName"
+                 style="@style/Sperate_view" />
+              <LinearLayout 
+                    android:id="@+id/linearlayout_pesticideAmountUnit"
+                  style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="农药每亩用量:" />
+
+                <EditText
+                     android:id="@+id/tv_pesticideAmountUnit"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                 android:id="@+id/view_pesticideAmountUnit"
+                 style="@style/Sperate_view" />
+              <LinearLayout 
+                    android:id="@+id/linearlayout_diluteScale"
+                  style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         稀释倍数:" />
+
+                <EditText
+                     android:id="@+id/tv_diluteScale"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                  android:id="@+id/view_diluteScale"
+                 style="@style/Sperate_view" />
+              <LinearLayout 
+                   android:id="@+id/linearlayout_preventObj"
+                  style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         防治对象:" />
+
+                <EditText
+                     android:id="@+id/tv_preventObj"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                  android:id="@+id/view_preventObj"
+                 style="@style/Sperate_view" />
+             
+             <LinearLayout 
+                  android:id="@+id/linearlayout_receiveWeight"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         收获重量:" />
+                <EditText
+                     android:id="@+id/tv_receiveWeight"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+             <View 
+                  android:id="@+id/view_receiveWeight"
+                 style="@style/Sperate_view" />
+             <LinearLayout 
+                  android:id="@+id/linearlayout_cropLevel"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         货品等级:" />
+
+                <TextView
+                     android:id="@+id/tv_cropLevel"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+            </LinearLayout>
+            <View 
+                  android:id="@+id/view_cropLevel"
+                 style="@style/Sperate_view" />
+
+    <TextView
+        android:id="@+id/tv_pro_save"
+        style="@style/Button_Style"
+        android:text="@string/tv_save" 
+        android:layout_marginBottom="5dp"
+        />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

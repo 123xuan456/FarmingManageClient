@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/title_bground" 
+        >
+        <LinearLayout 
+		    android:id="@+id/ImageView_Linearlayout_Back"
+		     style="@style/ImageView_Linearlayout_Back"
+		    >
+		      <ImageView
+		          android:id="@+id/img_comment_back"
+            style="@style/ImageView_Back" />
+		     <TextView 
+		         android:id="@+id/textView_Title_Left"
+		        style="@style/TextView_Title_Left"
+		        />
+		</LinearLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextView_Title"
+            android:text="选择服务站"
+            />
+        <TextView
+            android:id="@+id/tv_pro_save"
+            style="@style/TextView_InReleativeRight"
+            android:background="@drawable/add"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    
+    <ListView
+        android:id="@+id/listview_servicename"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/blue"
+        />
+    
+</LinearLayout>

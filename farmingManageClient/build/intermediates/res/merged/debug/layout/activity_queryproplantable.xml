@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout
+         style="@style/Relative_Title" >
+        <LinearLayout
+            android:id="@+id/ImageView_Linearlayout_Back"
+            style="@style/ImageView_Linearlayout_Back" >
+
+            <ImageView
+                android:id="@+id/img_comment_back"
+                style="@style/ImageView_Back" />
+
+            <TextView
+                android:id="@+id/textView_Title_Left"
+                style="@style/TextView_Title_Left" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextView_Title"/>
+
+        <TextView
+            android:id="@+id/tv_pro_add"
+            style="@style/TextView_InReleativeRight"
+            android:text="@string/tv_add"
+            android:visibility="gone"
+             />
+    </RelativeLayout>
+      <ScrollView android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"  >
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020计划名称:" />
+
+                <TextView 
+                    android:id="@+id/tv_planName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+		      <LinearLayout
+		          android:id="@+id/linear_argricuturalname"
+		           style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="农产品名称:" />
+
+                <TextView 
+                    android:id="@+id/tv_cropType"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view1"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linear_cropname"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020作物名称:" />
+
+                <TextView 
+                       android:id="@+id/tv_agriName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View 
+                 android:id="@+id/view2"
+                style="@style/Sperate_view" />
+           <LinearLayout 
+                android:id="@+id/linear_allPlanAmou"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020加工量:" />
+
+                <TextView 
+                       android:id="@+id/tv_allPlanAmou"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View 
+                 android:id="@+id/allPlanAmou"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linear_planAmou"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020种植量:" />
+
+                <TextView 
+                       android:id="@+id/tv_planAmou"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View 
+                 android:id="@+id/planAmou"
+                style="@style/Sperate_view" />
+             <LinearLayout 
+                 android:id="@+id/linear_processcost"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020加工费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minProcCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                     android:id="@+id/et_maxProcCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view3"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linear_seedcost"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020种子费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minSeedCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxSeedCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view4"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linear_caizhaicost"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020采摘费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minPickCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView
+                    android:id="@+id/et_maxPickCost"
+                     style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view5"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+               android:id="@+id/linear_huafeicost"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020化肥费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minChemCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxChemCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                 android:id="@+id/view6"
+                style="@style/Sperate_view" />
+             <LinearLayout 
+                 android:id="@+id/linear_rengongcost"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020人工费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minManuCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                     android:id="@+id/et_maxManuCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                 android:id="@+id/view7"
+                style="@style/Sperate_view" />
+             <LinearLayout 
+                 android:id="@+id/linear_baozhuangcost"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020包装费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minPackCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxPackCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view8"
+                style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020包装件数:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minPackNum"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxPackNum"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(件/斤)"
+				    />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="短途运输费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minShorTranCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxShorTranCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="长途运输费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minLongTranCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxLongTranCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020预冷费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minPrecCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                     android:id="@+id/et_maxPrecCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="包装业务费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minPackMateCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                     android:id="@+id/et_maxPackMateCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+				<LinearLayout
+                android:gravity="center"
+                android:id="@+id/linearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                 >
+				</LinearLayout>
+				<LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="小计" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minSubtotal"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                     android:id="@+id/et_maxSubtotal"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元)"
+				    />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout 
+            	style="@style/fw"    
+                android:orientation="horizontal"
+                >
+ 			<Button 
+ 			    android:id="@+id/btn_last"
+                style="@style/Query_Button_Next"
+                android:text="@string/tv_last"
+                />
+ 			<Button 
+ 			    android:id="@+id/btn_next"
+                style="@style/Query_Button_Next"
+                android:text="@string/tv_next"
+                />
+            </LinearLayout>
+      </LinearLayout>
+    </ScrollView>
+</LinearLayout>

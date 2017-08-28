@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/headview"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/black" >
+
+        <TextView
+            android:id="@+id/back"
+            style="@style/TextView_InReleativeLeft"
+            android:text="@string/album" />
+
+        <TextView
+            style="@style/TextView_Title"
+            android:text="选择照片" />
+
+        <TextView
+            android:id="@+id/cancel"
+            style="@style/TextView_InReleativeRight"
+            android:text="@string/camera_cancel" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="3dp"
+        android:background="@color/black" >
+
+        <TextView
+            android:id="@+id/preview"
+            style="@style/TextView_InReleativeLeft"
+            android:text="@string/preview" />
+
+        <TextView
+            android:id="@+id/btn_ok"
+            style="@style/TextView_InReleativeRight" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/myGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/headview"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:horizontalSpacing="5dp"
+        android:numColumns="4"
+        android:verticalSpacing="5dp" />
+
+    <TextView
+        android:id="@+id/myText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/no_photo"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

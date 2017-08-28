@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/title_bground" 
+        >
+        <LinearLayout 
+		    android:id="@+id/ImageView_Linearlayout_Back"
+		     style="@style/ImageView_Linearlayout_Back"
+		    >
+		      <ImageView
+		          android:id="@+id/img_comment_back"
+            style="@style/ImageView_Back" />
+		     <TextView 
+		         android:id="@+id/textView_Title_Left"
+		        style="@style/TextView_Title_Left"
+		        />
+		</LinearLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextView_Title"
+            android:text="@string/tv_addtianyangmanage"
+            />
+        <TextView
+            android:id="@+id/tv_pro_save"
+            style="@style/TextView_InReleativeRight"
+            android:background="@drawable/add"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    
+<ScrollView style="@style/ff" >
+
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+		     <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   田洋编号:" />
+
+                <TextView
+                    android:id="@+id/tv_ploughCode"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   作物名称:" />
+
+                <TextView 
+                    android:id="@+id/et_productName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   作物品种:" />
+
+                <EditText 
+                    android:id="@+id/et_cropPtype"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   收获数量:" />
+
+                <EditText 
+                     android:id="@+id/et_harvestNum"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:numeric="decimal"
+                     />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   产品等级:" />
+
+                <TextView 
+                    android:id="@+id/et_cropLevel"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   田洋面积:" />
+
+                <TextView 
+                     android:id="@+id/et_tianYangArea"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" 
+                     android:numeric="decimal"
+                    />
+            </LinearLayout>
+             <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   土壤情况:" />
+
+                <TextView 
+                     android:id="@+id/et_soilState"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+             <View style="@style/Sperate_view" />
+            <RelativeLayout style="@style/Relative_Query" >
+                <Button
+                    android:id="@+id/btn_adddetail"
+                    style="@style/Query_Button"
+                    android:text="增加明细" />
+            </RelativeLayout>
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>

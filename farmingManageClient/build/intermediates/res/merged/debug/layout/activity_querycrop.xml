@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/title_bground" >
+
+        <LinearLayout
+            android:id="@+id/ImageView_Linearlayout_Back"
+            style="@style/ImageView_Linearlayout_Back" >
+
+            <ImageView 
+                android:id="@+id/img_comment_back"
+                style="@style/ImageView_Back" />
+            <TextView
+                android:id="@+id/textView_Title_Left"
+                style="@style/TextView_Title_Left" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextView_Title"
+            android:text="查询作物交售" />
+
+        <Button
+            android:id="@+id/tv_modify"
+            style="@style/TextView_InReleativeRight"
+			android:background="@drawable/editgame"
+			/>
+    </RelativeLayout>
+
+    <ScrollView style="@style/ff" >
+
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+ <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="           区域:" />
+
+                <TextView 
+                    android:id="@+id/tv_dc"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="       供应商:" />
+
+                <TextView 
+                     android:id="@+id/tv_vendorName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="供应商类型:" />
+
+                <TextView 
+                    android:id="@+id/tv_vendorType"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   收货单号:" />
+
+                <TextView 
+                     android:id="@+id/tv_receiveCode"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="      经办人:" />
+
+                <TextView 
+                     android:id="@+id/tv_userName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   经办时间:" />
+
+                <TextView 
+                    android:id="@+id/tv_time"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         备注:" />
+
+                <TextView 
+                     android:id="@+id/tv_remark"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <LinearLayout 
+            	style="@style/fw"    
+                android:orientation="horizontal"
+                >
+ 			<Button 
+ 			    android:id="@+id/btn_last"
+                style="@style/Query_Button_Next"
+               android:text="上一条"
+                />
+ 			<Button 
+ 			    android:id="@+id/btn_next"
+                style="@style/Query_Button_Next"
+                android:text="下一条"
+                />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

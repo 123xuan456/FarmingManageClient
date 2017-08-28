@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\bg_shouye.jpg",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\drawable-xhdpi\\bg_shouye.jpg"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\logo.png",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\drawable-xhdpi\\logo.png"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\shouye_tianyuan.jpg",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\drawable-xhdpi\\shouye_tianyuan.jpg"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
+    }
+]

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/parent"
+    >
+
+    <RelativeLayout style="@style/Relative_Title" >
+
+        <LinearLayout
+            android:id="@+id/ImageView_Linearlayout_Back"
+            style="@style/ImageView_Linearlayout_Back" >
+
+            <ImageView
+                android:id="@+id/img_comment_back"
+                style="@style/ImageView_Back" />
+
+            <TextView
+                android:id="@+id/textView_Title_Left"
+                style="@style/TextView_Title_Left" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextView_Title"
+            android:text="添加服务站信息" />
+    </RelativeLayout>
+
+    <ScrollView style="@style/ff" >
+
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020所属区域:" />
+
+                <EditText
+                    android:id="@+id/tv_dcName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020服务站名称:" />
+
+                <TextView
+                    android:id="@+id/tv_stationName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="种植面积(亩):" />
+
+                <EditText
+                    android:id="@+id/tv_plantingArea"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" 
+                    android:numeric="decimal"
+                    />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020生产品种:" />
+
+                <EditText
+                    android:id="@+id/tv_cropTypes"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020地址:" />
+
+                <EditText
+                    android:id="@+id/tv_stationAddr"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020邮政编码:" />
+
+                <EditText
+                    android:id="@+id/tv_postCode"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" 
+                    android:numeric="integer"
+                    />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020编号:" />
+
+                <EditText
+                    android:id="@+id/tv_stationCode"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" 
+                    />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020土壤情况:" />
+
+                <EditText
+                    android:id="@+id/tv_soilState"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="种植农户数量(户):" />
+
+                <EditText
+                    android:id="@+id/tv_farmAmount"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:numeric="integer"
+                     />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020备注:" />
+
+                <EditText
+                    android:id="@+id/tv_stationBak"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout
+                style="@style/Layout_Promaangelist_Table_MarTop"
+                android:background="@android:color/darker_gray" >
+
+                <TextView
+                    style="@style/ff"
+                    android:gravity="center|left"
+                    android:text="站长信息"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="站长头像:" />
+
+                <ImageView
+                    android:id="@+id/iv_managerPicture"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bg_headportrait"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020站长姓名:" />
+
+                <EditText
+                    android:id="@+id/tv_stationManager"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020联系电话:" />
+
+                <EditText
+                    android:id="@+id/tv_managerPhone"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" 
+                    android:inputType="phone"
+                    />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020姓名拼音:" />
+
+                <EditText
+                    android:id="@+id/tv_managerSpell"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020技术员人数(人):" />
+
+                <EditText
+                    android:id="@+id/tv_technicianAmount"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" 
+                      android:numeric="integer"
+                    />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020站长简历:" />
+
+                <EditText
+                    android:id="@+id/tv_managerResume"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/Query_Button_FF"
+                android:text="@string/tv_save" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

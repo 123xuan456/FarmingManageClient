@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruicheng.agriculturalmanagesystem.PromanageListActivity" >
+
+    <ScrollView style="@style/ff" >
+
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="@string/tv_servicename" />
+
+                <Spinner
+                    android:id="@+id/spinner_promaangelist_table"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+     :
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="    播种日期:" />
+
+                <TextView 
+                    android:id="@+id/tv_selectseedtime"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" 
+                    android:text="请选择时间"
+                    />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="@string/tv_agricuturalname" />
+
+                <EditText style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="        记录人:" />
+
+                <TextView
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:background="@android:color/darker_gray"
+                    android:text="管理员" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="    实施人员:" />
+
+                <EditText style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="    操作田洋:" />
+
+                <TextView style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="@string/tv_servicenumber" />
+
+                <TextView
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:background="@android:color/darker_gray" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="    移栽日期:" />
+
+                <TextView 
+                    android:id="@+id/tv_transplantdatetime"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="@string/tv_agricuturalvariety" />
+
+                <EditText style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="    登记日期:" />
+
+                <TextView
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:background="@android:color/darker_gray" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="            备注:" />
+
+                <EditText
+                    style="@style/EditText__Promaangelist_Table_BeiZhu"
+                    android:background="@android:color/darker_gray" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/Button_Style" 
+                android:text="@string/tv_save"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+         style="@style/Relative_Title" >
+        <LinearLayout
+            android:id="@+id/ImageView_Linearlayout_Back"
+            style="@style/ImageView_Linearlayout_Back" >
+
+            <ImageView
+                android:id="@+id/img_comment_back"
+                style="@style/ImageView_Back" />
+
+            <TextView
+                android:id="@+id/textView_Title_Left"
+                style="@style/TextView_Title_Left" />
+        </LinearLayout>
+        <TextView
+            style="@style/TextView_Title"
+            android:text="添加田洋信息"
+            />
+        <TextView
+            android:id="@+id/tv_pro_add"
+            style="@style/TextView_InReleativeRight"
+            android:text="@string/tv_add" 
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <ScrollView style="@style/ff" >
+
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+                <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="所属区域:" />
+
+                <TextView 
+                    android:id="@+id/et_station"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="田地编号:" />
+
+                <EditText 
+                       android:id="@+id/et_ploughCode"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="农户名称:" />
+
+                <EditText 
+                     android:id="@+id/et_ploughFarm"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="田地面积(亩):" />
+
+                <EditText 
+                    android:id="@+id/et_ploughArea"
+                    android:numeric="decimal"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="土壤信息:" />
+
+                <EditText 
+                     android:id="@+id/et_soilState"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+                <Button 
+ 			    android:id="@+id/btn_confirm"
+                style="@style/Query_Button_FF"
+                android:text="@string/tv_confirm"
+                />
+            </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

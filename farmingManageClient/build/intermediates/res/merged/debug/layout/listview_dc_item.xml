@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/tv_dc"
+        style="@style/fw"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="left"
+        android:text="测试水水水水水水水水水水水水水"
+        android:layout_marginLeft="10dp"
+		android:layout_marginTop="3dp"
+		android:layout_marginBottom="3dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<RelativeLayout
+         style="@style/Relative_Title" >
+        <LinearLayout
+            android:id="@+id/ImageView_Linearlayout_Back"
+            style="@style/ImageView_Linearlayout_Back" >
+
+            <ImageView
+                android:id="@+id/img_comment_back"
+                style="@style/ImageView_Back" />
+
+            <TextView
+                android:id="@+id/textView_Title_Left"
+                style="@style/TextView_Title_Left" 
+               
+                />
+        </LinearLayout>
+        <TextView
+            style="@style/TextView_Title"
+             android:text="田洋管理"
+            />
+        <TextView
+            android:id="@+id/tv_pro_add"
+             style="@style/TextView_InReleativeRight"
+            android:background="@drawable/add"
+            />
+    </RelativeLayout>
+    <ScrollView style="@style/fw" >
+
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+                <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="服务站:" />
+
+                <TextView 
+                    android:id="@+id/tv_servicename"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+                <Button 
+ 			    android:id="@+id/btn_query"
+                style="@style/Query_Button_FF"
+                android:text="@string/tv_query"
+                />
+            </LinearLayout>
+    </ScrollView>
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:layout_marginTop="10dp"
+    >
+    <TextView 
+        android:id="@+id/tv_item_fieldNumber"
+        style="@style/ListView_Item"
+        android:text="田地编号"
+        />
+    <TextView 
+        android:id="@+id/tv_item_belongsToServiceStation"
+        style="@style/ListView_Item"
+        android:text="所属服务站"
+        />
+    <TextView 
+        android:id="@+id/tv_item_plantingOfCrops"
+        style="@style/ListView_Item"
+        android:text="种植作物"
+        />
+    <TextView 
+        android:id="@+id/tv_item_fieldArea"
+        style="@style/ListView_Item"
+        android:text="田地面积"
+        />
+</LinearLayout>
+     <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listview_basemanage"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="4dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        ptr:ptrMode="both" 
+        android:background="@color/gray"
+        >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+</LinearLayout>

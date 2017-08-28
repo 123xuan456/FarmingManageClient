@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_transparent" >
+
+    <LinearLayout
+        android:id="@+id/equip_popup_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/item_equippopup_delete"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/btn_popup_bg"
+               
+                android:textSize="18sp"
+                android:text="删除" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#f2f2f2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/item_equippopup_modify"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/btn_popup_bg"
+                android:textSize="18sp"
+                android:text="修改" />
+        </LinearLayout>
+
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#f2f2f2" />
+        <LinearLayout
+            android:id="@+id/linear_equippopup_query"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+        <Button
+            android:id="@+id/item_equippopup_query"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/btn_popup_bg"
+            android:textSize="18sp"
+            android:text="查看" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear__equippopup_agrimRecord"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+             >
+        <Button
+            android:id="@+id/item_equippopup_agrimRecord"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/btn_popup_bg"
+            android:textSize="18sp"
+            android:text="农事记录" />
+            </LinearLayout>
+             <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#f3f3f3" />
+	<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+        <Button
+            android:id="@+id/item_equippopup_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/btn_popup_bg"
+            android:textSize="18sp"
+            android:text="取消" />
+            </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

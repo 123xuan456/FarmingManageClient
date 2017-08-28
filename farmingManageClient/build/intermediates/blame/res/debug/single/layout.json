@@ -1,0 +1,370 @@
+[
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\listivew_prorestatistics_item.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\listivew_prorestatistics_item.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_addcostequation_dynamic.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_addcostequation_dynamic.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\listview_project_item.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\listview_project_item.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_receivinginfomanage.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_receivinginfomanage.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promanagelistc.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_promanagelistc.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\plugin_camera_image_file.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\plugin_camera_image_file.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_favorite.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_favorite.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_tianynagdaily.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_tianynagdaily.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\plugin_camera_album.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\plugin_camera_album.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_adddetail.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_adddetail.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_addcostequation.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_addcostequation.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_proplantable.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_proplantable.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_addprobaseinfo.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_addprobaseinfo.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_productionplan.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_productionplan.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tianyangmanage.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_tianyangmanage.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\plugin_camera_show_all_photo.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\plugin_camera_show_all_photo.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promanagelisth.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_promanagelisth.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_costequation.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_costequation.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tianyangnumber.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_tianyangnumber.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\listview_dc_item.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\listview_dc_item.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_harvest.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_harvest.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promanagelistb.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_promanagelistb.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_queryproplan.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_queryproplan.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_probaseinfo.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_probaseinfo.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_promanagelist_lonely.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_promanagelist_lonely.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_productionmanage.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_productionmanage.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_updatetianyangmanage.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_updatetianyangmanage.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\item_tianyangpopupmenu_costequation.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\item_tianyangpopupmenu_costequation.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_checkservicetianynaginfo.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_checkservicetianynaginfo.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_agrirecordtianynaginfo.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_agrirecordtianynaginfo.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_servicestationname.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_servicestationname.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\item_tianyangpopupmenu.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\item_tianyangpopupmenu.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_homepager.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_homepager.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\plugin_camera_select_folder.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\plugin_camera_select_folder.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tianyagproadd.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_tianyagproadd.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\listivew_query_item.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\listivew_query_item.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_promanagelist.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_promanagelist.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_checkproplan.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_checkproplan.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tianynagrigisteradmin.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_tianynagrigisteradmin.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_updateservicemanage.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_updateservicemanage.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\wheel_date_ym.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\wheel_date_ym.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promanagelistf.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_promanagelistf.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_tianyangfertilizer.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_tianyangfertilizer.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\item_listview.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\item_listview.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\item_tianyangpopupmenu_main.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\item_tianyangpopupmenu_main.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_proplan.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_proplan.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_adddetailcrop.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_adddetailcrop.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\listivew_querybaseinfo_item.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\listivew_querybaseinfo_item.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_productionmanagement.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_productionmanagement.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\plugin_camera_gallery.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\plugin_camera_gallery.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tianyangagriculture.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_tianyangagriculture.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_updatecrop.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_updatecrop.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_checkservicestationinfo.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_checkservicestationinfo.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_queryprobaseinfo.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_queryprobaseinfo.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_tianyangpesticides.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_tianyangpesticides.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\item_tianyangpopupmenu_query.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\item_tianyangpopupmenu_query.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_addproplan.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_addproplan.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_updateproplan.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_updateproplan.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_queryproplantable.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_queryproplantable.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_addtianyangmanage.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_addtianyangmanage.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promanageliste.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_promanageliste.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_seedandharvest.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_seedandharvest.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_checkcrop.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_checkcrop.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\listview_item_argidrecord.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\listview_item_argidrecord.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_updatecostequation.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_updatecostequation.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\plugin_camera_select_imageview.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\plugin_camera_select_imageview.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\wheel_date_ymd.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\wheel_date_ymd.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_querycrop.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_querycrop.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\loading_bar.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\loading_bar.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\listivew_query_costequation_item.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\listivew_query_costequation_item.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\spinner_style.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\spinner_style.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_updaerecord.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_updaerecord.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_district.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_district.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_addcropcrop.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_addcropcrop.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cropsell.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_cropsell.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\listview_servicename_item.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\listview_servicename_item.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tianyangharvest.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_tianyangharvest.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_productionrecordstatistics.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_productionrecordstatistics.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\wheel_date_ymdhm.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\wheel_date_ymdhm.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promanagelista.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_promanagelista.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promanagelistd.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_promanagelistd.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_checkcostequation.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_checkcostequation.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_listtitle.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_listtitle.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\activity_servicemanage.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\activity_servicemanage.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\listview_item_updatecostequation.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\listview_item_updatecostequation.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_promanagelistg.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\fragment_promanagelistg.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\item_popupwindows.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\item_popupwindows.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\layout\\loadingnotitle_bar.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\layout\\loadingnotitle_bar.xml"
+    }
+]

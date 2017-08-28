@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\activity_translate_out.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\anim\\activity_translate_out.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\activity_translate_in.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\anim\\activity_translate_in.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_in.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\anim\\push_bottom_in.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\anim\\slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_top.xml",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\anim\\slide_out_to_top.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_out.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\anim\\push_bottom_out.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\translate_in.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\anim\\translate_in.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\zoomout.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\anim\\zoomout.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\zoomin.xml",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\anim\\zoomin.xml"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_top.xml",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\anim\\slide_in_from_top.xml"
+    }
+]

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/Relative_Title" >
+
+        <LinearLayout
+            android:id="@+id/imageView_Linearlayout_Back"
+            style="@style/ImageView_Linearlayout_Back" >
+
+            <ImageView
+                android:id="@+id/img_comment_back"
+                style="@style/ImageView_Back" />
+
+            <TextView
+                android:id="@+id/textView_Title_Left"
+                style="@style/TextView_Title_Left" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextView_Title"
+            android:text="@string/tv_addtianyangmanage"/>
+
+        <TextView
+            android:id="@+id/tv_add"
+             style="@style/TextView_InReleativeRight"
+            android:background="@drawable/add"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/fw"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linear_argiculturename"
+            style="@style/Layout_Promaangelist_Table_MarTop" >
+
+            <TextView
+                style="@style/TextView__Promaangelist_Table_LeftOne"
+                android:text="农产品名称:" />
+
+            <TextView
+                android:id="@+id/tv_cropType"
+                style="@style/EditText__Promaangelist_Table_LeftTwo" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            style="@style/Sperate_view" />
+
+        <LinearLayout
+            android:id="@+id/linear_cropname"
+            style="@style/Layout_Promaangelist_Table_MarTop" >
+
+            <TextView
+                style="@style/TextView__Promaangelist_Table_LeftOne"
+                android:text="    作物名称:" />
+
+            <TextView
+                android:id="@+id/tv_agriName"
+                style="@style/EditText__Promaangelist_Table_LeftTwo" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            style="@style/Sperate_view" />
+
+        <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+            <TextView
+                style="@style/TextView__Promaangelist_Table_LeftOne"
+                android:text="    是否有效:" />
+
+            <TextView
+                android:id="@+id/tv_isValid"
+                style="@style/EditText__Promaangelist_Table_LeftTwo" 
+                android:text="全部"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_query"
+        style="@style/Query_Button_FF"
+        android:text="查询" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <TextView
+            android:id="@+id/tv_farmproductsname"
+            style="@style/ListView_TextView_Itetm"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:text="农产品名称" />
+
+        <TextView
+            android:id="@+id/tv_equationtype"
+            style="@style/ListView_TextView_Itetm"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:text="公式类型" />
+
+        <TextView
+            android:id="@+id/tv_isvalid"
+            style="@style/ListView_TextView_Itetm"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:text="是否有效" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listview_proplan"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        ptr:ptrMode="both" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

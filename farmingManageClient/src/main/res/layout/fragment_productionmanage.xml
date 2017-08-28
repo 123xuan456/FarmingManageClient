@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/ProManage_Layout_Navigation" >
+
+        <LinearLayout 
+             style="@style/ProManage_Navigation"
+             android:background="@drawable/bg_tianyangseed"
+             android:layout_marginRight="10dp"
+             android:padding="4dp"
+            >
+             <ImageView
+            android:id="@+id/tv_promanage_seed"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+            android:src="@drawable/tianyuanbozhong" 
+            android:padding="4dp"
+            />
+        </LinearLayout>
+        <LinearLayout 
+             style="@style/ProManage_Navigation"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_tianyangagriculture"
+             android:padding="4dp"
+            >
+        <ImageView
+            android:id="@+id/tv_promanage_agricultrueproject"
+             android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+            android:src="@drawable/tianyuannongshi"
+            android:padding="4dp"
+            />
+             </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ProManage_Layout_Navigation" >
+
+        <LinearLayout 
+             style="@style/ProManage_Navigation"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_tianyangharvest"
+            android:padding="4dp"
+            >
+            
+        <ImageView
+            android:id="@+id/tv_promanage_harvest"
+            android:src="@drawable/tianyuanshoucheng" 
+             android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:padding="4dp"
+           />
+        </LinearLayout>
+        
+        <LinearLayout 
+            style="@style/ProManage_Navigation"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_zuowujiaoshou"
+             android:padding="4dp"
+            
+            >
+             <ImageView
+            android:id="@+id/tv_promanage_zuowujiaoshou"
+            android:src="@drawable/zuowujiaoshou"
+             android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+             android:padding="4dp"
+             />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout 
+        style="@style/ProManage_Navigation_Five"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_prolvli"
+        android:padding="4dp"
+        >
+        <ImageView
+        android:id="@+id/tv_promanage_lvlitongji"
+        android:src="@drawable/shengchanlvli"
+         android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:padding="4dp"
+        />
+    </LinearLayout>
+</LinearLayout>

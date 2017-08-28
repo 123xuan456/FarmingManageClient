@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <LinearLayout style="@style/ListView_Promaangelist_Table_MarTop" >
+                <TextView
+                    android:id="@+id/tv_costName"
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="包装业务费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <EditText 
+                     android:id="@+id/et_minValue"
+                    style="@style/TextView__Seperate"
+                     />
+                
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <EditText 
+                     android:id="@+id/et_maxValue"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    android:id="@+id/tv_CuName"
+				    style="@style/TextView_CuName"
+				    android:text="测试费"
+				    />
+				</LinearLayout>
+				 <View style="@style/Sperate_view" />
+</LinearLayout>

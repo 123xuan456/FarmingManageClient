@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout
+         style="@style/Relative_Title" >
+        <LinearLayout
+            android:id="@+id/ImageView_Linearlayout_Back"
+            style="@style/ImageView_Linearlayout_Back" >
+
+            <ImageView
+                android:id="@+id/img_comment_back"
+                style="@style/ImageView_Back" />
+
+            <TextView
+                android:id="@+id/textView_Title_Left"
+                style="@style/TextView_Title_Left" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextView_Title"
+            android:text="查询生产计划数据"
+            />
+
+        <TextView
+            android:id="@+id/tv_more"
+            style="@style/TextView_InReleativeRight"
+            android:background="@drawable/editgame"
+            />
+    </RelativeLayout>
+    <ScrollView style="@style/ff" >
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="         计划名称:" />
+
+                <TextView 
+                    android:id="@+id/et_planName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            
+            <LinearLayout 
+                android:id="@+id/linear_agricuturename"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="     农产品名称:" />
+
+                <TextView 
+                     android:id="@+id/et_agriName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view1"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linear_cropname"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="        作物名称:" />
+
+                <TextView 
+                     android:id="@+id/et_cropName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View 
+                  android:id="@+id/view2"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linear_zhongzhiliang"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="      种植量(亩):" />
+
+                <TextView 
+                     android:id="@+id/et_planAmou"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view3"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linear_jiagongliang"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="      加工量(斤):" />
+
+                <TextView 
+                     android:id="@+id/et_allPlanAmou"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view4"
+                style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="           制定人:" />
+
+                <TextView 
+                    android:id="@+id/et_planDrawPers"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="预计开始时间:" />
+
+                <TextView 
+                    android:id="@+id/et_predStarDate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="预计结束时间:" />
+
+                <TextView 
+                    android:id="@+id/et_predEndDate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="       制定时间:" />
+
+                <TextView 
+                     android:id="@+id/et_planDrawDate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+                
+             <LinearLayout 
+            	style="@style/fw"    
+                android:orientation="horizontal"
+                >
+ 			<Button 
+ 			    android:id="@+id/btn_last"
+                style="@style/Query_Button_Next"
+                android:text="@string/tv_last"
+                />
+ 			<Button 
+ 			    android:id="@+id/btn_next"
+                style="@style/Query_Button_Next"
+                android:text="@string/tv_next"
+                />
+            </LinearLayout>
+             </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,444 @@
+-- Merging decision tree log ---
+manifest
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:2:1-224:12
+	package
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:3:5-47
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [FarmingManageClient:pullToRefrashlibrary:unspecified] J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\ÆëÉÜÐù\.android\build-cache\0a66b25b10574cab2a677dea4355ba7f567ccd89\output\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:8:9-34
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+		INJECTED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:11:22-76
+uses-permission#android.permission.INTERNET
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:12:22-64
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:14:5-84
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:14:22-81
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:16:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:20:5-75
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:20:22-72
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:22:22-78
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:23:5-73
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:23:22-70
+uses-permission#android.permission.VIBRATE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:24:5-66
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:24:22-63
+uses-permission#android.permission.ACCESS_DOWNLOAD_MANAGER
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:26:22-79
+uses-permission#android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:27:5-88
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:27:22-85
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:28:5-75
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:28:22-72
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:29:5-81
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:29:22-78
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:30:5-76
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:30:22-73
+application
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:32:5-222:19
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\ÆëÉÜÐù\.android\build-cache\0a66b25b10574cab2a677dea4355ba7f567ccd89\output\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:35:9-41
+	android:allowBackup
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:33:9-35
+	android:icon
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:34:9-38
+	android:theme
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:36:9-62
+activity#com.ruicheng.farmingmanageclient.MainActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:37:9-42:20
+	android:screenOrientation
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:40:13-49
+	android:launchMode
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:39:13-43
+	android:windowSoftInputMode
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:41:13-64
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:38:13-73
+activity#com.ruicheng.farmingmanageclient.HomePagerActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:43:9-52:20
+	android:label
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:45:13-45
+	android:theme
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:46:13-66
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:44:13-78
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:47:13-51:29
+action#android.intent.action.MAIN
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:48:17-69
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:48:25-66
+category#android.intent.category.LAUNCHER
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:50:17-77
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:50:27-74
+activity#com.ruicheng.farmingmanageclient.PromanageListActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:53:9-54:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:53:19-88
+activity#com.ruicheng.farmingmanageclient.LoginActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:55:9-56:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:55:19-80
+activity#com.ruicheng.farmingmanageclient.TianYangAgricultureActiivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:57:9-58:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:57:19-95
+activity#com.ruicheng.farmingmanageclient.TianYagProAddActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:59:9-60:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:59:19-88
+activity#com.ruicheng.farmingmanageclient.TianYangHarvestActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:61:9-62:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:61:19-90
+activity#com.ruicheng.farmingmanageclient.CropSellActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:63:9-64:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:63:19-83
+activity#com.ruicheng.farmingmanageclient.ProductionRecordStatisticsActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:65:9-66:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:65:19-101
+activity#com.ruicheng.farmingmanageclient.TianYnagRigisterAdminActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:67:9-68:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:67:19-96
+activity#com.ruicheng.farmingmanageclient.ReceivingInfoManageActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:69:9-70:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:69:19-94
+activity#com.ruicheng.farmingmanageclient.ListTitleActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:71:9-72:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:71:19-84
+activity#com.ruicheng.farmingmanageclient.QueryCropActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:73:9-74:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:73:19-84
+activity#com.ruicheng.farmingmanageclient.AddCropActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:75:9-76:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:75:19-82
+activity#com.ruicheng.farmingmanageclient.CostequationActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:77:9-78:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:77:19-87
+activity#com.ruicheng.farmingmanageclient.ProplanActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:79:9-80:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:79:19-82
+activity#com.ruicheng.farmingmanageclient.ProplantableActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:81:9-82:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:81:19-87
+activity#com.ruicheng.farmingmanageclient.AddCostequation
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:83:9-84:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:83:19-82
+activity#com.ruicheng.farmingmanageclient.AddProplanAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:85:9-86:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:85:19-79
+activity#com.ruicheng.farmingmanageclient.QueryProplanAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:87:9-88:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:87:19-81
+activity#com.ruicheng.farmingmanageclient.QueryProplantableAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:89:9-90:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:89:19-86
+activity#com.ruicheng.farmingmanageclient.QueryProBaseInfoAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:91:9-92:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:91:19-85
+activity#com.ruicheng.farmingmanageclient.AddProBaseInfoAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:93:9-94:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:93:19-83
+activity#com.ruicheng.farmingmanageclient.TianYangManageAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:95:9-96:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:95:19-83
+activity#com.ruicheng.farmingmanageclient.ServiceManageAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:97:9-98:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:97:19-82
+activity#com.ruicheng.farmingmanageclient.AddTianYangManageAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:99:9-100:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:99:19-86
+activity#com.ruicheng.farmingmanageclient.AddDetailAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:101:9-102:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:101:19-78
+activity#com.ruicheng.farmingmanageclient.ServiceStationNameAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:103:9-104:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:103:19-87
+activity#com.ruicheng.farmingmanageclient.TianYangNumberAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:105:9-106:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:105:19-83
+activity#com.ruicheng.farmingmanageclient.CropTypeNameAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:107:9-108:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:107:19-81
+activity#com.ruicheng.farmingmanageclient.UpdateRecordAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:109:9-110:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:109:19-81
+activity#com.ruicheng.farmingmanageclient.AddDetailCropAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:111:9-112:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:111:19-82
+activity#com.ruicheng.farmingmanageclient.CnameAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:113:9-114:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:113:19-74
+activity#com.ruicheng.farmingmanageclient.DistrictAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:115:9-116:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:115:19-77
+activity#com.ruicheng.farmingmanageclient.CropTypeNameIIAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:117:9-118:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:117:19-83
+activity#com.ruicheng.farmingmanageclient.IsValidAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:119:9-120:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:119:19-76
+activity#com.ruicheng.farmingmanageclient.UpdateCostequationAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:121:9-122:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:121:19-87
+activity#com.ruicheng.farmingmanageclient.CheckCostequationAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:123:9-124:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:123:19-86
+activity#com.ruicheng.farmingmanageclient.UpdateCropAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:125:9-126:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:125:19-79
+activity#com.ruicheng.farmingmanageclient.AgriNameAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:127:9-128:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:127:19-77
+activity#com.ruicheng.farmingmanageclient.CheckServiceTianYnagInfoAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:129:9-130:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:129:19-93
+activity#com.ruicheng.farmingmanageclient.UpdateServiceManageAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:131:9-132:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:131:19-88
+activity#com.ruicheng.farmingmanageclient.CheckServiceStationInfoAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:133:9-134:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:133:19-92
+activity#com.ruicheng.farmingmanageclient.CheckProplanAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:135:9-136:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:135:19-81
+activity#com.ruicheng.farmingmanageclient.CropPtypeNameAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:137:9-138:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:137:19-82
+activity#com.ruicheng.farmingmanageclient.CropLevelAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:139:9-140:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:139:19-78
+activity#com.ruicheng.farmingmanageclient.PloughDetailAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:141:9-142:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:141:19-81
+activity#com.ruicheng.farmingmanageclient.CheckCropAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:144:9-145:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:144:19-78
+activity#com.ruicheng.farmingmanageclient.PurIdAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:146:9-147:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:146:19-74
+activity#com.ruicheng.farmingmanageclient.UpdateProplanAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:148:9-149:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:148:19-82
+activity#com.ruicheng.farmingmanageclient.AlbumActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:150:9-151:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:150:19-80
+activity#com.ruicheng.farmingmanageclient.GalleryActivity
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:152:9-153:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:152:19-82
+activity#com.ruicheng.farmingmanageclient.UpdateTianYangManageAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:154:9-155:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:154:19-89
+activity#com.ruicheng.farmingmanageclient.AgriRecordTianYnagInfoAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:156:9-157:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:156:19-91
+activity#com.ruicheng.farmingmanageclient.CustomProductionPlanAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:158:9-159:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:158:19-89
+activity#com.ruicheng.farmingmanageclient.IsPackageAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:160:9-161:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:160:19-78
+activity#com.ruicheng.farmingmanageclient.LoginDistrictAc
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:162:9-163:20
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:162:19-82
+receiver#com.baidu.android.pushservice.PushServiceReceiver
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:166:9-180:20
+	android:process
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:168:13-44
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:167:13-77
+intent-filter#android.intent.action.ACTION_POWER_CONNECTED+android.intent.action.ACTION_POWER_DISCONNECTED+android.intent.action.BOOT_COMPLETED+android.intent.action.MEDIA_MOUNTED+android.intent.action.USER_PRESENT+android.net.conn.CONNECTIVITY_CHANGE+com.baidu.android.pushservice.action.media.CLICK+com.baidu.android.pushservice.action.notification.SHOW
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:169:13-179:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:170:17-79
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:170:25-76
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:171:17-79
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:171:25-76
+action#com.baidu.android.pushservice.action.notification.SHOW
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:172:17-97
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:172:25-94
+action#com.baidu.android.pushservice.action.media.CLICK
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:173:17-91
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:173:25-88
+action#android.intent.action.MEDIA_MOUNTED
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:175:17-78
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:175:25-75
+action#android.intent.action.USER_PRESENT
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:176:17-77
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:176:25-74
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:177:17-87
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:177:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:178:17-90
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:178:25-87
+receiver#com.baidu.android.pushservice.RegistrationReceiver
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:182:9-194:20
+	android:process
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:184:13-44
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:183:13-78
+intent-filter#com.baidu.android.pushservice.action.BIND_SYNC+com.baidu.android.pushservice.action.METHOD
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:185:13-188:29
+action#com.baidu.android.pushservice.action.METHOD
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:186:17-86
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:186:25-83
+action#com.baidu.android.pushservice.action.BIND_SYNC
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:187:17-89
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:187:25-86
+intent-filter#android.intent.action.PACKAGE_REMOVED
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:189:13-193:29
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:190:17-80
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:190:25-77
+data
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:192:17-50
+	android:scheme
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:192:23-47
+service#com.baidu.android.pushservice.PushService
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:196:9-203:19
+	android:process
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:199:13-44
+	android:exported
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:198:13-36
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:197:13-69
+intent-filter#com.baidu.android.pushservice.action.PUSH_SERVICE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:200:13-202:29
+action#com.baidu.android.pushservice.action.PUSH_SERVICE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:201:17-92
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:201:25-89
+service#com.baidu.android.pushservice.CommandService
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:205:9-207:39
+	android:exported
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:207:13-36
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:206:13-72
+receiver#com.ruicheng.farmingmanageclient.PushReceiver
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:212:2-221:12
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:212:12-72
+intent-filter#com.baidu.android.pushservice.action.MESSAGE+com.baidu.android.pushservice.action.RECEIVE+com.baidu.android.pushservice.action.notification.CLICK
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:213:5-220:21
+action#com.baidu.android.pushservice.action.MESSAGE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:215:9-79
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:215:17-76
+action#com.baidu.android.pushservice.action.RECEIVE
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:217:9-79
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:217:17-76
+action#com.baidu.android.pushservice.action.notification.CLICK
+ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:219:9-90
+	android:name
+		ADDED from J:\Work\FarmingManageClient\farmingManageClient\src\main\AndroidManifest.xml:219:17-87

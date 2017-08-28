@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/title_bground" >
+        <LinearLayout 
+		    android:id="@+id/ImageView_Linearlayout_Back"
+		     style="@style/ImageView_Linearlayout_Back"
+		    >
+		    <ImageView
+            android:id="@+id/img_comment_back"
+            style="@style/ImageView_Back" />
+		     <TextView 
+		         android:id="@+id/textView_Title_Left"
+		        style="@style/TextView_Title_Left"
+		        />
+		</LinearLayout>
+        <TextView
+            style="@style/TextView_Title"
+            android:text="生产履历统计"
+            />
+        <TextView
+            android:id="@+id/tv_pro_save"
+            style="@style/TextView_InReleativeRight"
+            android:text="@string/tv_save"
+            />
+    </RelativeLayout>
+    <LinearLayout 
+        android:id="@+id/layout_title1"
+        style="@style/Layout_ListTitle"
+        >
+        <TextView 
+            android:id="@+id/tv_title1"
+            style="@style/TextView_ListTitle"
+            android:text="收成登记"
+            />
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/layout_title2"
+        style="@style/Layout_ListTitle"
+        >
+        <TextView 
+            android:id="@+id/tv_title2"
+            style="@style/TextView_ListTitle"
+            android:text="收成登记管理"
+            />
+    </LinearLayout>
+
+</LinearLayout>

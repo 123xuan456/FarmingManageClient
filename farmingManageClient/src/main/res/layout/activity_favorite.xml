@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/black" >
+
+       <!--  <ImageView
+            android:id="@+id/img_favorite_back"
+            style="@style/ImageView_Back" /> -->
+             <LinearLayout 
+		    android:id="@+id/ImageView_Linearlayout_Back"
+		     style="@style/ImageView_Linearlayout_Back"
+		    >
+		    <ImageView
+            android:id="@+id/img_comment_back"
+            style="@style/ImageView_Back" />
+		     <TextView 
+		         android:id="@+id/textView_Title_Left"
+		        style="@style/TextView_Title_Left"
+		        />
+		</LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_my_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/my_collect"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/myfavourite_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+      android:background="@color/gray"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="4dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        ptr:ptrMode="both" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+	  <!-- android:background="@drawable/topbar" -->
+</LinearLayout>

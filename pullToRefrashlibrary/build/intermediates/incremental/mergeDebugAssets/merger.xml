@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="J:\Work\FarmingManageClient\pullToRefrashlibrary\src\main\assets"/><source path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="J:\Work\FarmingManageClient\pullToRefrashlibrary\src\debug\assets"/></dataSet></merger>

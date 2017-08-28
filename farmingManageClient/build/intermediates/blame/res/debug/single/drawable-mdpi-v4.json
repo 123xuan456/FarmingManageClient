@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\default_ptr_flip.png"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\bg_shouye.jpg",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\drawable-mdpi\\bg_shouye.jpg"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\indicator_arrow.png",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",
+        "source": "J:\\Work\\FarmingManageClient\\pullToRefrashlibrary\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "J:\\Work\\FarmingManageClient\\farmingManageClient\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    }
+]

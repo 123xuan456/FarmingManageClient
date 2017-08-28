@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        style="@style/Relative_Title">
+        <LinearLayout 
+		    android:id="@+id/ImageView_Linearlayout_Back"
+		     style="@style/ImageView_Linearlayout_Back"
+		    >
+		     <ImageView
+		         android:id="@+id/img_comment_back"
+            style="@style/ImageView_Back" />
+		     <TextView 
+		         android:id="@+id/textView_Title_Left"
+		        style="@style/TextView_Title_Left"
+		        />
+		</LinearLayout>
+        <TextView
+            style="@style/TextView_Title"
+            android:text="添加物品"
+            />
+        <Button
+            android:id="@+id/tv_modify"
+            style="@style/TextView_InReleativeRight_More"
+            android:background="@drawable/iv_more"
+			/>
+    </RelativeLayout>
+ <ScrollView style="@style/ff" >
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+        <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="      商品名称:" />
+
+                <TextView 
+                    android:id="@+id/et_goodName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   单价(元/斤):" />
+
+                <EditText 
+                     android:id="@+id/et_goodPricem"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:numeric="decimal"
+                    android:text="0.0"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="      是否包装:" />
+
+                <TextView 
+                     android:id="@+id/et_goodUnit"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     android:text="请选择"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="采购重量(斤):" />
+
+                <TextView 
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="------"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="收货重量(斤):" />
+
+                <EditText 
+                    android:id="@+id/et_purchasingWeight"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                     android:numeric="decimal"
+                      android:text="0"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="      收货件数:" />
+
+                <EditText 
+                     android:id="@+id/et_receivePackagesm"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:numeric="integer"
+                     android:text="0"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="        件重(斤):" />
+
+                <EditText 
+                      android:id="@+id/et_packageWeight"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:numeric="decimal"
+                     android:text="0"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="        金额(元):" />
+
+                <TextView 
+                    android:id="@+id/et_goodMoney"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:numeric="decimal"
+                     android:text="0.0"
+                     />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout 
+            	style="@style/fw"    
+                android:orientation="horizontal"
+                >
+ 			<Button 
+ 			    android:id="@+id/btn_last"
+                style="@style/Query_Button_Next"
+               android:text="上一条"
+                />
+ 			<Button 
+ 			    android:id="@+id/btn_next"
+                style="@style/Query_Button_Next"
+                android:text="下一条"
+                />
+            </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

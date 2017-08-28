@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="output$Generated" generated="true"><source path="C:\Users\齐绍轩\.android\build-cache\0a66b25b10574cab2a677dea4355ba7f567ccd89\output\res"/></dataSet><dataSet config="default$Generated" generated="true"><source path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res"/></dataSet><dataSet config="main$Generated" generated="true"><source path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res"/><source path="J:\Work\FarmingManageClient\farmingManageClient\build\generated\res\rs\debug"/><source path="J:\Work\FarmingManageClient\farmingManageClient\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="J:\Work\FarmingManageClient\farmingManageClient\src\debug\res"/></dataSet><dataSet config="output" from-dependency="true" generated-set="output$Generated"><source path="C:\Users\齐绍轩\.android\build-cache\0a66b25b10574cab2a677dea4355ba7f567ccd89\output\res"/></dataSet><dataSet config="default" from-dependency="true" generated-set="default$Generated"><source path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res"><file name="slide_in_from_bottom" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\anim\slide_in_from_bottom.xml" qualifiers="" type="anim"/><file name="slide_in_from_top" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\anim\slide_in_from_top.xml" qualifiers="" type="anim"/><file name="slide_out_to_bottom" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\anim\slide_out_to_bottom.xml" qualifiers="" type="anim"/><file name="slide_out_to_top" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\anim\slide_out_to_top.xml" qualifiers="" type="anim"/><file name="indicator_bg_bottom" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable\indicator_bg_bottom.xml" qualifiers="" type="drawable"/><file name="indicator_bg_top" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable\indicator_bg_top.xml" qualifiers="" type="drawable"/><file name="default_ptr_flip" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable-hdpi-v4\default_ptr_flip.png" qualifiers="hdpi-v4" type="drawable"/><file name="default_ptr_rotate" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable-hdpi-v4\default_ptr_rotate.png" qualifiers="hdpi-v4" type="drawable"/><file name="indicator_arrow" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable-hdpi-v4\indicator_arrow.png" qualifiers="hdpi-v4" type="drawable"/><file name="default_ptr_flip" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable-mdpi-v4\default_ptr_flip.png" qualifiers="mdpi-v4" type="drawable"/><file name="default_ptr_rotate" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable-mdpi-v4\default_ptr_rotate.png" qualifiers="mdpi-v4" type="drawable"/><file name="indicator_arrow" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable-mdpi-v4\indicator_arrow.png" qualifiers="mdpi-v4" type="drawable"/><file name="default_ptr_flip" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable-xhdpi-v4\default_ptr_flip.png" qualifiers="xhdpi-v4" type="drawable"/><file name="default_ptr_rotate" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable-xhdpi-v4\default_ptr_rotate.png" qualifiers="xhdpi-v4" type="drawable"/><file name="indicator_arrow" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\drawable-xhdpi-v4\indicator_arrow.png" qualifiers="xhdpi-v4" type="drawable"/><file name="pull_to_refresh_header_horizontal" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\layout\pull_to_refresh_header_horizontal.xml" qualifiers="" type="layout"/><file name="pull_to_refresh_header_vertical" path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\layout\pull_to_refresh_header_vertical.xml" qualifiers="" type="layout"/><file path="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\res\values\values.xml" qualifiers=""><dimen name="indicator_corner_radius">12dp</dimen><string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string><dimen name="indicator_right_padding">10dp</dimen><item name="scrollview" type="id"/><declare-styleable name="PullToRefresh"><attr format="reference|color" name="ptrRefreshableViewBackground"/><attr format="reference|color" name="ptrHeaderBackground"/><attr format="reference|color" name="ptrHeaderTextColor"/><attr format="reference|color" name="ptrHeaderSubTextColor"/><attr name="ptrMode">
+            <flag name="disabled" value="0x0"/>
+            <flag name="pullFromStart" value="0x1"/>
+            <flag name="pullFromEnd" value="0x2"/>
+            <flag name="both" value="0x3"/>
+            <flag name="manualOnly" value="0x4"/>
+
+            
+            <flag name="pullDownFromTop" value="0x1"/>
+            <flag name="pullUpFromBottom" value="0x2"/>
+        </attr><attr format="reference|boolean" name="ptrShowIndicator"/><attr format="reference" name="ptrDrawable"/><attr format="reference" name="ptrDrawableStart"/><attr format="reference" name="ptrDrawableEnd"/><attr format="reference|boolean" name="ptrOverScroll"/><attr format="reference" name="ptrHeaderTextAppearance"/><attr format="reference" name="ptrSubHeaderTextAppearance"/><attr name="ptrAnimationStyle">
+            <flag name="rotate" value="0x0"/>
+            <flag name="flip" value="0x1"/>
+        </attr><attr format="reference|boolean" name="ptrScrollingWhileRefreshingEnabled"/><attr format="reference|boolean" name="ptrListViewExtrasEnabled"/><attr format="reference|boolean" name="ptrRotateDrawableWhilePulling"/><attr format="reference|color" name="ptrAdapterViewBackground"/><attr format="reference" name="ptrDrawableTop"/><attr format="reference" name="ptrDrawableBottom"/></declare-styleable><item name="gridview" type="id"/><string name="pull_to_refresh_release_label">释放以加载…</string><string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string><string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string><dimen name="header_footer_top_bottom_padding">12dp</dimen><item name="webview" type="id"/><dimen name="indicator_internal_padding">4dp</dimen><string name="pull_to_refresh_refreshing_label">正在加载…</string><string name="pull_to_refresh_pull_label">上拉加载更多…</string><dimen name="header_footer_left_right_padding">24dp</dimen></file></source></dataSet><dataSet config="main" generated-set="main$Generated"><source path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res"><file name="activity_translate_in" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\anim\activity_translate_in.xml" qualifiers="" type="anim"/><file name="activity_translate_out" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\anim\activity_translate_out.xml" qualifiers="" type="anim"/><file name="push_bottom_in" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\anim\push_bottom_in.xml" qualifiers="" type="anim"/><file name="push_bottom_out" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\anim\push_bottom_out.xml" qualifiers="" type="anim"/><file name="translate_in" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\anim\translate_in.xml" qualifiers="" type="anim"/><file name="zoomin" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\anim\zoomin.xml" qualifiers="" type="anim"/><file name="zoomout" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\anim\zoomout.xml" qualifiers="" type="anim"/><file name="bground_pro_listivew_item" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\bground_pro_listivew_item.xml" qualifiers="" type="drawable"/><file name="bground_white" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\bground_white.xml" qualifiers="" type="drawable"/><file name="bg_addtop_navigation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\bg_addtop_navigation.xml" qualifiers="" type="drawable"/><file name="bg_headportrait" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\bg_headportrait.xml" qualifiers="" type="drawable"/><file name="btn_popup_bg" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\btn_popup_bg.xml" qualifiers="" type="drawable"/><file name="btn_save_style" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\btn_save_style.xml" qualifiers="" type="drawable"/><file name="layout_promanagelist_table" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\layout_promanagelist_table.xml" qualifiers="" type="drawable"/><file name="left_shadow" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\left_shadow.xml" qualifiers="" type="drawable"/><file name="listivew_item_bground" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\listivew_item_bground.xml" qualifiers="" type="drawable"/><file name="login_aothcode" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\login_aothcode.xml" qualifiers="" type="drawable"/><file name="login_button" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\login_button.xml" qualifiers="" type="drawable"/><file name="login_editext_background" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\login_editext_background.xml" qualifiers="" type="drawable"/><file name="login_showauthcode" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\login_showauthcode.xml" qualifiers="" type="drawable"/><file name="main_navigation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\main_navigation.xml" qualifiers="" type="drawable"/><file name="my_shape_edge" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\my_shape_edge.xml" qualifiers="" type="drawable"/><file name="plugin_camera_albumbackground" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\plugin_camera_albumbackground.xml" qualifiers="" type="drawable"/><file name="plugin_camera_del_state" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\plugin_camera_del_state.xml" qualifiers="" type="drawable"/><file name="plugin_camera_ok_btn_state" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\plugin_camera_ok_btn_state.xml" qualifiers="" type="drawable"/><file name="plugin_camera_pic_choose_selector" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\plugin_camera_pic_choose_selector.xml" qualifiers="" type="drawable"/><file name="plugin_camera_title_btn_back" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\plugin_camera_title_btn_back.xml" qualifiers="" type="drawable"/><file name="plugin_camera_title_btn_cancel" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\plugin_camera_title_btn_cancel.xml" qualifiers="" type="drawable"/><file name="plugin_camera_title_btn_preview" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\plugin_camera_title_btn_preview.xml" qualifiers="" type="drawable"/><file name="tv_right_style" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\tv_right_style.xml" qualifiers="" type="drawable"/><file name="wheel_bg" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\wheel_bg.xml" qualifiers="" type="drawable"/><file name="wheel_listitem" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\wheel_listitem.xml" qualifiers="" type="drawable"/><file name="wheel_title_act_btn" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\wheel_title_act_btn.xml" qualifiers="" type="drawable"/><file name="wheel_title_back_btn" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\wheel_title_back_btn.xml" qualifiers="" type="drawable"/><file name="wheel_title_btn_right" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\wheel_title_btn_right.xml" qualifiers="" type="drawable"/><file name="wheel_title_right_btn" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\wheel_title_right_btn.xml" qualifiers="" type="drawable"/><file name="wheel_val" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable\wheel_val.xml" qualifiers="" type="drawable"/><file name="add" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\add.png" qualifiers="hdpi-v4" type="drawable"/><file name="administrative_tools" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\administrative_tools.png" qualifiers="hdpi-v4" type="drawable"/><file name="back" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\back.png" qualifiers="hdpi-v4" type="drawable"/><file name="base_info_normal" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\base_info_normal.png" qualifiers="hdpi-v4" type="drawable"/><file name="base_info_press" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\base_info_press.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_bottom" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_bottom.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_equationequation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_equationequation.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_prolvli" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_prolvli.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_proplan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_proplan.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_proplantable" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_proplantable.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_shouye" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_shouye.jpg" qualifiers="hdpi-v4" type="drawable"/><file name="bg_tianyangagriculture" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_tianyangagriculture.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_tianyangharvest" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_tianyangharvest.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_tianyangmanage" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_tianyangmanage.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_tianyangseed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_tianyangseed.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_transparent" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_transparent.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_zuowujiaoshou" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\bg_zuowujiaoshou.png" qualifiers="hdpi-v4" type="drawable"/><file name="costequation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\costequation.png" qualifiers="hdpi-v4" type="drawable"/><file name="editgame" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\editgame.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="iv_more" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\iv_more.png" qualifiers="hdpi-v4" type="drawable"/><file name="login_background" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\login_background.jpg" qualifiers="hdpi-v4" type="drawable"/><file name="login_password" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\login_password.png" qualifiers="hdpi-v4" type="drawable"/><file name="login_strict" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\login_strict.png" qualifiers="hdpi-v4" type="drawable"/><file name="login_user" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\login_user.png" qualifiers="hdpi-v4" type="drawable"/><file name="logo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\logo.png" qualifiers="hdpi-v4" type="drawable"/><file name="plan_task_normal" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plan_task_normal.png" qualifiers="hdpi-v4" type="drawable"/><file name="plan_task_press" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plan_task_press.png" qualifiers="hdpi-v4" type="drawable"/><file name="plubin_camera_del_focused" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plubin_camera_del_focused.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_album_back" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_album_back.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_back_btn" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_back_btn.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_back_btn_pressed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_back_btn_pressed.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_bottom_bar" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_bottom_bar.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_cancel" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_cancel.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_cancel_pressed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_cancel_pressed.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_choosed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_choosed.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_choose_back" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_choose_back.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_del_unfocused" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_del_unfocused.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_filenum" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_filenum.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_no_pictures" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_no_pictures.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_preview_focused" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_preview_focused.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_preview_pressed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_preview_pressed.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_preview_unselected" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_preview_unselected.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_send_focused" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_send_focused.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_send_pressed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_send_pressed.png" qualifiers="hdpi-v4" type="drawable"/><file name="plugin_camera_send_unselected" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\plugin_camera_send_unselected.png" qualifiers="hdpi-v4" type="drawable"/><file name="proplan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\proplan.png" qualifiers="hdpi-v4" type="drawable"/><file name="proplantable" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\proplantable.png" qualifiers="hdpi-v4" type="drawable"/><file name="pro_manage_naomal" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\pro_manage_naomal.png" qualifiers="hdpi-v4" type="drawable"/><file name="pro_manage_naomal_press" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\pro_manage_naomal_press.png" qualifiers="hdpi-v4" type="drawable"/><file name="pro_plan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\pro_plan.png" qualifiers="hdpi-v4" type="drawable"/><file name="shengchanlvli" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\shengchanlvli.png" qualifiers="hdpi-v4" type="drawable"/><file name="shouye" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\shouye.png" qualifiers="hdpi-v4" type="drawable"/><file name="shouye_tianyuan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\shouye_tianyuan.jpg" qualifiers="hdpi-v4" type="drawable"/><file name="tianyuanbozhong" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\tianyuanbozhong.png" qualifiers="hdpi-v4" type="drawable"/><file name="tianyuannongshi" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\tianyuannongshi.png" qualifiers="hdpi-v4" type="drawable"/><file name="tianyuanshoucheng" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\tianyuanshoucheng.png" qualifiers="hdpi-v4" type="drawable"/><file name="user" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\user.png" qualifiers="hdpi-v4" type="drawable"/><file name="zuowujiaoshou" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-hdpi\zuowujiaoshou.png" qualifiers="hdpi-v4" type="drawable"/><file name="logo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-ldpi\logo.png" qualifiers="ldpi-v4" type="drawable"/><file name="bg_shouye" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-mdpi\bg_shouye.jpg" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="bg_shouye" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xhdpi\bg_shouye.jpg" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="logo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xhdpi\logo.png" qualifiers="xhdpi-v4" type="drawable"/><file name="shouye_tianyuan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xhdpi\shouye_tianyuan.jpg" qualifiers="xhdpi-v4" type="drawable"/><file name="bg_wheel_scroll_picker" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\bg_wheel_scroll_picker.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="ic_launcher" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="shouye_tianyuan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\shouye_tianyuan.jpg" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_listitem_grey_normal" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_listitem_grey_normal.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_listitem_normal" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_listitem_normal.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_listitem_pressed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_listitem_pressed.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_listitem_simple" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_listitem_simple.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_act_btn_disable" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_act_btn_disable.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_act_btn_focused" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_act_btn_focused.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_act_btn_normal" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_act_btn_normal.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_act_btn_pressed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_act_btn_pressed.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_back_focused" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_back_focused.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_back_normal" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_back_normal.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_back_pressed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_back_pressed.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_btn_focused" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_btn_focused.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_btn_normal" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_btn_normal.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="wheel_title_btn_pressed" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\drawable-xxhdpi\wheel_title_btn_pressed.9.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="activity_addcostequation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_addcostequation.xml" qualifiers="" type="layout"/><file name="activity_addcostequation_dynamic" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_addcostequation_dynamic.xml" qualifiers="" type="layout"/><file name="activity_addcropcrop" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_addcropcrop.xml" qualifiers="" type="layout"/><file name="activity_adddetail" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_adddetail.xml" qualifiers="" type="layout"/><file name="activity_adddetailcrop" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_adddetailcrop.xml" qualifiers="" type="layout"/><file name="activity_addprobaseinfo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_addprobaseinfo.xml" qualifiers="" type="layout"/><file name="activity_addproplan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_addproplan.xml" qualifiers="" type="layout"/><file name="activity_addtianyangmanage" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_addtianyangmanage.xml" qualifiers="" type="layout"/><file name="activity_agrirecordtianynaginfo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_agrirecordtianynaginfo.xml" qualifiers="" type="layout"/><file name="activity_checkcostequation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_checkcostequation.xml" qualifiers="" type="layout"/><file name="activity_checkcrop" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_checkcrop.xml" qualifiers="" type="layout"/><file name="activity_checkproplan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_checkproplan.xml" qualifiers="" type="layout"/><file name="activity_checkservicestationinfo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_checkservicestationinfo.xml" qualifiers="" type="layout"/><file name="activity_checkservicetianynaginfo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_checkservicetianynaginfo.xml" qualifiers="" type="layout"/><file name="activity_costequation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_costequation.xml" qualifiers="" type="layout"/><file name="activity_cropsell" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_cropsell.xml" qualifiers="" type="layout"/><file name="activity_district" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_district.xml" qualifiers="" type="layout"/><file name="activity_favorite" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_favorite.xml" qualifiers="" type="layout"/><file name="activity_harvest" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_harvest.xml" qualifiers="" type="layout"/><file name="activity_homepager" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_homepager.xml" qualifiers="" type="layout"/><file name="activity_listtitle" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_listtitle.xml" qualifiers="" type="layout"/><file name="activity_login" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_login.xml" qualifiers="" type="layout"/><file name="activity_main" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_main.xml" qualifiers="" type="layout"/><file name="activity_productionmanagement" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_productionmanagement.xml" qualifiers="" type="layout"/><file name="activity_productionrecordstatistics" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_productionrecordstatistics.xml" qualifiers="" type="layout"/><file name="activity_promanagelist" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_promanagelist.xml" qualifiers="" type="layout"/><file name="activity_promanagelist_lonely" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_promanagelist_lonely.xml" qualifiers="" type="layout"/><file name="activity_proplan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_proplan.xml" qualifiers="" type="layout"/><file name="activity_proplantable" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_proplantable.xml" qualifiers="" type="layout"/><file name="activity_querycrop" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_querycrop.xml" qualifiers="" type="layout"/><file name="activity_queryprobaseinfo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_queryprobaseinfo.xml" qualifiers="" type="layout"/><file name="activity_queryproplan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_queryproplan.xml" qualifiers="" type="layout"/><file name="activity_queryproplantable" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_queryproplantable.xml" qualifiers="" type="layout"/><file name="activity_receivinginfomanage" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_receivinginfomanage.xml" qualifiers="" type="layout"/><file name="activity_seedandharvest" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_seedandharvest.xml" qualifiers="" type="layout"/><file name="activity_servicemanage" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_servicemanage.xml" qualifiers="" type="layout"/><file name="activity_servicestationname" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_servicestationname.xml" qualifiers="" type="layout"/><file name="activity_tianyagproadd" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_tianyagproadd.xml" qualifiers="" type="layout"/><file name="activity_tianyangagriculture" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_tianyangagriculture.xml" qualifiers="" type="layout"/><file name="activity_tianyangharvest" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_tianyangharvest.xml" qualifiers="" type="layout"/><file name="activity_tianyangmanage" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_tianyangmanage.xml" qualifiers="" type="layout"/><file name="activity_tianyangnumber" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_tianyangnumber.xml" qualifiers="" type="layout"/><file name="activity_tianynagrigisteradmin" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_tianynagrigisteradmin.xml" qualifiers="" type="layout"/><file name="activity_updaerecord" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_updaerecord.xml" qualifiers="" type="layout"/><file name="activity_updatecostequation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_updatecostequation.xml" qualifiers="" type="layout"/><file name="activity_updatecrop" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_updatecrop.xml" qualifiers="" type="layout"/><file name="activity_updateproplan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_updateproplan.xml" qualifiers="" type="layout"/><file name="activity_updateservicemanage" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_updateservicemanage.xml" qualifiers="" type="layout"/><file name="activity_updatetianyangmanage" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\activity_updatetianyangmanage.xml" qualifiers="" type="layout"/><file name="fragment_probaseinfo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_probaseinfo.xml" qualifiers="" type="layout"/><file name="fragment_productionmanage" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_productionmanage.xml" qualifiers="" type="layout"/><file name="fragment_productionplan" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_productionplan.xml" qualifiers="" type="layout"/><file name="fragment_promanagelista" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_promanagelista.xml" qualifiers="" type="layout"/><file name="fragment_promanagelistb" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_promanagelistb.xml" qualifiers="" type="layout"/><file name="fragment_promanagelistc" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_promanagelistc.xml" qualifiers="" type="layout"/><file name="fragment_promanagelistd" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_promanagelistd.xml" qualifiers="" type="layout"/><file name="fragment_promanageliste" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_promanageliste.xml" qualifiers="" type="layout"/><file name="fragment_promanagelistf" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_promanagelistf.xml" qualifiers="" type="layout"/><file name="fragment_promanagelistg" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_promanagelistg.xml" qualifiers="" type="layout"/><file name="fragment_promanagelisth" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_promanagelisth.xml" qualifiers="" type="layout"/><file name="fragment_tianyangfertilizer" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_tianyangfertilizer.xml" qualifiers="" type="layout"/><file name="fragment_tianyangpesticides" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_tianyangpesticides.xml" qualifiers="" type="layout"/><file name="fragment_tianynagdaily" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\fragment_tianynagdaily.xml" qualifiers="" type="layout"/><file name="item_listview" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\item_listview.xml" qualifiers="" type="layout"/><file name="item_popupwindows" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\item_popupwindows.xml" qualifiers="" type="layout"/><file name="item_tianyangpopupmenu" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\item_tianyangpopupmenu.xml" qualifiers="" type="layout"/><file name="item_tianyangpopupmenu_costequation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\item_tianyangpopupmenu_costequation.xml" qualifiers="" type="layout"/><file name="item_tianyangpopupmenu_main" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\item_tianyangpopupmenu_main.xml" qualifiers="" type="layout"/><file name="item_tianyangpopupmenu_query" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\item_tianyangpopupmenu_query.xml" qualifiers="" type="layout"/><file name="listivew_prorestatistics_item" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\listivew_prorestatistics_item.xml" qualifiers="" type="layout"/><file name="listivew_querybaseinfo_item" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\listivew_querybaseinfo_item.xml" qualifiers="" type="layout"/><file name="listivew_query_costequation_item" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\listivew_query_costequation_item.xml" qualifiers="" type="layout"/><file name="listivew_query_item" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\listivew_query_item.xml" qualifiers="" type="layout"/><file name="listview_dc_item" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\listview_dc_item.xml" qualifiers="" type="layout"/><file name="listview_item_argidrecord" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\listview_item_argidrecord.xml" qualifiers="" type="layout"/><file name="listview_item_updatecostequation" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\listview_item_updatecostequation.xml" qualifiers="" type="layout"/><file name="listview_project_item" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\listview_project_item.xml" qualifiers="" type="layout"/><file name="listview_servicename_item" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\listview_servicename_item.xml" qualifiers="" type="layout"/><file name="loadingnotitle_bar" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\loadingnotitle_bar.xml" qualifiers="" type="layout"/><file name="loading_bar" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\loading_bar.xml" qualifiers="" type="layout"/><file name="plugin_camera_album" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\plugin_camera_album.xml" qualifiers="" type="layout"/><file name="plugin_camera_gallery" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\plugin_camera_gallery.xml" qualifiers="" type="layout"/><file name="plugin_camera_image_file" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\plugin_camera_image_file.xml" qualifiers="" type="layout"/><file name="plugin_camera_select_folder" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\plugin_camera_select_folder.xml" qualifiers="" type="layout"/><file name="plugin_camera_select_imageview" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\plugin_camera_select_imageview.xml" qualifiers="" type="layout"/><file name="plugin_camera_show_all_photo" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\plugin_camera_show_all_photo.xml" qualifiers="" type="layout"/><file name="spinner_style" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\spinner_style.xml" qualifiers="" type="layout"/><file name="wheel_date_ym" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\wheel_date_ym.xml" qualifiers="" type="layout"/><file name="wheel_date_ymd" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\wheel_date_ymd.xml" qualifiers="" type="layout"/><file name="wheel_date_ymdhm" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\layout\wheel_date_ymdhm.xml" qualifiers="" type="layout"/><file name="main" path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\menu\main.xml" qualifiers="" type="menu"/><file path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="ScrollLayout">
+        <attr format="string" name="labelerClass"/>
+        <attr format="string" name="labelerFormat"/>
+        <attr format="dimension" name="childWidth"/>
+        <attr format="dimension" name="childHeight"/>
+    </declare-styleable></file><file path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\values\colors.xml" qualifiers=""><color name="main_navigation">#E9F1F4</color><color name="albumback">#E1E0DE</color><color name="red">#FF0000</color><color name="plugin_camera_black">#000000</color><color name="character_color">#444444</color><color name="yellow">#FAFFBD</color><color name="login_btn_background">#F2F2F2</color><color name="login_editext_biankuang">#C8D7D0</color><color name="black">#000000</color><color name="green">#009933</color><color name="none_color">#00000000</color><color name="style_red">#ff4c41</color><color name="blue">#59c3e2</color><color name="login_btn_biankuang">#DADADA</color><color name="title_bground">#42B100</color><color name="gray">#F2F2F2</color><color name="translucence">#506050</color><color name="style_divider_color">#C9C7CD</color><color name="white">#FFFFFF</color></file><file path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_vertical_margin">16dp</dimen><dimen name="activity_horizontal_margin">16dp</dimen></file><file path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\values\strings.xml" qualifiers=""><string name="please_wait">请稍后...</string><string name="tv_rengognfei">人工费(元/斤):</string><string name="tv_recoder">记录人:</string><string name="tv_nongchanpinmingcheng">农产品名称:</string><string name="camera_cancel">取消</string><string name="tv_add">添加</string><string name="tv_mover">实施人员:</string><string name="tv_zhongzhimianji">种植面积(亩):</string><string name="tv_address">地址:</string><string name="tv_lianxidianhua">联系电话:</string><string name="tv_confirm">确认</string><string name="tv_main_title">生产管理系统</string><string name="tv_zhidingren">制定人:</string><string name="tv_password">密码</string><string name="tv_agricuturalvariety">农作物品种:</string><string name="tv_tiandibianhao">田地编号:</string><string name="tv_seeddate">播种日期:</string><string name="tv_addtianyangmanage">添加田洋农事</string><string name="tv_last">上一条</string><string name="tv_turangxinxi">土壤信息:</string><string name="tv_bozhongyizaiguanli">播种移栽管理</string><string name="tv_probaseinfo">基础信息</string><string name="tv_query">查询</string><string name="appTitle">欢迎登录田洋管理生产管理平台</string><string name="tv_baozhuangyewufei">包装业务费(元/斤):</string><string name="tv_cancel">取消</string><string name="hello_world">Hello world!</string><string name="unfinished">完成</string><string name="tv_zuowujiaoshou">作物交售</string><string name="app_name">田洋生产</string><string name="tv_jihuamigncheng">计划名称:</string><string name="tv_save">保存</string><string name="tv_turangqingkuang">土壤情况:</string><string name="tv_yujikaishishijian">预计开始时间:</string><string name="tv_bianhao">编号:</string><string name="tv_transplantname">移栽日期:</string><string name="tv_jiagognfei">加工费(元/斤):</string><string name="tv_zhanzhang">站长:</string><string name="tv_tianyangmanage">田洋管理</string><string name="tv_suoshufuwuzhan">所属服务站:</string><string name="tv_promanage">生产管理</string><string name="tv_suoshujipeizhongxin">所属集配中心:</string><string name="tv_operatetianyang">操作田洋:</string><string name="tv_yujijieshushijian">预计结束时间:</string><string name="only_choose_num">超出可选图片张数</string><string name="tv_servicenumber">服务站编号:</string><string name="tv_shengzhangpinzhong">生长品种:</string><string name="tv_remark">备注:</string><string name="tv_baochaungjianshu">包装件数(件/斤):</string><string name="photo">选择相册</string><string name="tv_jihualeixing">计划类型:</string><string name="tv_proplan">生产计划</string><string name="tv_bozhongyizaidengji">播种移栽登记</string><string name="tv_shouchengguanli">收成登记管理</string><string name="album">相册</string><string name="tv_yulengfei">预冷费(元/斤):</string><string name="preview">预览</string><string name="tv_manager">管理员:</string><string name="tv_tianjiashouhuoxinxi">添加收货信息</string><string name="tv_tianyangnoshixiangmu">田阳农事项目</string><string name="tv_tianyangnongshiguanli">田洋农事管理</string><string name="tv_servicemanage">服务站管理</string><string name="tv_zhidingshijian">制定时间:</string><string name="tv_authcode_error">验证码错误</string><string name="tv_nonghuminghcheng">农户名称:</string><string name="tv_suoshuquyu">所属区域:</string><string name="tv_login">登录</string><string name="tv_shouchengdengji">收成登记</string><string name="tv_shengchanlvlitongji_list">生产率履历统计</string><string name="tv_tiandimianji">田地面积(亩):</string><string name="no_photo">相册没有图片</string><string name="tv_baozhuangfei">包装费(元/斤):</string><string name="my_collect">我的收藏</string><string name="tv_service">服务站:</string><string name="tv_shengchanpinzhong">生产品种:</string><string name="tv_authcode_correct">验证码正确</string><string name="tv_changtuyunshufei">长途运输费(元/斤):</string><string name="tv_postalcode">邮政编码:</string><string name="tv_commit">提交</string><string name="tv_tianjiashouhuoguanli">添加收货信息管理</string><string name="tv_username">账号</string><string name="tv_tianyangnongshidengji">田洋农事登记</string><string name="tv_tianyangshoucheng">田洋收成</string><string name="tv_servicename">服务站名称:</string><string name="action_settings">Settings</string><string name="tv_next">下一条</string><string name="tv_duantuyunshufei">短途运输费:</string><string name="tv_tianyangbozhongyizai">田洋播种移栽</string><string name="tv_agricuturalname">农作物名称:</string><string name="tv_jiagognliang">加工量(斤):</string><string name="invalidSD">sdcard无效或没有插入！</string><string name="tv_authcode">验证码</string><string name="finish">完成</string><string name="tv_hour">小计(元):</string><string name="tv_strict">区域</string><string name="tv_recorddate">登记日期:</string><string name="tv_shengchanlvlitongji">生产率履历统计</string><string name="tv_zhongzhinonghushuliang">种植农户数量(户):</string></file><file path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\values\styles.xml" qualifiers=""><style name="TextView_InReleativeLeft">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style><style name="Query_Button">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/green</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style><style name="Promanage_Layout_Navigation">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style><style name="Theme.Start" parent="AppBaseTheme">
+        <item name="android:windowBackground">@drawable/ic_launcher</item>
+        <item name="android:windowNoTitle">true</item>
+    </style><style name="EditText__Promaangelist_Table_BeiZhu">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:background">@drawable/tv_right_style</item>
+    </style><style name="Login_spinner">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/login_editext_background</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:gravity">center</item>
+    </style><style name="TextView_ListTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginLeft">7dp</item>
+        <item name="android:padding">3dp</item>
+    </style><style name="Login_Register_Character">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">3dp</item>>
+    </style><style name="TextView__Promaangelist_Table_LeftTwo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+    </style><style name="ImageView_Linearlayout_Back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style><style name="loadingDialog" parent="@android:Theme.Dialog">
+
+        
+        <item name="android:windowFrame">@null</item>
+        
+        <item name="android:windowNoTitle">true</item>
+        
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style><style name="Button_Style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center|center_horizontal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_save_style</item>
+    </style><style name="Layout_ListTitle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:gravity">center</item>
+    </style><style name="LinearLayout_f0dp">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@color/gray</item>
+    </style><style name="Login_TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/character_color</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style><style name="Sperate_view">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:background">@drawable/btn_save_style</item>
+    </style><style name="TextView__Middle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">9dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:text">- -</item>
+    </style><style name="Login_Button">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:background">@drawable/login_button</item>
+        <item name="android:gravity">center</item>
+    </style><style name="Layout_Promaangelist_Table_MarTop_AddDetail">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style><style name="ProManageList_Navigation">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style><style name="TextView__Promaangelist_Table_LeftOne">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center|right</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginRight">3dp</item>
+    </style><style name="ListView_Item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/listivew_item_bground</item>
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        
+    </style><style name="Layout_Promaangelist_Table_MarTop_Add">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:scrollbars">vertical</item>
+    </style><style name="Layout_Promaangelist_Table_CheckTitle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style><style name="ProManage_Navigation">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style><style name="Linear_WidthWeight1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+    </style><style name="Login_Layout_Horizontal">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style><style name="ProManage_Navigation_BaseInfo">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style><style name="Relative_Query" parent="ww">
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style><style name="TextView_SeriviceItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:gravity">center</item>
+    </style><style name="Main_AddTop_Navigation">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_addtop_navigation</item>
+    </style><style name="Linear_Seperate">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style><style name="Layout_promanage_SecList">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style><style name="ff">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style><style name="ImageView_Back">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:background">@drawable/back</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:layout_marginLeft">6dp</item>
+    </style><style name="ff_ScrollView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style><style name="Relative_Title">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@color/title_bground</item>
+    </style><style name="TextView_Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style><style name="ListView_TextView_Itetm">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/listivew_item_bground</item>
+    </style><style name="ProManage_Layout_Navigation">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_margin">30dp</item>
+    </style><style name="wheel_dialogAnimation" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="@android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style><style name="TextView_promanage_SecList">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style><style name="TextView_Project_Item_Left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style><style name="ProManageList_Navigation_huadong">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/red</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+    </style><style name="TextView_Title_Left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">返回</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:background">@drawable/bground_white</item>
+    </style><style name="TextView_CuName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:gravity">center</item>
+    </style><style name="Login_Register">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:gravity">center</item>
+    </style><style name="Linear_Name" parent="fw">
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/white</item>
+    </style><style name="Main_Top_Navigation">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style><style name="Query_Button_FF">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/green</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style><style name="TextView__Seperate">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:background">@drawable/login_editext_background</item>
+        <item name="android:numeric">decimal</item>
+    </style><style name="Login_EdiText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/login_editext_background</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style><style name="TextView_Project_Item_Right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style><style name="TextView_type">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginLeft">7dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+    </style><style name="ww">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style><style name="Query_Button_Next">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/green</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style><style name="TextView_InReleativeRight_More">
+        <item name="android:layout_width">6dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style><style name="EditText__Promaangelist_Table_LeftTwo">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:background">@drawable/tv_right_style</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+    </style><style name="TextView_InReleativeRight_Moreeeeeeee">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:background">@color/title_bground</item>
+    </style><style name="LinearLayout_Dynamic">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style><style name="Listview_Project_Layout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style><style name="TextView_InReleativeRight">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style><style name="wf">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style><style name="fw">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style><style name="Layout_Promaangelist_Table_MarTop">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style><style name="ProManage_Navigation_Five">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style><style name="ListView_Promaangelist_Table_MarTop">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        
+    </style></file><file path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\values-sw720dp-land\dimens.xml" qualifiers="sw720dp-land-v13"><dimen name="activity_horizontal_margin">128dp</dimen></file><file path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        
+    </style></file><file path="J:\Work\FarmingManageClient\farmingManageClient\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        
+    </style></file></source><source path="J:\Work\FarmingManageClient\farmingManageClient\build\generated\res\rs\debug"/><source path="J:\Work\FarmingManageClient\farmingManageClient\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="J:\Work\FarmingManageClient\farmingManageClient\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="PullToRefresh"><attr format="reference|color" name="ptrRefreshableViewBackground"/><attr format="reference|color" name="ptrHeaderBackground"/><attr format="reference|color" name="ptrHeaderTextColor"/><attr format="reference|color" name="ptrHeaderSubTextColor"/><attr name="ptrMode">
+            <flag name="disabled" value="0x0"/>
+            <flag name="pullFromStart" value="0x1"/>
+            <flag name="pullFromEnd" value="0x2"/>
+            <flag name="both" value="0x3"/>
+            <flag name="manualOnly" value="0x4"/>
+
+            
+            <flag name="pullDownFromTop" value="0x1"/>
+            <flag name="pullUpFromBottom" value="0x2"/>
+        </attr><attr format="reference|boolean" name="ptrShowIndicator"/><attr format="reference" name="ptrDrawable"/><attr format="reference" name="ptrDrawableStart"/><attr format="reference" name="ptrDrawableEnd"/><attr format="reference|boolean" name="ptrOverScroll"/><attr format="reference" name="ptrHeaderTextAppearance"/><attr format="reference" name="ptrSubHeaderTextAppearance"/><attr name="ptrAnimationStyle">
+            <flag name="rotate" value="0x0"/>
+            <flag name="flip" value="0x1"/>
+        </attr><attr format="reference|boolean" name="ptrScrollingWhileRefreshingEnabled"/><attr format="reference|boolean" name="ptrListViewExtrasEnabled"/><attr format="reference|boolean" name="ptrRotateDrawableWhilePulling"/><attr format="reference|color" name="ptrAdapterViewBackground"/><attr format="reference" name="ptrDrawableTop"/><attr format="reference" name="ptrDrawableBottom"/></declare-styleable><declare-styleable name="ScrollLayout"><attr format="string" name="labelerClass"/><attr format="string" name="labelerFormat"/><attr format="dimension" name="childWidth"/><attr format="dimension" name="childHeight"/></declare-styleable></configuration></mergedItems></merger>

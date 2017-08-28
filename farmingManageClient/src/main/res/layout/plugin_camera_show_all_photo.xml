@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/albumback" >
+
+    <RelativeLayout
+        android:id="@+id/showallphoto_headview"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/black" >
+
+        <TextView
+            android:id="@+id/showallphoto_back"
+            style="@style/TextView_InReleativeLeft"
+            android:text="@string/album" />
+
+        <TextView
+            android:id="@+id/showallphoto_headtitle"
+            style="@style/TextView_Title"
+            android:text="@string/photo" />
+
+        <TextView
+            android:id="@+id/showallphoto_cancel"
+            style="@style/TextView_InReleativeRight"
+            android:text="@string/camera_cancel" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/showallphoto_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black" >
+
+        <TextView
+            android:id="@+id/showallphoto_preview"
+            style="@style/TextView_InReleativeLeft"
+            android:text="@string/preview" />
+
+        <TextView
+            android:id="@+id/showallphoto_ok_button"
+            style="@style/TextView_InReleativeRight"
+            android:text="@string/unfinished" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/showallphoto_myGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/showallphoto_bottom_layout"
+        android:layout_below="@id/showallphoto_headview"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"
+        android:background="@color/albumback"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:verticalSpacing="10dp" />
+
+    <ProgressBar
+        android:id="@+id/showallphoto_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

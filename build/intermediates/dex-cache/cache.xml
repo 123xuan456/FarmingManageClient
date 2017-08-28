@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="J:\Work\FarmingManageClient\pullToRefrashlibrary\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8ee48fb72d442a64a2916bc9a57ea043cf57401a">
+        <dex dex="J:\Work\FarmingManageClient\farmingManageClient\build\intermediates\pre-dexed\debug\classes_d07cd31d21c133a456425852ebc9d3f4ae2413cc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="J:\Work\FarmingManageClient\farmingManageClient\libs\pushservice-4.5.3.48.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="77392fd69a14d333856f98ef6074643844cb7f61">
+        <dex dex="J:\Work\FarmingManageClient\farmingManageClient\build\intermediates\pre-dexed\debug\pushservice-4.5.3.48_504537a84ff05d25980e06d95ed1b2fc826469a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="J:\Work\FarmingManageClient\farmingManageClient\libs\universal-image-loader-1.9.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="296dfb44fbf31397c0306e60cb62e06ca40df07f">
+        <dex dex="J:\Work\FarmingManageClient\farmingManageClient\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.1_f1e996c9b8509c18e50c13591e5c204da9562ba0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="J:\Work\FarmingManageClient\farmingManageClient\libs\xUtils-2.6.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="455d08e790d5728ef6fd13ad4f6a524726c7bd9b">
+        <dex dex="J:\Work\FarmingManageClient\farmingManageClient\build\intermediates\pre-dexed\debug\xUtils-2.6.2_51fdcb2adf5369098ba67ae075af0499de22c59f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="J:\Work\FarmingManageClient\farmingManageClient\libs\android-async-http-1.4.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="77bf7cacf9cefe19dc105e5425d2eb1bb5285881">
+        <dex dex="J:\Work\FarmingManageClient\farmingManageClient\build\intermediates\pre-dexed\debug\android-async-http-1.4.5_09c36ce050eed0f2320dc44ef87b43c83c9c0868.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_transparent" 
+    android:gravity="center"
+    >
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        >
+         <LinearLayout
+        android:id="@+id/equip_popup_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/albumback"
+        android:orientation="vertical" >
+	<ListView 
+            android:id="@+id/listview_district"
+            style="@style/ff"
+            ></ListView>
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

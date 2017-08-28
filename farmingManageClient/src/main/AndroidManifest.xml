@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ruicheng.farmingmanageclient"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 在sd卡中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 向SD卡写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name="com.ruicheng.farmingmanageclient.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.ruicheng.farmingmanageclient.HomePagerActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.PromanageListActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.LoginActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.TianYangAgricultureActiivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.TianYagProAddActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.TianYangHarvestActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CropSellActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.ProductionRecordStatisticsActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.TianYnagRigisterAdminActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.ReceivingInfoManageActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.ListTitleActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.QueryCropActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AddCropActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CostequationActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.ProplanActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.ProplantableActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AddCostequation" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AddProplanAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.QueryProplanAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.QueryProplantableAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.QueryProBaseInfoAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AddProBaseInfoAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.TianYangManageAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.ServiceManageAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AddTianYangManageAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AddDetailAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.ServiceStationNameAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.TianYangNumberAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CropTypeNameAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.UpdateRecordAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AddDetailCropAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CnameAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.DistrictAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CropTypeNameIIAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.IsValidAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.UpdateCostequationAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CheckCostequationAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.UpdateCropAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AgriNameAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CheckServiceTianYnagInfoAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.UpdateServiceManageAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CheckServiceStationInfoAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CheckProplanAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CropPtypeNameAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CropLevelAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.PloughDetailAc" >
+        </activity>
+、
+        <activity android:name="com.ruicheng.farmingmanageclient.CheckCropAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.PurIdAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.UpdateProplanAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AlbumActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.GalleryActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.UpdateTianYangManageAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.AgriRecordTianYnagInfoAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.CustomProductionPlanAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.IsPackageAc" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.LoginDistrictAc" >
+        </activity>
+        <!-- push service start -->
+        <!-- 用于接收系统消息以保证PushService正常运行 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <!-- Push服务接收客户端发送的各种请求 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+        <!-- push结束 -->
+
+
+	<!-- 此处Receiver名字修改为当前包名路径 -->
+	<receiver android:name="com.ruicheng.farmingmanageclient.PushReceiver">
+    <intent-filter>
+        <!-- 接收push消息 --> 
+        <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+        <!-- 接收bind、setTags等method的返回结果--> 
+        <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+        <!-- 接收通知点击事件，和通知自定义内容 --> 
+        <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+    </intent-filter>
+</receiver>
+    </application>
+
+</manifest>

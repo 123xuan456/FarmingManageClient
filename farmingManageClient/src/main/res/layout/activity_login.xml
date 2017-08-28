@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.5"
+        android:background="@color/green"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/ff"
+            android:gravity="center"
+            android:text="@string/appTitle"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.5"
+        android:background="@drawable/login_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/Login_Layout_Horizontal"
+            android:layout_marginTop="30dp" >
+
+            <TextView
+                style="@style/Login_TextView"
+                android:text="账    号" 
+                />
+
+            <EditText
+                android:id="@+id/et_username"
+                style="@style/Login_EdiText"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Login_Layout_Horizontal"
+            android:layout_marginTop="3dp" >
+
+            <TextView
+                style="@style/Login_TextView"
+                android:text="密    码" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/Login_EdiText"
+                android:password="true"
+                 />
+        </LinearLayout>
+         <LinearLayout
+            style="@style/Login_Layout_Horizontal"
+            android:layout_marginTop="3dp" >
+            <TextView
+                style="@style/Login_TextView"
+                android:text="服务器" />
+
+            <EditText
+                android:id="@+id/tv_server"
+                style="@style/Login_EdiText"
+                android:hint="www.reeching.com"
+                 />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/Login_Layout_Horizontal"
+            android:layout_marginTop="3dp" 
+            android:visibility="gone"
+            >
+
+            <TextView
+                style="@style/Login_TextView"
+                android:text="区    域" />
+
+            <Spinner
+                android:id="@+id/sp_strict"
+                style="@style/Login_spinner" 
+                />
+        </LinearLayout>
+         <LinearLayout
+            style="@style/Login_Layout_Horizontal"
+            android:layout_marginTop="3dp" >
+
+            <TextView
+                style="@style/Login_TextView"
+                android:text="区    域" />
+
+            <TextView
+                android:id="@+id/sp_test"
+                style="@style/Login_spinner" 
+                android:gravity="left|center"
+                />
+        </LinearLayout>
+        
+
+        <LinearLayout
+            style="@style/Login_Layout_Horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:visibility="gone"
+             >
+            <TextView
+                style="@style/Login_TextView"
+                android:text="@string/tv_authcode" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="5" >
+
+                <EditText
+                    android:id="@+id/et_authcode"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/login_aothcode"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/tv_showauthcode"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/login_showauthcode"
+                    android:gravity="center"
+                    android:text="2315" 
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+	
+            <!-- <TextView
+                android:id="@+id/tv_authcode_state"
+                style="@style/ww"
+                android:gravity="center"
+                android:text="验证码错误"
+                android:textColor="@color/red"
+                android:textSize="15sp"
+                android:visibility="gone"
+                 /> -->
+        </LinearLayout>
+       
+        <RelativeLayout 
+          android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+             android:visibility="gone"
+            >
+            <TextView 
+                android:id="@+id/tv_frogetpassword"
+                style="@style/Login_Register_Character"
+                android:text="忘记密码?"
+                />
+            <TextView 
+                style="@style/Login_Register"
+                android:text="现在去注册"
+                android:layout_toRightOf="@id/tv_frogetpassword"
+                android:id="@+id/tv_register"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            >
+             <Button
+                android:id="@+id/btn_commit"
+                style="@style/Login_Button"
+                android:layout_marginRight="5dp"
+                android:text="@string/tv_login"
+                 />
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/Login_Button"
+                android:text="@string/tv_cancel"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/btn_commit"
+                 /> -->
+            ></RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

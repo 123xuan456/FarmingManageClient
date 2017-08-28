@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruicheng.agriculturalmanagesystem.PromanageListActivity" >
+
+   <!--  <LinearLayout style="@style/ff" 
+        android:orientation="vertical"
+        > -->
+        <LinearLayout
+            style="@style/fw"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="服务站名称:" />
+                <Spinner
+                    android:id="@+id/spinner_promaangelist_table"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   实施时间:" />
+                <Spinner
+                    android:id="@+id/spinner_promaangelist_table"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="   实施编号:" />
+                <Spinner
+                    android:id="@+id/spinner_promaangelist_table"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+            <Button 
+         android:id="@+id/btn_save"
+         style="@style/Button_Style"
+         android:text="@string/tv_query"
+         />
+            <LinearLayout 
+                style="@style/Layout_Promaangelist_Table_CheckTitle"
+                >
+            </LinearLayout>
+        </LinearLayout>
+   <!--  </LinearLayout> -->
+   <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listview_query"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="4dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        ptr:ptrMode="both" 
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+</LinearLayout>

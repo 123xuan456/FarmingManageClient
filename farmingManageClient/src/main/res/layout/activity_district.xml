@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout
+        style="@style/Relative_Title"
+        
+         >
+        <LinearLayout 
+		    android:id="@+id/ImageView_Linearlayout_Back"
+		     style="@style/ImageView_Linearlayout_Back"
+		    >
+		     <ImageView
+		         android:id="@+id/img_comment_back"
+            style="@style/ImageView_Back" />
+		     <TextView 
+		         android:id="@+id/textView_Title_Left"
+		        style="@style/TextView_Title_Left"
+		        />
+		</LinearLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextView_Title"
+            android:text="选择供应商"
+            />
+        <TextView
+            android:id="@+id/tv_pro_add"
+            style="@style/TextView_InReleativeRight"
+            android:text="添加"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <ListView 
+        android:id="@+id/listview_dc"
+        android:layout_width="fill_parent"
+	android:layout_weight="1"
+	android:layout_height="0dp"
+        ></ListView>
+   <!--  <ScrollView style="@style/fw" >
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+		     <LinearLayout 
+                 android:id="@+id/linear_processcost"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="加工费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minProcCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                     android:id="@+id/et_maxProcCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view3"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linear_seedcost"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="种子费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minSeedCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxSeedCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view4"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+                android:id="@+id/linear_caizhaicost"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="采摘费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minPickCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView
+                    android:id="@+id/et_maxPickCost"
+                     style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view5"
+                style="@style/Sperate_view" />
+            <LinearLayout 
+               android:id="@+id/linear_huafeicost"
+                style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="化肥费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minChemCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxChemCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                 android:id="@+id/view6"
+                style="@style/Sperate_view" />
+             <LinearLayout 
+                 android:id="@+id/linear_rengongcost"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="人工费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minManuCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                     android:id="@+id/et_maxManuCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                 android:id="@+id/view7"
+                style="@style/Sperate_view" />
+             <LinearLayout 
+                 android:id="@+id/linear_baozhuangcost"
+                 style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="包装费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minPackCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxPackCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View 
+                android:id="@+id/view8"
+                style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="包装件数:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minPackNum"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxPackNum"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(件/斤)"
+				    />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="短途运输费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                    android:id="@+id/et_minShorTranCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxShorTranCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="长途运输费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minLongTranCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                    android:id="@+id/et_maxLongTranCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="预冷费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minPrecCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                     android:id="@+id/et_maxPrecCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+            <View style="@style/Sperate_view" />
+             <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="包装业务费:" />
+				<LinearLayout 
+				 style="@style/Linear_Seperate"   
+				    >
+                <TextView 
+                     android:id="@+id/et_minPackMateCost"
+                    style="@style/TextView__Seperate"
+                     />
+                 <TextView style="@style/TextView__Middle"
+                     />
+                <TextView 
+                     android:id="@+id/et_maxPackMateCost"
+                    style="@style/TextView__Seperate"
+                     />
+				</LinearLayout>
+				<TextView 
+				    style="@style/TextView_CuName"
+				    android:text="(元/斤)"
+				    />
+            </LinearLayout>
+				<ListView 
+				    android:id="@+id/listview_costName1"
+				    android:layout_height="0dp"
+				    android:layout_weight="1"
+				    android:layout_width="fill_parent"
+				    android:divider="@drawable/btn_save_style"
+				    android:dividerHeight="3dp"
+				    android:layout_marginLeft="20dp"
+				    android:layout_marginRight="20dp"
+				    android:layout_marginTop="5dp"
+				    ></ListView>
+             </LinearLayout>
+    </ScrollView> -->
+</LinearLayout>

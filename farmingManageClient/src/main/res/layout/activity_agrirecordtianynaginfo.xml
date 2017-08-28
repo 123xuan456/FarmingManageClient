@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+         style="@style/Relative_Title" >
+        <LinearLayout
+            android:id="@+id/ImageView_Linearlayout_Back"
+            style="@style/ImageView_Linearlayout_Back" >
+
+            <ImageView
+                android:id="@+id/img_comment_back"
+                style="@style/ImageView_Back" />
+
+            <TextView
+                android:id="@+id/textView_Title_Left"
+                style="@style/TextView_Title_Left" />
+        </LinearLayout>
+        <TextView
+            style="@style/TextView_Title"
+            android:text="农事记录 "
+            />
+        <TextView
+            android:id="@+id/tv_pro_add"
+            style="@style/TextView_InReleativeRight"
+			android:visibility="gone"
+            />
+    </RelativeLayout>
+     <ListView 
+        android:id="@+id/listview_dc"
+        style="@style/ff"
+        />
+</LinearLayout>

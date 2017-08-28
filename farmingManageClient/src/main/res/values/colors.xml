@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <color name="translucence">#506050</color>
+    <color name="green">#009933</color>
+    <color name="gray">#F2F2F2</color>
+    <color name="white">#FFFFFF</color>
+    <color name="character_color">#444444</color>
+     <color name="black">#000000</color>
+     <color name="yellow">#FAFFBD</color>
+      <color name="red">#FF0000</color>
+      <color name="login_btn_background">#F2F2F2</color>
+       <color name="login_btn_biankuang">#DADADA</color>
+       <color name="login_editext_biankuang">#C8D7D0</color>
+       <color name="title_bground">#42B100</color>
+       <!-- 主界面导航按钮点击颜色 -->
+       <color name="main_navigation">#E9F1F4</color>
+       
+       
+       <color name="blue">#59c3e2</color>  <!-- 蓝色 -->
+    
+    <!-- 上传图片添加的颜色 -->
+    <color name="none_color">#00000000</color>
+    <color name="plugin_camera_black">#000000</color>
+    <color name="albumback">#E1E0DE</color>
+    <color name="style_red">#ff4c41</color>
+    <color name="style_divider_color">#C9C7CD</color>
+    
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/black" >
+
+        <LinearLayout 
+		    android:id="@+id/ImageView_Linearlayout_Back"
+		     style="@style/ImageView_Linearlayout_Back"
+		    >
+		    <ImageView
+		         android:id="@+id/img_comment_back"
+            style="@style/ImageView_Back" />
+		     <TextView 
+		         android:id="@+id/textView_Title_Left"
+		        style="@style/TextView_Title_Left"
+		        />
+		</LinearLayout>
+
+        <TextView
+            style="@style/TextView_Title"/>
+
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/promanage_Layout_Navigation_title1"
+        style="@style/Promanage_Layout_Navigation"
+        >
+        <TextView
+            android:id="@+id/tv_bozhongyizaidengji"
+            style="@style/ProManageList_Navigation"
+            android:text="@string/tv_bozhongyizaidengji"
+            />
+        <TextView
+            android:id="@+id/tv_bozhongyizaiguanli"
+            style="@style/ProManageList_Navigation"
+            android:text="@string/tv_bozhongyizaiguanli"
+            />
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/promanage_Layout_Navigation_title2"
+        style="@style/Promanage_Layout_Navigation"
+        >
+        <TextView
+            android:id="@+id/tv_navigation_one"
+            style="@style/ProManageList_Navigation_huadong"
+            />
+        <TextView
+            android:id="@+id/tv_navigation_two"
+            style="@style/ProManageList_Navigation_huadong"
+            />
+    </LinearLayout>
+     <android.support.v4.view.ViewPager
+        android:id="@+id/vp_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

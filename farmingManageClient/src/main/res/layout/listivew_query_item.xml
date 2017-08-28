@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:weightSum="10"
+    android:gravity="center"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    >
+    <TextView 
+        android:id="@+id/tv_item_operate"
+        style="@style/ListView_TextView_Itetm"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:text="操作"
+        />
+    <TextView 
+         android:id="@+id/tv_item_operatedate"
+        style="@style/ListView_TextView_Itetm"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:text="实施日期"
+        />
+    <TextView 
+         android:id="@+id/tv_item_type"
+        style="@style/ListView_TextView_Itetm"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:text="类型"
+        />
+    <TextView 
+         android:id="@+id/tv_item_describtion"
+        style="@style/ListView_TextView_Itetm"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:text="描述"
+        />
+
+</LinearLayout>

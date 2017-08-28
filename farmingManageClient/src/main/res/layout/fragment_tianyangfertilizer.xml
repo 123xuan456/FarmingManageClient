@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <ScrollView style="@style/ff" >
+
+        <LinearLayout
+            style="@style/ff"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="服务站名称:" />
+
+                <TextView
+                    android:id="@+id/tv_serviceName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020肥料名称:" />
+
+                <EditText 
+                    android:id="@+id/tv_manureName"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020亩用量(斤):" />
+
+                <EditText 
+                    android:id="@+id/tv_manureAmountUnit"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020用途:" />
+
+                <EditText 
+                    android:id="@+id/tv_manureUse"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020实施人员:" />
+
+                <EditText 
+                    android:id="@+id/tv_actionPerson"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020记录人:" />
+
+                <TextView 
+                    android:id="@+id/tv_registUser"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" 
+                    android:text="管理员"
+                    />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="服务站编号:" />
+
+                <EditText 
+                    android:id="@+id/tv_stationCode"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020实施日期:" />
+
+                <TextView 
+                    android:id="@+id/tv_receiveDate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020操作田洋:" />
+
+                <TextView 
+                     android:id="@+id/tv_operatetianyang"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020登记日期:" />
+
+                <EditText
+                    android:id="@+id/tv_recordDate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="2015-08-27" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />
+
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+
+                <TextView
+                    style="@style/TextView__Promaangelist_Table_LeftOne"
+                    android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020备注:" />
+
+                <EditText 
+                    android:id="@+id/et_actionBak"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
+            </LinearLayout>
+
+            <View style="@style/Sperate_view" />	
+
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/Button_Style"
+                android:layout_marginBottom="5dp"
+                android:text="@string/tv_save" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
