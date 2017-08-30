@@ -4,36 +4,35 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout style="@style/ProManage_Layout_Navigation" >
+    <LinearLayout style="@style/ProManage_Layout_Navigation">
 
-        <LinearLayout 
-             style="@style/ProManage_Navigation"
-             android:background="@drawable/bg_tianyangseed"
-             android:layout_marginRight="10dp"
-             android:padding="4dp"
-            >
-             <ImageView
-            android:id="@+id/tv_promanage_seed"
-           android:layout_width="fill_parent"
-           android:layout_height="fill_parent"
-            android:src="@drawable/tianyuanbozhong" 
-            android:padding="4dp"
-            />
+        <LinearLayout
+            style="@style/ProManage_Navigation"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_tianyangseed"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/tv_promanage_seed"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="4dp"
+                android:src="@drawable/tianyuanbozhong" />
         </LinearLayout>
-        <LinearLayout 
-             style="@style/ProManage_Navigation"
+
+        <LinearLayout
+            style="@style/ProManage_Navigation"
             android:layout_marginLeft="10dp"
             android:background="@drawable/bg_tianyangagriculture"
-             android:padding="4dp"
-            >
-        <ImageView
-            android:id="@+id/tv_promanage_agricultrueproject"
-             android:layout_width="fill_parent"
-           android:layout_height="fill_parent"
-            android:src="@drawable/tianyuannongshi"
-            android:padding="4dp"
-            />
-             </LinearLayout>
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/tv_promanage_agricultrueproject"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="4dp"
+                android:src="@drawable/tianyuannongshi" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout style="@style/ProManage_Layout_Navigation" >

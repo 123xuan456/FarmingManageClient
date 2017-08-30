@@ -8,11 +8,13 @@ import org.apache.http.Header;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -152,8 +154,8 @@ public class TianYagProAddActivity extends BaseActivity implements
 
 			tv_registUser.setText("记录人");
 			btn_save = (Button) findViewById(R.id.btn_save);
-
-			/* getOptionPlough(); */
+			tv_registdate.setText(DateUtils.getStringDateShort());
+//			 getOptionPlough();
 
 		} else if (kind == 1) {
 			tv_title.setText("添加田洋农事项目");
@@ -248,6 +250,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 		}
 	}
 
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@Override
 	public void setListener() {
 
@@ -368,6 +371,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 		}
 	}
 
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	public void setVPagerData() {
 		listFrag = new ArrayList<Fragment>();
 		TianYnagDailyFragment tianYnagDailyFragment = new TianYnagDailyFragment();
@@ -394,6 +398,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 	}
 
 	private Button.OnClickListener btnClickManager = new OnClickListener() {
+		@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 		@Override
 		public void onClick(View v) {
 

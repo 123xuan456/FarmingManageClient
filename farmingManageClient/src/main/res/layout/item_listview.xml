@@ -23,9 +23,9 @@
             android:text="选择区域"
             />
     </RelativeLayout>
-    <ListView 
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/listview_dc"
        android:layout_height="match_parent"
        android:layout_width="match_parent"
-        ></ListView>
+        ></com.handmark.pulltorefresh.library.PullToRefreshListView>
 </LinearLayout>

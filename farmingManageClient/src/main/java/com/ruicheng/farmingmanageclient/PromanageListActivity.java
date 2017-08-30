@@ -1,20 +1,10 @@
 package com.ruicheng.farmingmanageclient;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import org.apache.http.Header;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -37,8 +27,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.ruicheng.farmingmanageclient.adapter.TianYangProListViewAdapter;
@@ -57,6 +47,14 @@ import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
 import com.ruicheng.farmingmanageclient.view.SelectDateTimePopWin;
+
+import org.apache.http.Header;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 生产管理的二级列表
@@ -575,7 +573,6 @@ public class PromanageListActivity extends BaseActivity implements
 	/**
 	 * 判断提交信息是否为空
 	 *
-	 * @param v
 	 * @return
 	 */
 	public boolean estimateInfoIsNullUtils(){

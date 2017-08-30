@@ -10,6 +10,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.ruicheng.farmingmanageclient.adapter.CnameAdapter;
@@ -31,7 +33,7 @@ import org.json.JSONObject;
 
 public class LoginDistrictAc extends BaseActivity {
 
-	private ListView listview_dc ;
+	private PullToRefreshListView listview_dc ;
 	private Dialog loadingDialog ;
 	private CnameAdapter cnameAdapter ;
 	private ImageView img_comment_back;
@@ -49,19 +51,19 @@ public class LoginDistrictAc extends BaseActivity {
 				getApplicationContext());
 
 		ServiceNameHandler.allList = loginInfoHelper.selectLoginfo();
-
-		if (ServiceNameHandler.allList.size()>0) {
-			DistrictAdapter DistrictAdapter = new DistrictAdapter(ServiceNameHandler.allList, getApplicationContext());
-			listview_dc.setAdapter(DistrictAdapter);
-		} else {
-			getAcquireAllDc();
-		}
+		getAcquireAllDc();
+//		if (ServiceNameHandler.allList.size()>0) {
+//			DistrictAdapter DistrictAdapter = new DistrictAdapter(ServiceNameHandler.allList, getApplicationContext());
+//			listview_dc.setAdapter(DistrictAdapter);
+//		} else {
+//			getAcquireAllDc();
+//		}
 
 	}
 
 	@Override
 	public void init() {
-		listview_dc = (ListView) findViewById(R.id.listview_dc);
+		listview_dc = (PullToRefreshListView) findViewById(R.id.listview_dc);
 		loadingDialog = DialogUtils.requestDialog(this);
 
 		img_comment_back = (ImageView) findViewById(R.id.img_comment_back);
@@ -88,12 +90,24 @@ public class LoginDistrictAc extends BaseActivity {
 				Intent i = new Intent();
 				i.setClass(getApplicationContext(),LoginDistrictAc.class);
 				Bundle bundle = new Bundle();
-				bundle.putSerializable("acquireAllDcInfo",((AcquireAllDcInfo)ServiceNameHandler.allList.get(position)));
+				bundle.putSerializable("acquireAllDcInfo",((AcquireAllDcInfo)ServiceNameHandler.allList.get(position-1)));
 				i.putExtras(bundle);
 				setResult(RESULT_OK, i);
 				finish();
 			}
 		});
+		listview_dc.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+			@Override
+			public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+				getAcquireAllDc();
+			}
+
+			@Override
+			public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+				getAcquireAllDc();
+			}
+		});
+
 	}
 	/**
 	 *
@@ -144,7 +158,7 @@ public class LoginDistrictAc extends BaseActivity {
 									.saveLoginfo(ServiceNameHandler.allList);
 							DistrictAdapter DistrictAdapter = new DistrictAdapter(ServiceNameHandler.allList, getApplicationContext());
 							listview_dc.setAdapter(DistrictAdapter);
-
+							listview_dc.onRefreshComplete();
 						}
 					});
 		}

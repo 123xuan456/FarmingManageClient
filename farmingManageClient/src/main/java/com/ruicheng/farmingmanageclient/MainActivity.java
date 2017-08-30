@@ -1,9 +1,9 @@
 package com.ruicheng.farmingmanageclient;
 
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
@@ -32,11 +33,10 @@ import com.ruicheng.farmingmanageclient.fragment.ProductionManageFragment;
 import com.ruicheng.farmingmanageclient.fragment.ProductionPlanFragment;
 import com.ruicheng.farmingmanageclient.util.ServiceNameHandler;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
-import com.ruicheng.farmingmanageclient.utils.ToastUtils;
 
 public class MainActivity extends BaseActivity {
-
-	private FragmentManager fm;
+	private Fragment fragment;
+//	private FragmentManager fm;
 	private ProductionManageFragment productionManageFragment = new ProductionManageFragment();
 	private ProductionPlanFragment productionPlanFragment = new ProductionPlanFragment();
 	private ProBaseInfoFragment proBaseInfoFragment = new ProBaseInfoFragment();
@@ -65,18 +65,26 @@ public class MainActivity extends BaseActivity {
 		init();
 		setListener();
 		initPopupWindow();
-		fm = getSupportFragmentManager();
-		FragmentTransaction ft = fm.beginTransaction();
+//		fm = getSupportFragmentManager();
+//		FragmentTransaction ft = fm.beginTransaction();
 
-		ft.add(R.id.main_container, productionManageFragment);
-		ft.add(R.id.main_container, productionPlanFragment);
-		ft.add(R.id.main_container, proBaseInfoFragment);
 
-		ft.show(productionManageFragment);
-		ft.hide(productionPlanFragment);
-		ft.hide(proBaseInfoFragment);
-		//提交
-		ft.commit();
+		fragment = getSupportFragmentManager().findFragmentById(R.id.main_container);
+		if (fragment == null) {
+			fragment =new  ProductionManageFragment();
+			getSupportFragmentManager().beginTransaction()
+					.add(R.id.main_container,new  ProductionManageFragment()).commit();
+		}
+
+//		ft.add(R.id.main_container, productionManageFragment);
+//		ft.add(R.id.main_container, productionPlanFragment);
+//		ft.add(R.id.main_container, proBaseInfoFragment);
+//
+//		ft.show(productionManageFragment);
+//		ft.hide(productionPlanFragment);
+//		ft.hide(proBaseInfoFragment);
+//		//提交
+//		ft.commit();
 
 	}
 
@@ -103,12 +111,12 @@ public class MainActivity extends BaseActivity {
 					btn_proplan.setBackgroundResource(R.drawable.plan_task_normal);
 					btn_probaseinfo
 							.setBackgroundResource(R.drawable.base_info_normal);
-
-					FragmentTransaction ft = fm.beginTransaction();
-					ft.show(productionManageFragment);
-					ft.hide(productionPlanFragment);
-					ft.hide(proBaseInfoFragment);
-					ft.commit();
+					fragment=new ProductionManageFragment();
+//					FragmentTransaction ft = fm.beginTransaction();
+//					ft.show(productionManageFragment);
+//					ft.hide(productionPlanFragment);
+//					ft.hide(proBaseInfoFragment);
+//					ft.commit();
 					break;
 				case R.id.btn_proplan:
 
@@ -128,11 +136,13 @@ public class MainActivity extends BaseActivity {
 					btn_proplan.setBackgroundResource(R.drawable.plan_task_press);
 					btn_probaseinfo
 							.setBackgroundResource(R.drawable.base_info_normal);
-					FragmentTransaction ft1 = fm.beginTransaction();
-					ft1.show(productionPlanFragment);
-					ft1.hide(productionManageFragment);
-					ft1.hide(proBaseInfoFragment);
-					ft1.commit();
+					fragment=new ProductionPlanFragment();
+
+//					FragmentTransaction ft1 = fm.beginTransaction();
+//					ft1.show(productionPlanFragment);
+//					ft1.hide(productionManageFragment);
+//					ft1.hide(proBaseInfoFragment);
+//					ft1.commit();
 					break;
 				case R.id.btn_probaseinfo:
 
@@ -152,12 +162,12 @@ public class MainActivity extends BaseActivity {
 					btn_proplan.setBackgroundResource(R.drawable.plan_task_normal);
 					btn_probaseinfo
 							.setBackgroundResource(R.drawable.base_info_press);
-
-					FragmentTransaction ft2 = fm.beginTransaction();
-					ft2.show(proBaseInfoFragment);
-					ft2.hide(productionPlanFragment);
-					ft2.hide(productionManageFragment);
-					ft2.commit();
+					fragment=new ProBaseInfoFragment();
+//					FragmentTransaction ft2 = fm.beginTransaction();
+//					ft2.show(proBaseInfoFragment);
+//					ft2.hide(productionPlanFragment);
+//					ft2.hide(productionManageFragment);
+//					ft2.commit();
 
 					break;
 				case R.id.linear_more:
@@ -170,36 +180,30 @@ public class MainActivity extends BaseActivity {
 				default:
 					break;
 			}
+			if (fragment != null) {
+				getSupportFragmentManager().beginTransaction().replace(R.id.main_container, fragment).commit();
+			}
 		}
 	};
 
-	@Override
-	public boolean dispatchKeyEvent(KeyEvent event) {
-		if (event.getKeyCode() == KeyEvent.KEYCODE_BACK
-				&& event.getAction() != KeyEvent.ACTION_UP) {
-			quiteApp();
+	private long mExitTime;
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			if ((System.currentTimeMillis() - mExitTime) > 2000) {
+
+				Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+				mExitTime = System.currentTimeMillis();
+			} else {
+				Intent intent = new Intent();
+				intent.setAction(BaseActivity.SYSTEM_EXIT);
+				sendBroadcast(intent);
+			}
 			return true;
 		}
-		return super.dispatchKeyEvent(event);
+		return super.onKeyDown(keyCode, event);
 	}
 
-	long endTime;
 
-	/**
-	 * 退出程序
-	 */
-	private void quiteApp() {
-		if ((System.currentTimeMillis() - endTime) > 2000) {
-			ToastUtils.show(this, "再按一次退出程序");
-			endTime = System.currentTimeMillis();
-		} else {
-//			android.os.Process.killProcess(android.os.Process.myPid());
-//			System.exit(1);
-			finish();
-		}
-	}
-
-	@Override
 	public void init() {
 
 		linear_more = (LinearLayout)findViewById(R.id.linear_more);
@@ -220,7 +224,6 @@ public class MainActivity extends BaseActivity {
 		 */
 	}
 
-	@Override
 	public void setListener() {
 		btn_promanage.setOnClickListener(btnClickManager);
 		btn_proplan.setOnClickListener(btnClickManager);

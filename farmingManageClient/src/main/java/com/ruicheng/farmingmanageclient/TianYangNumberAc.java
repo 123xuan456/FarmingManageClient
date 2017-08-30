@@ -3,6 +3,7 @@ package com.ruicheng.farmingmanageclient;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -151,6 +152,10 @@ public class TianYangNumberAc extends BaseActivity {
 			params.put(Constant.USERID, PreferencesUtils.getInt(getApplicationContext(), Constant.USERID)+"");
 			params.put(Constant.USERNAME,PreferencesUtils.getString(getApplicationContext(), Constant.USERNAME));
 			params.put("stationId",stationId);
+			Log.i("adda","optionType="+optionType+",androidAccessType="+Constant.ANDROIDACCESSTYPE+
+					",userId="+PreferencesUtils.getInt(getApplicationContext(), Constant.USERID)+
+					",userName="+PreferencesUtils.getString(getApplicationContext(), Constant.USERNAME)+
+			",stationId="+stationId);
 			TwitterRestClient.get(Constant.OPTIONPLOUGH, params, new JsonHttpResponseHandler(){
 
 				@Override
@@ -176,7 +181,6 @@ public class TianYangNumberAc extends BaseActivity {
 
 						listAll  = JSONUtils.getploughListInfo(response);
 						setListAll(listAll);
-
 						listStationInfo = JSONUtils.getStationAllInfo(response);
 						for (int i = 0; i <listStationInfo.size(); i++) {
 							ServiceNameHandler.stationList.add(listStationInfo.get(i));

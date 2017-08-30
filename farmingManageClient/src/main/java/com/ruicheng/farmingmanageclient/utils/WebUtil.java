@@ -156,10 +156,7 @@ public class WebUtil {
 		HttpResponse res = null;
 		try {
 			res = client.execute(get);
-		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
+		}  catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

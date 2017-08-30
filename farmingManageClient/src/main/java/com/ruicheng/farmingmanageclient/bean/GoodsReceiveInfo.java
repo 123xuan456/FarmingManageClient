@@ -151,5 +151,5 @@ public class GoodsReceiveInfo implements Serializable{
 	public void setUploadState(String uploadState) {
 		this.uploadState = uploadState;
 	}
-	
+
 }

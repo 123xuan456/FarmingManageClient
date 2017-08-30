@@ -675,9 +675,12 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 			new Thread() {
 				@Override
 				public void run() {
-
+					String a = tv_server.getText().toString();
+					System.out.println("a="+a);
 					res = WebUtil.getHttpResponse("http://"
-							+StringUtils.replaceBlank(tv_server.getText().toString())+ "/clmk");
+							+ StringUtils.replaceBlank(a)+ "/clmk");
+//					res = WebUtil.getHttpResponse("http://"
+//							+StringUtils.replaceBlank(tv_server.getText().toString())+ "/clmk");
 
 					Message msg = Message.obtain();
 

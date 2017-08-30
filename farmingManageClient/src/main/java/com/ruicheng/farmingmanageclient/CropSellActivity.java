@@ -1,12 +1,5 @@
 package com.ruicheng.farmingmanageclient;
 
-import java.util.Date;
-import java.util.List;
-
-import org.apache.http.Header;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +10,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +18,6 @@ import com.loopj.android.http.RequestParams;
 import com.ruicheng.farmingmanageclient.base.BaseActivity;
 import com.ruicheng.farmingmanageclient.bean.CnameInfo;
 import com.ruicheng.farmingmanageclient.bean.GoodsReceiveInfo;
-import com.ruicheng.farmingmanageclient.bean.StationInfo;
 import com.ruicheng.farmingmanageclient.constants.Constant;
 import com.ruicheng.farmingmanageclient.net.TwitterRestClient;
 import com.ruicheng.farmingmanageclient.util.ServiceNameHandler;
@@ -37,6 +28,12 @@ import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
 import com.ruicheng.farmingmanageclient.view.SelectDateTimePopWin;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.Serializable;
 
 /**
  * 作物交售---添加收货信息界面
@@ -327,6 +324,8 @@ public class CropSellActivity extends BaseActivity implements OnClickListener {
 										Intent i = new Intent();
 										i.setClass(CropSellActivity.this,
 												QueryCropActivity.class);
+										i.putExtra("GOODSRECEIVE",
+												(Serializable) ServiceNameHandler.GoodsReceiveInfoList);
 										Bundle bundle = new Bundle();
 										bundle.putSerializable(
 												"GOODSRECEIVE",
@@ -355,7 +354,6 @@ public class CropSellActivity extends BaseActivity implements OnClickListener {
 	/**
 	 * 判断提交信息是否为空
 	 *
-	 * @param v
 	 * @return
 	 */
 	public boolean estimateInfoIsNullUtils() {
