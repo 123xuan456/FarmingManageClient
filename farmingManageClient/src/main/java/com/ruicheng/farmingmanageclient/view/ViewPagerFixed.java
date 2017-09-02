@@ -1,10 +1,14 @@
 package com.ruicheng.farmingmanageclient.view;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.os.Build;
+import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-public class ViewPagerFixed extends android.support.v4.view.ViewPager {
+@TargetApi(Build.VERSION_CODES.GINGERBREAD)
+public class ViewPagerFixed extends ViewPager {
 
     public ViewPagerFixed(Context context) {
         super(context);

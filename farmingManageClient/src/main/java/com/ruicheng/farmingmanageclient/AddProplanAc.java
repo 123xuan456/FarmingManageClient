@@ -463,7 +463,7 @@ public class AddProplanAc extends BaseActivity {
 									//保存方法
 									getSaveProductionPlan();
 								}else{
-									ToastUtils.show(getApplicationContext(), "请输入定义成本公式的农作物");
+									//ToastUtils.show(getApplicationContext(), "请输入定义成本公式的农作物");
 								}
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block

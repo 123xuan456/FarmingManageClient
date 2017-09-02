@@ -1,8 +1,5 @@
 package com.ruicheng.farmingmanageclient;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -13,7 +10,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -28,6 +24,9 @@ import com.ruicheng.farmingmanageclient.bean.ImageBucket;
 import com.ruicheng.farmingmanageclient.util.AlbumHelper;
 import com.ruicheng.farmingmanageclient.util.BimpHandler;
 import com.ruicheng.farmingmanageclient.utils.DialogUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 进入相册显示所有图片
@@ -129,14 +128,6 @@ public class AlbumActivity extends Activity {
 
 	}
 
-	// 返回按钮监听
-	private class BackListener implements OnClickListener {
-		public void onClick(View v) {
-			intent.setClass(AlbumActivity.this, ImageFolderActivity.class);
-			startActivity(intent);
-			finish();
-		}
-	}
 
 	// 取消按钮的监听
 	private class CancelListener implements OnClickListener {
@@ -170,7 +161,14 @@ public class AlbumActivity extends Activity {
 		back = (TextView) findViewById(R.id.back);
 		cancel = (TextView) findViewById(R.id.cancel);
 		cancel.setOnClickListener(new CancelListener());
-		back.setOnClickListener(new BackListener());
+		back.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+					Intent i=new Intent(AlbumActivity.this, ImageFolderActivity.class);
+					startActivity(i);
+//			finish();
+			}
+		});
 		preview = (TextView) findViewById(R.id.preview);
 		preview.setOnClickListener(new PreviewListener());
 		gridView = (GridView) findViewById(R.id.myGrid);
@@ -201,7 +199,7 @@ public class AlbumActivity extends Activity {
 								//选择单张时 不提示
 								if(picType != 1){
 									Toast.makeText(AlbumActivity.this,
-											R.string.only_choose_num, 0).show();
+											R.string.only_choose_num, Toast.LENGTH_SHORT).show();
 								}
 							}
 							return;
@@ -269,13 +267,13 @@ public class AlbumActivity extends Activity {
 		}
 	}
 
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			intent.setClass(AlbumActivity.this, ImageFolderActivity.class);
-			startActivity(intent);
-		}
-		return false;
-	}
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//		if (keyCode == KeyEvent.KEYCODE_BACK) {
+//			intent.setClass(AlbumActivity.this, ImageFolderActivity.class);
+//			startActivity(intent);
+//		}
+//		return false;
+//	}
 
 	@Override
 	protected void onRestart() {

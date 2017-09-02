@@ -70,9 +70,9 @@ public class TianYangNumberAc extends BaseActivity {
 			stationId = bundle.getString("stationId");
 			fromwhichview = bundle.getInt("fromwhichview");
 		}
+
 		init();
 		setListener();
-		getOptionPlough(stationId);
 
 
 	}
@@ -91,6 +91,7 @@ public class TianYangNumberAc extends BaseActivity {
 		listview_tianyangnumber = (ListView) findViewById(R.id.listview_tianyangnumber);
 
 		loadingDialog = DialogUtils.requestDialog(this);
+		getOptionPlough(stationId);
 
 		img_comment_back = (ImageView) findViewById(R.id.img_comment_back);
 		findViewById(R.id.ImageView_Linearlayout_Back).setOnClickListener(

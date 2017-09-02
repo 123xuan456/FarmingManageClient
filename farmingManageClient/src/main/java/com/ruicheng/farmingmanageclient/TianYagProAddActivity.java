@@ -1,13 +1,6 @@
 package com.ruicheng.farmingmanageclient;
 /*田洋生产二级界面后点击添加按钮跳转 的三级界面：添加田洋播种界面、添加田洋农事项目、添加田洋收成*/
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.Header;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Dialog;
@@ -49,6 +42,13 @@ import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
 import com.ruicheng.farmingmanageclient.view.SelectDateTimePopWin;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TianYagProAddActivity extends BaseActivity implements
 		OnClickListener {
@@ -658,7 +658,6 @@ public class TianYagProAddActivity extends BaseActivity implements
 	/**
 	 * 判断提交信息是否为空
 	 *
-	 * @param v
 	 * @return
 	 */
 	public boolean estimateInfoIsNullUtils(){

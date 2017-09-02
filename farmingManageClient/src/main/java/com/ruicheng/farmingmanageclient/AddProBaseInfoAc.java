@@ -136,12 +136,11 @@ public class AddProBaseInfoAc extends BaseActivity {
 			switch (v.getId()) {
 				case R.id.ImageView_Linearlayout_Back:
 					img_comment_back.setVisibility(View.GONE);
-					Intent i = new Intent();
-					Intent intent = new Intent();
-					intent.setClass(getApplicationContext(), ServiceManageAc.class);
-					startActivity(intent);
-					finish();
-					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
+//					Intent intent = new Intent();
+//					intent.setClass(getApplicationContext(), ServiceManageAc.class);
+//					startActivity(intent);
+//					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
+				finish();
 					break;
 				case R.id.tv_cropTypes:
 					Intent ii = new Intent();
@@ -243,16 +242,16 @@ public class AddProBaseInfoAc extends BaseActivity {
 		}
 	}
 
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-		if (keyCode == event.KEYCODE_BACK) {
-			/* android.os.Process.killProcess(android.os.Process.myPid()); */
-			startActivity(new Intent(this, ServiceManageAc.class));
-			overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
-		}
-		return super.onKeyDown(keyCode, event);
-	}
+//	@Override
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//
+//		if (keyCode == event.KEYCODE_BACK) {
+//			/* android.os.Process.killProcess(android.os.Process.myPid()); */
+//			startActivity(new Intent(this, ServiceManageAc.class));
+//			overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
+//		}
+//		return super.onKeyDown(keyCode, event);
+//	}
 	public void getAllNotCompleteSheett() {
 		if (NetUtils.checkNetConnection(getApplicationContext())) {
 			loadingDialog.show();

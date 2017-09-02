@@ -1,7 +1,5 @@
 package com.ruicheng.farmingmanageclient;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -21,6 +19,8 @@ import android.widget.ToggleButton;
 import com.ruicheng.farmingmanageclient.adapter.AlbumGridViewAdapter;
 import com.ruicheng.farmingmanageclient.bean.CameraImage;
 import com.ruicheng.farmingmanageclient.util.BimpHandler;
+
+import java.util.ArrayList;
 
 /**
  * 从图片文件夹ImageFolderActivity.java选择跳转到这
@@ -96,8 +96,9 @@ public class ShowAllPhotoActivity extends Activity {
 		}
 
 		public void onClick(View v) {
-			intent.setClass(ShowAllPhotoActivity.this, ImageFolderActivity.class);
-			startActivity(intent);
+//			intent.setClass(ShowAllPhotoActivity.this, ImageFolderActivity.class);
+//			startActivity(intent);
+			finish();
 		}
 
 	}
@@ -125,6 +126,12 @@ public class ShowAllPhotoActivity extends Activity {
 		okButton = (TextView) findViewById(R.id.showallphoto_ok_button);
 	}
 
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		unregisterReceiver(broadcastReceiver);
+	}
+
 	private void initListener() {
 
 		gridImageAdapter
@@ -135,7 +142,7 @@ public class ShowAllPhotoActivity extends Activity {
 						if (BimpHandler.tempSelectBitmap.size() >= BimpHandler.num&&isChecked) {
 							button.setVisibility(View.GONE);
 							toggleButton.setChecked(false);
-							Toast.makeText(ShowAllPhotoActivity.this, R.string.only_choose_num, 200).show();
+							Toast.makeText(ShowAllPhotoActivity.this, R.string.only_choose_num, Toast.LENGTH_SHORT).show();
 							return;
 						}
 

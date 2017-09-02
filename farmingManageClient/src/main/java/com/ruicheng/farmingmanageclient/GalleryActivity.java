@@ -1,10 +1,12 @@
 package com.ruicheng.farmingmanageclient;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -49,6 +51,7 @@ public class GalleryActivity extends Activity {
 	private Context mContext;
 
 	RelativeLayout photo_relativeLayout;
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -118,6 +121,7 @@ public class GalleryActivity extends Activity {
 	// 删除按钮添加的监听器
 	private class DelListener implements OnClickListener {
 
+		@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 		public void onClick(View v) {
 			if (listViews.size() == 1) {
 				BimpHandler.tempSelectBitmap.clear();
@@ -227,6 +231,7 @@ public class GalleryActivity extends Activity {
 			return POSITION_NONE;
 		}
 
+		@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 		public void destroyItem(View arg0, int arg1, Object arg2) {
 			((ViewPagerFixed) arg0).removeView(listViews.get(arg1 % size));
 		}

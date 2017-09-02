@@ -2,9 +2,7 @@ package com.ruicheng.farmingmanageclient;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -14,7 +12,7 @@ import android.widget.TextView;
 
 import com.ruicheng.farmingmanageclient.adapter.ImageFolderAdapter;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
-
+//相册页面
 public class ImageFolderActivity extends Activity {
 	private ImageFolderAdapter folderAdapter;
 	private TextView bt_cancel;
@@ -51,14 +49,14 @@ public class ImageFolderActivity extends Activity {
 		}
 	}
 
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			Intent intent = new Intent();
-			intent.setClass(mContext, MainActivity.class);
-			startActivity(intent);
-		}
-
-		return true;
-	}
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//		if (keyCode == KeyEvent.KEYCODE_BACK) {
+//			Intent intent = new Intent();
+//			intent.setClass(mContext, MainActivity.class);
+//			startActivity(intent);
+//		}
+//
+//		return true;
+//	}
 
 }

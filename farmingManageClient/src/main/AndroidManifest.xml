@@ -52,9 +52,11 @@
         </activity>
         <activity android:name="com.ruicheng.farmingmanageclient.PromanageListActivity" >
         </activity>
-        <activity android:name="com.ruicheng.farmingmanageclient.CropListActivity" >
-        </activity>
         <activity android:name="com.ruicheng.farmingmanageclient.LoginActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.ImageFolderActivity" >
+        </activity>
+        <activity android:name="com.ruicheng.farmingmanageclient.ShowAllPhotoActivity" >
         </activity>
         <activity android:name="com.ruicheng.farmingmanageclient.TianYangAgricultureActiivity" >
         </activity>

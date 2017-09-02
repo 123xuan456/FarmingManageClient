@@ -148,7 +148,6 @@ public class ImageFolderAdapter extends BaseAdapter {
 			intent.setClass(mContext, ShowAllPhotoActivity.class);
 			mContext.startActivity(intent);
 			choose_back.setVisibility(v.VISIBLE);
-			((Activity)mContext).finish();
 		}
 	}
 

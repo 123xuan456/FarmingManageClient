@@ -106,12 +106,11 @@ public class AddTianYangManageAc extends BaseActivity {
 			switch (v.getId()) {
 				case R.id.ImageView_Linearlayout_Back:
 					img_comment_back.setVisibility(View.GONE);
-					Intent i = new Intent();
-					Intent intent = new Intent();
-					intent.setClass(getApplicationContext(), TianYangManageAc.class);
-					startActivity(intent);
+//					Intent intent = new Intent();
+//					intent.setClass(getApplicationContext(), TianYangManageAc.class);
+//					startActivity(intent);
+//					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
 					finish();
-					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
 					break;
 				case R.id.btn_confirm:
 					//提交保存数据
@@ -171,17 +170,17 @@ public class AddTianYangManageAc extends BaseActivity {
 
 	}
 
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-		if (keyCode == event.KEYCODE_BACK) {
-			/* android.os.Process.killProcess(android.os.Process.myPid()); */
-			startActivity(new Intent(this, TianYangManageAc.class));
-			overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
-			finish();
-		}
-		return super.onKeyDown(keyCode, event);
-	}
+//	@Override
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//
+//		if (keyCode == event.KEYCODE_BACK) {
+//			/* android.os.Process.killProcess(android.os.Process.myPid()); */
+//			startActivity(new Intent(this, TianYangManageAc.class));
+//			overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
+//			finish();
+//		}
+//		return super.onKeyDown(keyCode, event);
+//	}
 	/**
 	 * 判断提交信息是否为空
 	 *

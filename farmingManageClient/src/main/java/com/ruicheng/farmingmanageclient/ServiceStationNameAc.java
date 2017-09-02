@@ -66,7 +66,7 @@ public class ServiceStationNameAc extends BaseActivity {
 		}
 		init() ;
 		setListener();
-		getOptionPlough();
+
 	}
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -83,7 +83,7 @@ public class ServiceStationNameAc extends BaseActivity {
 		listview_servicename = (ListView) findViewById(R.id.listview_servicename);
 
 		loadingDialog = DialogUtils.requestDialog(this);
-
+		getOptionPlough();
 		img_comment_back = (ImageView) findViewById(R.id.img_comment_back);
 		findViewById(R.id.ImageView_Linearlayout_Back).setOnClickListener(
 				new OnClickListener() {
