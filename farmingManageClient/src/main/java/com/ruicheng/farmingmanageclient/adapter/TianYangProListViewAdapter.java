@@ -76,7 +76,7 @@ public class TianYangProListViewAdapter extends BaseAdapter {
 			viewHolder.tv_project_moveDate.setText("移栽日期:"+tianYangProData.getMoveDate());
 			viewHolder.tv_project_actionPerson.setText("实施人员:"+tianYangProData.getActionPerson());
 			viewHolder.tv_project_seedDate.setText("播种日期:"+tianYangProData.getSeedDate());
-			viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
+		//	viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
 			if ("null".equals(tianYangProData.getActionBak())) {
 				viewHolder.tv_item_agrDesc.setText("备注:"+"<>");
 			} else {
@@ -89,7 +89,7 @@ public class TianYangProListViewAdapter extends BaseAdapter {
 			if ("2".equals(tianYangProData.getProductType())) {
 				viewHolder.tv_project_productType.setText("日常农事");
 
-				viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
+		//		viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
 				viewHolder.tv_project_seedDate.setText("气温:"+tianYangProData.getTemperValue());
 				viewHolder.tv_item_preventObj.setText("农事项目:"+tianYangProData.getProductItem());
 				viewHolder.tv_project_moveDate.setText("农资名称及用量:"+tianYangProData.getAgrDesc());
@@ -104,7 +104,7 @@ public class TianYangProListViewAdapter extends BaseAdapter {
 			} else if("3".equals(tianYangProData.getProductType())){
 				viewHolder.tv_project_productType.setText("肥料使用");
 
-				viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
+			//	viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
 				viewHolder.tv_project_seedDate.setText("肥料名称:"+tianYangProData.getManureName());
 				viewHolder.tv_item_preventObj.setText("亩用量:"+tianYangProData.getManureAmountUnit());
 				viewHolder.tv_project_moveDate.setText("用途:"+tianYangProData.getManureUse());
@@ -122,7 +122,7 @@ public class TianYangProListViewAdapter extends BaseAdapter {
 				/*
 				public TextView tv_project_cropType ;
 				public TextView tv_project_actionPerson ;*/
-				viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
+			//	viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
 				viewHolder.tv_project_seedDate.setText("农药名称:"+tianYangProData.getPesticideName());
 				viewHolder.tv_project_cropType.setText("亩用量:"+tianYangProData.getPesticideAmountUnit());
 				viewHolder.tv_project_moveDate.setText("稀释倍数:"+tianYangProData.getDiluteScale());
@@ -140,7 +140,7 @@ public class TianYangProListViewAdapter extends BaseAdapter {
 		}else if (optionType ==5){
 			viewHolder.tv_project_productType.setText("田洋收成");
 
-			viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
+		//	viewHolder.tv_project_actionBak.setText("田洋编号:"+tianYangProData.getPloughCode());
 			viewHolder.tv_project_seedDate.setText("作物名称:"+tianYangProData.getCropType());
 			viewHolder.tv_project_receiveDate1.setText("收获日期:"+tianYangProData.getReceiveDate());
 			viewHolder.tv_project_moveDate.setText("货品重量:"+tianYangProData.getReceiveWeight());

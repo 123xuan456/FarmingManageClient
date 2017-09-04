@@ -635,7 +635,6 @@ public class PromanageListActivity extends BaseActivity implements
 
 				} else {
 					params.put("toDate","");
-
 				}
 				if (ploughListInfo!=null&&!"".equals(ploughListInfo.getPloughId())&&!"null".equals(ploughListInfo.getPloughId())) {
 					params.put("detail.ploughId",ploughListInfo.getPloughId());
@@ -724,11 +723,11 @@ public class PromanageListActivity extends BaseActivity implements
 								loadingDialog.dismiss();
 							}
 							try {
-								if ("failure".equals(JSONUtils
-										.getResultMsg(errorResponse))) {
-									ToastUtils.show(getApplicationContext(), "删除失败");
-								}
-							} catch (JSONException e) {
+//								if ("failure".equals(JSONUtils
+//										.getResultMsg(errorResponse))) {
+//								}
+								ToastUtils.show(getApplicationContext(), "删除失败");
+							} catch (Exception e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
@@ -764,7 +763,6 @@ public class PromanageListActivity extends BaseActivity implements
 		switch (v.getId()) {
 			case R.id.linear_tianYangNumber:
 				Intent i = new Intent();
-
 				if ("".equals(tv_servicename.getText().toString())||"null".equals(tv_servicename.getText().toString())) {
 					ToastUtils.show(getApplicationContext(), "请先选择服务站");
 					return ;
@@ -797,7 +795,7 @@ public class PromanageListActivity extends BaseActivity implements
 							Constant.USERID, Constant.FAILUREINT) + "");
 			params.put(Constant.USERNAME, PreferencesUtils.getString(
 					getApplicationContext(), Constant.USERNAME));
-
+			//获取农作物名称的接口
 			TwitterRestClient.get(Constant.QUERYPRODUCT, params,
 					new JsonHttpResponseHandler() {
 						@Override

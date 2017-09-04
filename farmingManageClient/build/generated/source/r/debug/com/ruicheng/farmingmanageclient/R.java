@@ -566,7 +566,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int tv_CuName=0x7f080175;
         public static final int tv_Time=0x7f080053;
         public static final int tv_UName=0x7f0800dd;
-        public static final int tv_actionBak =0x7f0800ec;
+        public static final int tv_actionBak=0x7f0800ec;
         public static final int tv_actionPerson=0x7f0800a1;
         public static final int tv_actionbak=0x7f08014d;
         public static final int tv_add=0x7f080091;

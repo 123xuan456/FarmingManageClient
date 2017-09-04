@@ -252,9 +252,10 @@ public class JSONUtils {
 		for (int i = 0; i < stationJsonArr.length(); i++) {
 			JSONObject stationJson = stationJsonArr.getJSONObject(i);
 			DataListInfo dataListInfo = new DataListInfo();
-			if (optionType == 1) {
+			if (optionType == 1) {//查询天阳播种
 				dataListInfo.setDetailId(stationJson.getString("detailId"));
-				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
+				//dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
+				dataListInfo.setSysId(stationJson.getString("sysId"));
 				dataListInfo.setProductType(stationJson.getString("productType"));
 				dataListInfo.setRecordDate(stationJson.getString("recordDate"));
 				dataListInfo.setCropCode(stationJson.getString("cropCode"));
@@ -267,8 +268,9 @@ public class JSONUtils {
 				dataListInfo.setReceiveDate(stationJson.getString("receiveDate"));
 				dataListInfo.setActionPerson(stationJson.getString("actionPerson"));
 				dataListInfo.setActionBak(stationJson.getString("actionBak"));
-			} else if (optionType ==2){
-				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
+			} else if (optionType ==2){//田洋农事项目:2
+				dataListInfo.setSysId(stationJson.getString("sysId"));
+				//dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
 				dataListInfo.setDetailId(stationJson.getString("detailId"));
 				dataListInfo.setRecordId(stationJson.getString("recordId"));
 				dataListInfo.setReceiveDate(stationJson.getString("receiveDate"));
@@ -316,8 +318,9 @@ public class JSONUtils {
 				dataListInfo.setActionBak(stationJson.getString("actionBak"));
 				dataListInfo.setActionBak(stationJson.getString("actionBak"));*/
 
-			}else if (optionType == 5){
-				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
+			}else if (optionType == 5){//田洋收成: 5
+				dataListInfo.setSysId(stationJson.getString("sysId"));
+				//dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
 				dataListInfo.setDetailId(stationJson.getString("detailId"));
 				dataListInfo.setRecordId(stationJson.getString("recordId"));
 				dataListInfo.setReceiveDate(stationJson.getString("receiveDate"));

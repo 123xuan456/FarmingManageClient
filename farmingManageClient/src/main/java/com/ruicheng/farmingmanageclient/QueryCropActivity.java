@@ -154,8 +154,10 @@ public class QueryCropActivity extends BaseActivity implements OnClickListener {
 				// 点击获取上一条数据
 				if (position == 0) {
 					ToastUtils.show(getApplicationContext(), "当前已是第一条数据..");
+					btn_last.setBackgroundColor(Color.parseColor("#F2F2F2"));
 					return ;
 				}
+
 				btn_next.setBackgroundColor(Color.parseColor("#009933"));
 				position -- ;
 				goodsReceiveInfo = ServiceNameHandler.GoodsReceiveInfoList.get(position);

@@ -20,7 +20,9 @@ public class TwitterRestClient {
 
 	public static String getAbsoluteUrl(String relativeUrl) {
 		client.setTimeout(60*1000);
-		return BASE_URL + relativeUrl;
+		String a = BASE_URL + relativeUrl;
+		System.out.println("http:url:"+a);
+		return a;
 	}
 
 	public static void get(RequestParams params,
@@ -30,7 +32,6 @@ public class TwitterRestClient {
 
 	public static void get(String url, RequestParams params,
 			AsyncHttpResponseHandler responseHandler) {
-		System.out.println("http:url:"+url+":params:"+params+":responseHandler:"+responseHandler);
 		client.get(getAbsoluteUrl(url), params, responseHandler);
 	}
 

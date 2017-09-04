@@ -183,7 +183,7 @@
                     android:text="备        注    :" />
 
                 <EditText
-                     android:id="@+id/tv_actionBak "
+                     android:id="@+id/tv_actionBak"
                     style="@style/EditText__Promaangelist_Table_LeftTwo"
                     android:text="" />
             </LinearLayout>

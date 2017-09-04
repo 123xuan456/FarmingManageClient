@@ -422,7 +422,7 @@ int id tvTitle 0x7f0801a0
 int id tv_CuName 0x7f080175
 int id tv_Time 0x7f080053
 int id tv_UName 0x7f0800dd
-int id tv_actionBak  0x7f0800ec
+int id tv_actionBak 0x7f0800ec
 int id tv_actionPerson 0x7f0800a1
 int id tv_actionbak 0x7f08014d
 int id tv_add 0x7f080091

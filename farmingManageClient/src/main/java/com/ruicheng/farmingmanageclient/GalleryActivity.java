@@ -10,7 +10,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -190,22 +189,22 @@ public class GalleryActivity extends Activity {
 	/**
 	 * 监听返回按钮
 	 */
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			if(position==1){
-				this.finish();
-				intent.setClass(GalleryActivity.this, AlbumActivity.class);
-				startActivity(intent);
-			}else if(position==2){
-				this.finish();
-				intent.setClass(GalleryActivity.this, ShowAllPhotoActivity.class);
-				startActivity(intent);
-			}
-		}
-		return true;
-	}
+//	@Override
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//
+//		if (keyCode == KeyEvent.KEYCODE_BACK) {
+//			if(position==1){
+//				this.finish();
+//				intent.setClass(GalleryActivity.this, AlbumActivity.class);
+//				startActivity(intent);
+//			}else if(position==2){
+//				this.finish();
+//				intent.setClass(GalleryActivity.this, ShowAllPhotoActivity.class);
+//				startActivity(intent);
+//			}
+//		}
+//		return true;
+//	}
 
 
 	class MyPageAdapter extends PagerAdapter {

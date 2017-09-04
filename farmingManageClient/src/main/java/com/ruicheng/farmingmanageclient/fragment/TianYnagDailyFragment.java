@@ -1,9 +1,5 @@
 package com.ruicheng.farmingmanageclient.fragment;
 
-import org.apache.http.Header;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -13,25 +9,22 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.inputmethod.InputMethodManager;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-import com.ruicheng.farmingmanageclient.PromanageListActivity;
 import com.ruicheng.farmingmanageclient.R;
 import com.ruicheng.farmingmanageclient.ServiceStationNameAc;
 import com.ruicheng.farmingmanageclient.TianYangNumberAc;
-import com.ruicheng.farmingmanageclient.bean.CropTypeNameInfo;
 import com.ruicheng.farmingmanageclient.bean.PloughListInfo;
-import com.ruicheng.farmingmanageclient.bean.RecordInfo;
 import com.ruicheng.farmingmanageclient.bean.StationData;
 import com.ruicheng.farmingmanageclient.constants.Constant;
 import com.ruicheng.farmingmanageclient.net.TwitterRestClient;
-import com.ruicheng.farmingmanageclient.util.ServiceNameHandler;
 import com.ruicheng.farmingmanageclient.utils.DateUtils;
 import com.ruicheng.farmingmanageclient.utils.DialogUtils;
 import com.ruicheng.farmingmanageclient.utils.JSONUtils;
@@ -39,6 +32,10 @@ import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
 import com.ruicheng.farmingmanageclient.view.SelectDateTimePopWin;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * 田阳农事管理---日常农事界面
@@ -158,7 +155,6 @@ public class TianYnagDailyFragment extends Fragment implements OnClickListener {
 	/**
 	 * 判断提交信息是否为空
 	 *
-	 * @param v
 	 * @return
 	 */
 	public boolean estimateInfoIsNullUtils(){
@@ -236,9 +232,12 @@ public class TianYnagDailyFragment extends Fragment implements OnClickListener {
 			params.put("detail.actionPerson", et_cropState.getText().toString());
 			params.put("detail.actionBak", et_actionPerson.getText().toString());
 			params.put("detail.productType", 2);
-
-			params.put("ploughId",
-					ploughListInfo.getPloughId());
+			if(ploughListInfo.getPloughId()!=null){
+				params.put("ploughId",
+						ploughListInfo.getPloughId());
+			}else {
+				Toast.makeText(getActivity(),"请填写完整",Toast.LENGTH_SHORT).show();
+			}
 
 			TwitterRestClient.get(Constant.SAVERECORD, params,
 					new JsonHttpResponseHandler() {

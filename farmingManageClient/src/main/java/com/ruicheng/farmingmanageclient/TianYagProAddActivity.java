@@ -326,7 +326,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 			btn_tianyangadd_daily.setOnClickListener(btnClickManager);
 			btn_tianyangadd_fertilizeruse.setOnClickListener(btnClickManager);
 			btn_tianyangadd_pesticideuse.setOnClickListener(btnClickManager);
-		} else if (kind == 2) {
+		} else if (kind == 2) {//收成
 			btn_save.setOnClickListener(btnClickAgriculture);
 			btn_adddetail.setOnClickListener(btnClickAgriculture);
 			tv_harvestdate.setOnClickListener(new OnClickListener() {
@@ -560,6 +560,9 @@ public class TianYagProAddActivity extends BaseActivity implements
 									ToastUtils.show(getApplicationContext(),
 											"保存成功");
 									finish();
+								}else {
+									ToastUtils
+											.show(getApplicationContext(), "保存失败");
 								}
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block
