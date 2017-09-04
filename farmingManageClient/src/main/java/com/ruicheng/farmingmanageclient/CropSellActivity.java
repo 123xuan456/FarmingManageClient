@@ -334,6 +334,7 @@ public class CropSellActivity extends BaseActivity implements OnClickListener {
 										bundle.putInt("position", 0);
 										i.putExtras(bundle);
 										startActivity(i);
+										finish();
 										overridePendingTransition(
 												R.anim.zoomout, R.anim.zoomin);
 									} else {
