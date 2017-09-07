@@ -1,20 +1,12 @@
 package com.ruicheng.farmingmanageclient;
 
-import org.apache.http.Header;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -23,25 +15,27 @@ import android.widget.TextView;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-import com.ruicheng.farmingmanageclient.base.BaseActivity;
-import com.ruicheng.farmingmanageclient.bean.IsValidInfo;
 import com.ruicheng.farmingmanageclient.bean.PlanInfo;
 import com.ruicheng.farmingmanageclient.constants.Constant;
 import com.ruicheng.farmingmanageclient.net.TwitterRestClient;
 import com.ruicheng.farmingmanageclient.utils.DateUtils;
-import com.ruicheng.farmingmanageclient.utils.DialogUtils;
 import com.ruicheng.farmingmanageclient.utils.JSONUtils;
 import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
 import com.ruicheng.farmingmanageclient.view.SelectDateTimePopWin;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * 添加生产计划界面
  *
  * @author zhaobeibei
  *
  */
-public class AddProplanAc extends BaseActivity {
+public class AddProplanAc extends Activity {
 
 	private Intent intent ;
 	private int type ;
@@ -50,7 +44,7 @@ public class AddProplanAc extends BaseActivity {
 	private LinearLayout ImageView_Linearlayout_Back ;
 	private ImageView img_comment_back ;
 	private View view1,view2,view3,view4;
-	private Dialog loadingDialog;
+	//private Dialog loadingDialog;
 	private EditText  et_planName, et_planAmou,
 			et_allPlanAmou, et_planDrawDate;
 	private Button btn_confirm ;
@@ -68,17 +62,16 @@ public class AddProplanAc extends BaseActivity {
 		if (intent !=null) {
 			type = intent.getIntExtra("TYPE", -1);
 		}
-		loadingDialog = DialogUtils.requestDialog(this);
-		getAddProductionPlanForProcess();
 
+		init();
+		setListener();
 	}
 
-	@Override
 	public void init() {
 
 		btn_confirm = (Button) findViewById(R.id.btn_confirm);
 
-		loadingDialog = DialogUtils.requestDialog(this);
+		//loadingDialog = DialogUtils.requestDialog(this);
 		img_comment_back = (ImageView) findViewById(R.id.img_comment_back);
 		ImageView_Linearlayout_Back = (LinearLayout) findViewById(R.id.ImageView_Linearlayout_Back);
 		linear_agricuturalname = (LinearLayout) findViewById(R.id.linear_agricuturalname);
@@ -101,8 +94,7 @@ public class AddProplanAc extends BaseActivity {
 		et_predEndDate = (TextView)findViewById(R.id.et_predEndDate);
 		et_planDrawDate = (EditText)findViewById(R.id.et_planDrawDate);
 		et_planType = (TextView)findViewById(R.id.et_planType);
-		et_planDrawPers.setText(planInfo.getPlanDrawPers());
-		et_planDrawDate.setText(DateUtils.strDateFormatSh(planInfo.getPlanDrawDate()));
+
 
 		if (type == 0) {
 			tv_title.setText("种植生产计划定义");
@@ -119,6 +111,12 @@ public class AddProplanAc extends BaseActivity {
 			view4.setVisibility(View.GONE);
 			view1.setVisibility(View.GONE);
 			view2.setVisibility(View.VISIBLE);
+			btn_confirm.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					getAjaxQueryIsValidFromula();
+				}
+			});
 
 		} else {
 			tv_title.setText("加工生产计划定义");
@@ -132,7 +130,14 @@ public class AddProplanAc extends BaseActivity {
 			view2.setVisibility(View.GONE);
 			view3.setVisibility(View.GONE);
 			view4.setVisibility(View.VISIBLE);
+			btn_confirm.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					getAjaxQueryIsValidFromula();
+				}
+			});
 		}
+		getAddProductionPlanForProcess();
 	}
 	/**
 	 * 生产计划定义接口
@@ -140,7 +145,7 @@ public class AddProplanAc extends BaseActivity {
 	 */
 	public void getAddProductionPlanForProcess() {
 		if (NetUtils.checkNetConnection(getApplicationContext())) {
-			loadingDialog.show();
+		//	loadingDialog.show();
 			RequestParams params = new RequestParams();
 			params.put("androidAccessType",Constant.ANDROIDACCESSTYPE);
 			params.put("userId",PreferencesUtils.getInt(getApplicationContext(), Constant.USERID)+"");
@@ -155,24 +160,24 @@ public class AddProplanAc extends BaseActivity {
 							// TODO Auto-generated method stub
 							super.onFailure(statusCode, headers, throwable,
 									errorResponse);
-							if (loadingDialog.isShowing()) {
-								loadingDialog.dismiss();
-							}
+//							if (loadingDialog.isShowing()) {
+//								loadingDialog.dismiss();
+//							}
 						}
 						@Override
 						public void onSuccess(int statusCode, Header[] headers,
 											  JSONObject response) {
 							// TODO Auto-generated method stub
 							super.onSuccess(statusCode, headers, response);
-							if (loadingDialog.isShowing()) {
-								loadingDialog.dismiss();
-							}
+//							if (loadingDialog.isShowing()) {
+//								loadingDialog.dismiss();
+//							}
 							try {
 								if ("success".equals(JSONUtils
 										.getResultMsg(response))) {
 									planInfo = JSONUtils.getAddProductionPlanForProcess(response);
-									init() ;
-									setListener() ;
+									et_planDrawPers.setText(planInfo.getPlanDrawPers());
+									et_planDrawDate.setText(DateUtils.strDateFormatSh(planInfo.getPlanDrawDate()));
 								}
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block
@@ -183,12 +188,10 @@ public class AddProplanAc extends BaseActivity {
 		}
 
 	}
-	@Override
 	public void setListener() {
 		// 跳转界面监听
 		IntentViewListener intentViewListener = new IntentViewListener();
 		ImageView_Linearlayout_Back.setOnClickListener(intentViewListener);
-		btn_confirm.setOnClickListener(intentViewListener);
 
 		et_agriName.setOnClickListener(intentViewListener);
 		et_cropName.setOnClickListener(intentViewListener);
@@ -210,10 +213,6 @@ public class AddProplanAc extends BaseActivity {
 					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
 					finish();
 					break ;
-				case R.id.btn_confirm:
-
-					getAjaxQueryIsValidFromula();
-					break ;
 				case R.id.et_agriName:
 					Intent i = new Intent();
 					i.setClass(AddProplanAc.this, CropTypeNameAc.class);
@@ -229,8 +228,8 @@ public class AddProplanAc extends BaseActivity {
 					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
 					break ;
 				case R.id.et_predStarDate:
-					InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-					imm.hideSoftInputFromWindow(btn_confirm.getWindowToken(), 0);
+//					InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//					imm.hideSoftInputFromWindow(btn_confirm.getWindowToken(), 0);
 					new SelectDateTimePopWin(AddProplanAc.this, "",
 							LayoutInflater.from(getApplicationContext())
 									.inflate(R.layout.activity_favorite, null)
@@ -243,8 +242,8 @@ public class AddProplanAc extends BaseActivity {
 					};
 					break ;
 				case R.id.et_predEndDate:
-					InputMethodManager im = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-					im.hideSoftInputFromWindow(btn_confirm.getWindowToken(), 0);
+//					InputMethodManager im = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//					im.hideSoftInputFromWindow(btn_confirm.getWindowToken(), 0);
 					new SelectDateTimePopWin(AddProplanAc.this, "",
 							LayoutInflater.from(getApplicationContext())
 									.inflate(R.layout.activity_favorite, null)
@@ -302,7 +301,6 @@ public class AddProplanAc extends BaseActivity {
 	/**
 	 * 判断提交信息是否为空
 	 *
-	 * @param v
 	 * @return
 	 */
 	public boolean estimateInfoIsNullUtils(){
@@ -346,7 +344,7 @@ public class AddProplanAc extends BaseActivity {
 			return ;
 		}
 		if (NetUtils.checkNetConnection(getApplicationContext())) {
-			loadingDialog.show();
+		//	loadingDialog.show();
 			RequestParams params = new RequestParams();
 			params.put("androidAccessType","mobile");
 			params.put(
@@ -370,9 +368,7 @@ public class AddProplanAc extends BaseActivity {
 				params.put("plan.planAmou",et_allPlanAmou.getText().toString());
 			} else {
 				params.put("plan.agriName",et_cropName.getText().toString());
-
 				params.put("plan.planAmou",et_planAmou.getText().toString());
-
 			}
 
 			params.put("plan.agriId",agriId);
@@ -385,9 +381,9 @@ public class AddProplanAc extends BaseActivity {
 							// TODO Auto-generated method stub
 							super.onFailure(statusCode, headers, throwable, errorResponse);
 
-							if (loadingDialog.isShowing()) {
-								loadingDialog.dismiss();
-							}
+//							if (loadingDialog.isShowing()) {
+//								loadingDialog.dismiss();
+//							}
 							ToastUtils.show(getApplicationContext(), "保存失败");
 
 						}
@@ -396,13 +392,13 @@ public class AddProplanAc extends BaseActivity {
 											  JSONObject response) {
 							// TODO Auto-generated method stub
 							super.onSuccess(statusCode, headers, response);
-							if (loadingDialog.isShowing()) {
-								loadingDialog.dismiss();
-							}
+//							if (loadingDialog.isShowing()) {
+//								loadingDialog.dismiss();
+//							}
 							ToastUtils.show(getApplicationContext(), "保存成功");
-							if (loadingDialog.isShowing()) {
-								loadingDialog.dismiss();
-							}
+//							if (loadingDialog.isShowing()) {
+//								loadingDialog.dismiss();
+//							}
 							finish();						}
 					});
 		} else {
@@ -426,9 +422,9 @@ public class AddProplanAc extends BaseActivity {
 							// TODO Auto-generated method stub
 							super.onFailure(statusCode, headers, throwable,
 									errorResponse);
-							if (loadingDialog.isShowing()) {
-								loadingDialog.dismiss();
-							}
+//							if (loadingDialog.isShowing()) {
+//								loadingDialog.dismiss();
+//							}
 							ToastUtils.show(getApplicationContext(), "没有有效的成本公式");
 							if (type == 1) {
 								ToastUtils.show(getApplicationContext(), "请重新添加农产品名称");
@@ -441,13 +437,15 @@ public class AddProplanAc extends BaseActivity {
 											  JSONObject response) {
 							// TODO Auto-generated method stub
 							super.onSuccess(statusCode, headers, response);
-							if (loadingDialog.isShowing()) {
-								loadingDialog.dismiss();
-							}
+//							if (loadingDialog.isShowing()) {
+//								loadingDialog.dismiss();
+//							}
+
 							try {
 								if ("success".equals(JSONUtils
 										.getResultMsg(response))) {
-
+									//保存方法
+									getSaveProductionPlan();
 									/*Intent intent = new Intent();
 									intent.setClass(getApplicationContext(),CustomProductionPlanAc.class);
 									Bundle bundle = new Bundle();
@@ -460,10 +458,9 @@ public class AddProplanAc extends BaseActivity {
 									}
 									intent.putExtras(bundle);
 									startActivity(intent);*/
-									//保存方法
-									getSaveProductionPlan();
+
 								}else{
-									//ToastUtils.show(getApplicationContext(), "请输入定义成本公式的农作物");
+									ToastUtils.show(getApplicationContext(), "没有有效的成本公式");
 								}
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block

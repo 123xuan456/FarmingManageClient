@@ -423,6 +423,7 @@ public class ProplanActivity extends BaseActivity {
 										startActivityForResult(i, MODIFY);
 										overridePendingTransition(
 												R.anim.zoomout, R.anim.zoomin);
+										finish();
 									}
 								}
 							} catch (JSONException e) {

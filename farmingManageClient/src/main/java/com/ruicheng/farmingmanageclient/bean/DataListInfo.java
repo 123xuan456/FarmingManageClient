@@ -45,6 +45,7 @@ public class DataListInfo implements Serializable{
 	private String pesticideName;
 	private String delFlag;
 	private String phasesId;
+	private String ploughCode;
 
 
 	public String getSysId() {
@@ -293,4 +294,10 @@ public class DataListInfo implements Serializable{
 		this.phasesId = phasesId;
 	}
 
+	public String getPloughCode() {
+		return ploughCode;
+	}
+	public void setPloughCode(String ploughCode) {
+		this.ploughCode = ploughCode;
+	}
 }

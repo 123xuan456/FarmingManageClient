@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ruicheng.farmingmanageclient.base.BaseActivity;
 import com.ruicheng.farmingmanageclient.bean.PloughListDetailInfo;
@@ -94,31 +95,46 @@ public class AddDetailAc extends BaseActivity implements OnClickListener {
 		tv_ploughCode.setOnClickListener(this);
 		et_cropLevel.setOnClickListener(this);
 	}
+	public boolean isNull() {
+		if (tv_ploughCode.getText().toString().equals("")||et_cropPtype.getText().toString().equals("")
+				||et_productName.getText().toString().equals("")||et_harvestNum.getText().toString().equals("")
+				||et_cropLevel.getText().toString().equals("")||et_soilState.getText().toString().equals("")
+				||et_tianYangArea.getText().toString().equals("")){
+			return false;
+		}
+		return true;
+	}
+
 
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 			case R.id.btn_adddetail:
+
+				if (isNull()){
+					arr = ploughListDetailInfo.getPloughId();
 				if (ServiceNameHandler.ploughListDetailList
-						.get(0).getPloughCode() != null
+						.get(0).getPloughId() != null
 						&& !"".equals(ServiceNameHandler.ploughListDetailList
 						.get(0).getPloughId())
 						&& !"null"
 						.equals(ServiceNameHandler.ploughListDetailList
 								.get(0)
 								.getPloughId())) {
+					String s = ServiceNameHandler.ploughListDetailList
+							.get(0)
+							.getPloughId()
+							+ ","
+							+ arr;
+					System.out.println("s="+s);
 					ServiceNameHandler.ploughListDetailList
 							.get(0)
-							.setPloughCode(
-									ServiceNameHandler.ploughListDetailList
-											.get(0)
-											.getPloughId()
-											+ ","
-											+ ploughListDetailInfo.getPloughId());
+							.setPloughId(s
+									);
 				} else {
-					arr = ploughListDetailInfo.getPloughId();
+
 					ServiceNameHandler.ploughListDetailList
-							.get(0).setPloughId(ploughListDetailInfo.getPloughId());
+							.get(0).setPloughId(arr);
 				}
 
 				if (ServiceNameHandler.ploughListDetailList
@@ -313,14 +329,18 @@ public class AddDetailAc extends BaseActivity implements OnClickListener {
 														int arg1) {
 										Intent i = new Intent();
 										Bundle bundle = new Bundle();
-										bundle.putString(
-												"ploughCode",
-												ServiceNameHandler.ploughListDetailList
-														.get(0).getPloughId());
+
 										bundle.putString(
 												"productName",
 												ServiceNameHandler.ploughListDetailList
 														.get(0).getDicValue());
+										String a1 = ServiceNameHandler.ploughListDetailList
+												.get(0).getPloughId();
+										System.out.println("a1="+a1);
+										bundle.putString(
+												"ploughCode",
+												a1
+												);
 										bundle.putString(
 												"productPName",
 												ServiceNameHandler.ploughListDetailList
@@ -350,6 +370,9 @@ public class AddDetailAc extends BaseActivity implements OnClickListener {
 										finish();
 									}
 								}).show();
+				}else {
+					Toast.makeText(this,"明细不能为空",Toast.LENGTH_SHORT).show();
+				}
 				break;
 
 			case R.id.et_productName:
@@ -407,11 +430,12 @@ public class AddDetailAc extends BaseActivity implements OnClickListener {
 					ploughListDetailInfo = (PloughListDetailInfo) data
 							.getSerializableExtra("ploughListDetailInfo");
 					tv_ploughCode.setText(ploughListDetailInfo.getPloughCode());
-//				et_productName.setText(ploughListDetailInfo.getDicValue());
-//				et_cropPtype.setText(ploughListDetailInfo.getCropPtype());
+					et_productName.setText(ploughListDetailInfo.getDicValue());
+//					et_cropPtype.setText(ploughListDetailInfo.getCropPtype());
 					et_tianYangArea.setText(ploughListDetailInfo.getPloughArea());
 					et_soilState.setText(ploughListDetailInfo.getSoilState());
-//				dicCode = ploughListDetailInfo.getDicCode();
+					dicId=ploughListDetailInfo.getDicId();
+					dicCode = ploughListDetailInfo.getDicCode();
 					break;
 				case CROPLEVEL:
 					String croplevel = data.getStringExtra("croplevel");
@@ -422,5 +446,6 @@ public class AddDetailAc extends BaseActivity implements OnClickListener {
 			}
 		}
 	}
+
 
 }

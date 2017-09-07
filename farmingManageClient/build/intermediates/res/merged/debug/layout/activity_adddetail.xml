@@ -58,7 +58,7 @@
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="   作物名称:" />
 
-                <TextView 
+                <TextView
                     android:id="@+id/et_productName"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>
@@ -99,7 +99,7 @@
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="   产品等级:" />
 
-                <TextView 
+                <TextView
                     android:id="@+id/et_cropLevel"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>

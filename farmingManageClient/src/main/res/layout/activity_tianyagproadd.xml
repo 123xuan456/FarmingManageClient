@@ -21,11 +21,6 @@
 		        />
 		</LinearLayout>
         <TextView
-            android:id="@+id/tv_title"
-            style="@style/TextView_Title"
-            android:text="@string/tv_addtianyangmanage"
-            />
-        <TextView
             android:id="@+id/tv_pro_save"
             style="@style/TextView_InReleativeRight"
             android:text="@string/tv_save"

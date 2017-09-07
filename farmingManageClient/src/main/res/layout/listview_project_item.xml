@@ -73,7 +73,7 @@
                 <TextView 
             android:id="@+id/tv_item_agrDesc"
             style="@style/TextView_Project_Item_Right"
-             android:text="类型"
+             android:text=""
             />
                 <TextView 
             android:id="@+id/tv_item_preventObj"

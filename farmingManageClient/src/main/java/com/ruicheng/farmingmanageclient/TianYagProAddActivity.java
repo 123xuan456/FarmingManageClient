@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +23,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -49,6 +52,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TianYagProAddActivity extends BaseActivity implements
 		OnClickListener {
@@ -90,6 +95,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 	private String stationId ;
 	private PloughListInfo ploughListInfo ;
 	private TextView tv_servicenam;
+	private String servicename;
 
 
 	@Override
@@ -99,6 +105,8 @@ public class TianYagProAddActivity extends BaseActivity implements
 		if (intent != null) {
 			kind = intent.getIntExtra("KIND", -1);
 			optionType = intent.getIntExtra("optionType", -1);
+			servicename=intent.getStringExtra("servicename");
+			stationId=intent.getStringExtra("stationId");
 			if (kind == 0) {
 				// 播种移栽界面
 				setContentView(R.layout.activity_seedandharvest);
@@ -136,7 +144,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 
 			tv_ploughId = (TextView) findViewById(R.id.tv_ploughId);
 
-			tv_title.setText("添加田洋播种");
+			//tv_title.setText("添加田洋播种");
 			tv_pro_save = (TextView) findViewById(R.id.tv_pro_save);
 
 			tv_transplantdate = (TextView) findViewById(R.id.tv_transplantdate);
@@ -149,6 +157,9 @@ public class TianYagProAddActivity extends BaseActivity implements
 
 			et_cropPtype = (EditText) findViewById(R.id.et_cropPtype);
 			et_actionPerson = (EditText) findViewById(R.id.et_actionPerson);
+			//
+			setEditTextInhibitInputSpeChat(et_cropPtype);
+			setEditTextInhibitInputSpeChat(et_actionPerson);
 
 			tv_cropType = (TextView) findViewById(R.id.tv_cropType);
 
@@ -157,8 +168,11 @@ public class TianYagProAddActivity extends BaseActivity implements
 			tv_registdate.setText(DateUtils.getStringDateShort());
 //			 getOptionPlough();
 
+			tv_servicestation.setText(servicename);
+			et_servicenumber.setText(stationId);
+
 		} else if (kind == 1) {
-			tv_title.setText("添加田洋农事项目");
+//			tv_title.setText("添加田洋农事项目");
 			vp_tianyangadd_viewpager = (ViewPager) findViewById(R.id.vp_tianyangadd_viewpager);
 			btn_tianyangadd_daily = (Button) findViewById(R.id.btn_tianyangadd_daily);
 			btn_tianyangadd_fertilizeruse = (Button) findViewById(R.id.btn_tianyangadd_fertilizeruse);
@@ -168,7 +182,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 			btn_tianyangadd_fertilizeruse.setBackgroundColor(Color.GRAY);
 			btn_tianyangadd_pesticideuse.setBackgroundColor(Color.GRAY);
 		} else if (kind == 2) {
-			tv_title.setText("添加田洋收成");
+//			tv_title.setText("添加田洋收成");
 			btn_adddetail = (Button) findViewById(R.id.btn_adddetail);
 
 			tv_harvestdate = (TextView) findViewById(R.id.tv_harvestdate);
@@ -179,8 +193,9 @@ public class TianYagProAddActivity extends BaseActivity implements
 			tv_registdate.setText(DateUtils.getStringDateShort());
 
 			tv_actionPerson =(EditText)findViewById(R.id.tv_actionPerson);
-
 			tv_registUser = (TextView) findViewById(R.id.tv_registUser);
+			tv_servicestation.setText(servicename);
+			et_servicenumber.setText(stationId);
 
 		}
 
@@ -198,13 +213,38 @@ public class TianYagProAddActivity extends BaseActivity implements
 				});
 	}
 
+	/**
+	 * 禁止EditText输入特殊字符
+	 * @param editText
+	 */
+	public static void setEditTextInhibitInputSpeChat(EditText editText){
+
+		InputFilter filter=new InputFilter() {
+			@Override
+			public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+				String speChat="[`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";
+				Pattern pattern = Pattern.compile(speChat);
+				Matcher matcher = pattern.matcher(source.toString());
+				if(matcher.find()){
+					return "";
+				}
+				else{
+					return null;
+				}
+			}
+		};
+		editText.setFilters(new InputFilter[]{filter});
+	}
+
+
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (data != null && resultCode == Activity.RESULT_OK) {
 			switch (requestCode) {
 				case SERVICESTATION:
-					String servicename = data.getStringExtra("servicename");
+					servicename = data.getStringExtra("servicename");
 					tv_servicestation.setText(servicename);
 					stationId = data.getStringExtra("stationId");
 					et_servicenumber.setText(stationId);
@@ -229,8 +269,9 @@ public class TianYagProAddActivity extends BaseActivity implements
 						soilState = addetailBundle.getString("soilState");
 						tianYangArea = addetailBundle.getString("tianYangArea");
 						dicCodee = addetailBundle.getString("dicCode");
-						btn_adddetail.setBackgroundColor(Color.GRAY);
-						btn_adddetail.setClickable(false);
+//						btn_adddetail.setBackgroundColorss(Color.GRAY);
+//						btn_adddetail.setClickable(false);
+					}else {
 
 					}
 					break;
@@ -377,18 +418,25 @@ public class TianYagProAddActivity extends BaseActivity implements
 		TianYnagDailyFragment tianYnagDailyFragment = new TianYnagDailyFragment();
 		bundle = new Bundle();
 		bundle.putInt("optionType",optionType);//
+		bundle.putString("servicename",servicename);//服务站名称
+		bundle.putString("stationId",stationId);//服务站编号
+
 		tianYnagDailyFragment.setArguments(bundle);
 		listFrag.add(tianYnagDailyFragment);
 
 		TianYangFertilizerFragment tianYangFertilizerFragment = new TianYangFertilizerFragment();
 		bundle = new Bundle();
 		bundle.putInt("optionType",optionType);
+		bundle.putString("servicename",servicename);//服务站名称
+		bundle.putString("stationId",stationId);//服务站编号
 		tianYangFertilizerFragment.setArguments(bundle);
 		listFrag.add(tianYangFertilizerFragment);
 
 		TianYangPesticidesFragment tianYangPesticidesFragment = new TianYangPesticidesFragment();
 		bundle = new Bundle();
 		bundle.putInt("optionType",optionType);
+		bundle.putString("servicename",servicename);//服务站名称
+		bundle.putString("stationId",stationId);//服务站编号
 		tianYangPesticidesFragment.setArguments(bundle);
 		listFrag.add(tianYangPesticidesFragment);
 
@@ -450,7 +498,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 					startActivityForResult(i, ADDDETAIL);
 					break;
 				case R.id.btn_save:
-
+					//天阳收成
 					getSaveReap();
 
 					break ;
@@ -492,9 +540,15 @@ public class TianYagProAddActivity extends BaseActivity implements
 	 * 田杨收成登记接口
 	 *
 	 */
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	public void getSaveReap() {
 		if (!estimateInfoIsNullUtils()) {
 			return ;
+		}
+		if (ploughCode==null&&productName==null&&productPName==null&&harvestNum==null&&cropLevel==null&&
+			tianYangArea==null&&soilState==null&&dicCodee==null){
+			Toast.makeText(this,"请添加明细",Toast.LENGTH_SHORT).show();
+			return;
 		}
 		if (NetUtils.checkNetConnection(getApplicationContext())) {
 			loadingDialog.show();
@@ -511,8 +565,13 @@ public class TianYagProAddActivity extends BaseActivity implements
 			params.put("optionType", optionType);
 
 			params.put("record.productType",optionType);
-			params.put("record.stationId",stationData.getStationId());
-			params.put("record.stationCode", stationData.getStationCode());
+			if (stationData==null){
+				params.put("record.stationId",stationId);
+				params.put("record.stationCode", servicename);
+			}else {
+				params.put("record.stationId",stationData.getStationId());
+				params.put("record.stationCode", stationData.getStationCode());
+			}
 			params.put("record.registUser",PreferencesUtils.getInt(getApplicationContext(),
 					Constant.USERID, Constant.FAILUREINT) + "");
 			params.put("record.registDate", tv_registdate.getText().toString()+" "+DateUtils.getTimeShort());
@@ -726,7 +785,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 				ToastUtils.show(getApplicationContext(), "登记日期不能为空");
 				return false ;
 			}
-			btn_adddetail.setBackgroundColor(Color.parseColor("#009933"));
+			//btn_adddetail.setBackgroundColor(Color.parseColor("#009933"));
 			if (ServiceNameHandler.ploughListDetailList==null||ServiceNameHandler.ploughListDetailList.size()==0) {
 				ToastUtils.show(getApplicationContext(), "请添加明细");
 				return false ;

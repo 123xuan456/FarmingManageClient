@@ -421,7 +421,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int et_stationAddr=0x7f0800ed;
         public static final int et_stationBak=0x7f080158;
         public static final int et_stationCode=0x7f080152;
-        public static final int et_temperValue =0x7f08014e;
+        public static final int et_temperValue=0x7f08014e;
         public static final int et_tianYangArea=0x7f08004b;
         public static final int et_username=0x7f0800aa;
         public static final int et_weatherState=0x7f080153;

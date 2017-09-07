@@ -111,6 +111,7 @@ public class PromanageListActivity extends BaseActivity implements
 	private boolean isRefresh = false;
 	private int pageNo = 1;
 	private int optionTyppe ;
+	private String servicename;//服务站名称
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -176,6 +177,9 @@ public class PromanageListActivity extends BaseActivity implements
 					bundle.putInt("MODIFYITEM", 0); // 添加农事项目
 					intent.putExtra("KIND", kind);
 					intent.putExtra("optionType", optionType);
+					intent.putExtra("servicename",servicename);
+					intent.putExtra("stationId",stationId);//服务站编号
+
 					startActivityForResult(intent, ADDPROJECT);
 					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
 					break;
@@ -234,7 +238,7 @@ public class PromanageListActivity extends BaseActivity implements
 		if (data != null && resultCode == RESULT_OK) {
 			switch (requestCode) {
 				case PROSERVICENAME:
-					String servicename = data.getStringExtra("servicename");
+					servicename = data.getStringExtra("servicename");
 					tv_servicename.setText(servicename);
 					stationId = data.getStringExtra("stationId");
 					break;
@@ -615,13 +619,13 @@ public class PromanageListActivity extends BaseActivity implements
 			params.put(
 					"userId",
 					PreferencesUtils.getInt(getApplicationContext(),
-							Constant.USERID, Constant.FAILUREINT) + "");
+							Constant.USERID, Constant.FAILUREINT) + "");//1
 			params.put("userName", PreferencesUtils.getString(
-					getApplicationContext(), Constant.USERNAME));
+					getApplicationContext(), Constant.USERNAME));//admin
 			params.put("dcId", PreferencesUtils.getString(
-					getApplicationContext(), Constant.DCID, Constant.FAILURE));
+					getApplicationContext(), Constant.DCID, Constant.FAILURE));//
 			//optionType (田洋播种移栽:1,田洋农事项目:2,田洋收成: 5)
-			params.put("optionType", optionType + "");
+			params.put("optionType", optionType + "");//
 			params.put("pager.num", pageNo+"");
 			params.put("pager.size", Constant.SIZE+"");
 			if (query == 1) {

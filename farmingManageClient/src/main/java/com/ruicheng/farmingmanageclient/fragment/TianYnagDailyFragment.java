@@ -27,6 +27,7 @@ import com.ruicheng.farmingmanageclient.constants.Constant;
 import com.ruicheng.farmingmanageclient.net.TwitterRestClient;
 import com.ruicheng.farmingmanageclient.utils.DateUtils;
 import com.ruicheng.farmingmanageclient.utils.DialogUtils;
+import com.ruicheng.farmingmanageclient.utils.EditTextUtils;
 import com.ruicheng.farmingmanageclient.utils.JSONUtils;
 import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
@@ -58,14 +59,18 @@ public class TianYnagDailyFragment extends Fragment implements OnClickListener {
 	private final int SERVICESTATION =1;
 	private Bundle bundle;
 	private int optionType ;
-	private String stationId ;
+	private String stationId;//服务站编号
 	private StationData stationData ;
 	private PloughListInfo ploughListInfo ;
+	private String servicename;//服务站名称
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		bundle = getArguments();
 		optionType = bundle.getInt("optionType", -1);
+		servicename = bundle.getString("servicename");
+		stationId = bundle.getString("stationId");
 		view = inflater.inflate(R.layout.fragment_tianynagdaily, null);
 
 		init();
@@ -94,6 +99,16 @@ public class TianYnagDailyFragment extends Fragment implements OnClickListener {
 		et_operatetianyang = (TextView) view.findViewById(R.id.et_operatetianyang);
 
 		et_recordDate.setText(DateUtils.getStringDateShort());
+		tv_servicename.setText(servicename);
+		et_stationCode.setText(stationId);
+
+		EditTextUtils.setEditTextInhibitInputSpeChat(et_temperValue);
+		EditTextUtils.setEditTextInhibitInputSpeChat(et_actionPerson);
+		EditTextUtils.setEditTextInhibitInputSpeChat(et_productItem);
+		EditTextUtils.setEditTextInhibitInputSpeChat(et_stationCode);
+		EditTextUtils.setEditTextInhibitInputSpeChat(et_cropState);
+		EditTextUtils.setEditTextInhibitInputSpeChat(et_weatherState);
+		EditTextUtils.setEditTextInhibitInputSpeChat(et_agrDesc);
 
 	}
 
@@ -212,8 +227,13 @@ public class TianYnagDailyFragment extends Fragment implements OnClickListener {
 			params.put("optionType",optionType);
 
 			params.put("record.productType",2);
-			params.put("record.stationId",stationData.getStationId());
-			params.put("record.stationCode", stationData.getStationCode());
+			if (stationData==null){
+				params.put("record.stationId",stationId);
+				params.put("record.stationCode", servicename);
+			}else {
+				params.put("record.stationId",stationData.getStationId());
+				params.put("record.stationCode", stationData.getStationCode());
+			}
 			params.put("record.registUser",PreferencesUtils.getInt(getActivity(),
 					Constant.USERID, Constant.FAILUREINT) + "");
 			params.put("record.registDate", et_recordDate.getText().toString());

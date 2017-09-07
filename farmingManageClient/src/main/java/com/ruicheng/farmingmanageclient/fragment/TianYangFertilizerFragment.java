@@ -26,6 +26,7 @@ import com.ruicheng.farmingmanageclient.constants.Constant;
 import com.ruicheng.farmingmanageclient.net.TwitterRestClient;
 import com.ruicheng.farmingmanageclient.utils.DateUtils;
 import com.ruicheng.farmingmanageclient.utils.DialogUtils;
+import com.ruicheng.farmingmanageclient.utils.EditTextUtils;
 import com.ruicheng.farmingmanageclient.utils.JSONUtils;
 import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
@@ -58,12 +59,16 @@ public class TianYangFertilizerFragment extends Fragment implements OnClickListe
 	private String stationId ;
 	private StationData stationData ;
 	private PloughListInfo ploughListInfo ;
+	private String servicename;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 
 		bundle = getArguments();
 		optionType = bundle.getInt("optionType", -1);
+		servicename = bundle.getString("servicename");
+		stationId = bundle.getString("stationId");
 		view = inflater.inflate(R.layout.fragment_tianyangfertilizer, null);
 
 		init();
@@ -99,6 +104,16 @@ public class TianYangFertilizerFragment extends Fragment implements OnClickListe
 		loadingDialog = DialogUtils.requestDialog(getActivity());
 
 		tv_recordDate.setText(DateUtils.getStringDateShort());
+		tv_serviceName.setText(servicename);
+		tv_stationCode.setText(stationId);
+
+		EditTextUtils.setEditTextInhibitInputSpeChat(tv_manureName);
+		EditTextUtils.setEditTextInhibitInputSpeChat(tv_manureAmountUnit);
+		EditTextUtils.setEditTextInhibitInputSpeChat(tv_manureUse);
+		EditTextUtils.setEditTextInhibitInputSpeChat(tv_actionPerson);
+		EditTextUtils.setEditTextInhibitInputSpeChat(tv_stationCode);
+		EditTextUtils.setEditTextInhibitInputSpeChat(tv_recordDate);
+		EditTextUtils.setEditTextInhibitInputSpeChat(et_actionBak);
 
 	}
 
@@ -121,8 +136,13 @@ public class TianYangFertilizerFragment extends Fragment implements OnClickListe
 			params.put("optionType",optionType);
 
 			params.put("record.productType",3);
-			params.put("record.stationId",stationData.getStationId());
-			params.put("record.stationCode", stationData.getStationCode());
+			if (stationData==null){
+				params.put("record.stationId",stationId);
+				params.put("record.stationCode", servicename);
+			}else {
+				params.put("record.stationId",stationData.getStationId());
+				params.put("record.stationCode", stationData.getStationCode());
+			}
 			params.put("record.registUser",PreferencesUtils.getInt(getActivity(),
 					Constant.USERID, Constant.FAILUREINT) + "");
 			params.put("record.registDate", tv_recordDate.getText().toString()+" "+DateUtils.getTimeShort());

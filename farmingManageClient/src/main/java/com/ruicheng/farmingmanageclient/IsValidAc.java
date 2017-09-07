@@ -179,13 +179,8 @@ public class IsValidAc extends BaseActivity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-			case R.id.imageView_Linearlayout_Back:
-				img_comment_back.setVisibility(View.GONE);
-				Intent i = new Intent();
-				i.setClass(IsValidAc.this, CostequationActivity.class);
-				startActivity(i);
+			case R.id.ImageView_Linearlayout_Back:
 				finish();
-				overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
 				break;
 			default:
 				break;

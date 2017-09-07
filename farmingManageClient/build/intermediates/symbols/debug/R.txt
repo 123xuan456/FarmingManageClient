@@ -277,7 +277,7 @@ int id et_station 0x7f080074
 int id et_stationAddr 0x7f0800ed
 int id et_stationBak 0x7f080158
 int id et_stationCode 0x7f080152
-int id et_temperValue  0x7f08014e
+int id et_temperValue 0x7f08014e
 int id et_tianYangArea 0x7f08004b
 int id et_username 0x7f0800aa
 int id et_weatherState 0x7f080153

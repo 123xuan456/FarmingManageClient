@@ -24,6 +24,7 @@ import com.ruicheng.farmingmanageclient.utils.DialogUtils;
 import com.ruicheng.farmingmanageclient.utils.JSONUtils;
 import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
+import com.ruicheng.farmingmanageclient.utils.ToastUtils;
 
 import org.apache.http.Header;
 import org.json.JSONException;
@@ -113,8 +114,8 @@ public class PurIdAc extends BaseActivity {
 			RequestParams params = new RequestParams();
 			params.put("androidAccessType",Constant.ANDROIDACCESSTYPE);
 			params.put("userId",PreferencesUtils.getInt(getApplicationContext(), Constant.USERID)+"");
-			params.put("userName",PreferencesUtils.getString(getApplicationContext(),Constant.USERNAME));
 			params.put("areaId",PreferencesUtils.getString(getApplicationContext(),Constant.DCID));
+			params.put("userName",PreferencesUtils.getString(getApplicationContext(),Constant.USERNAME));
 			TwitterRestClient.get(Constant.GETALLNOTCOMPLETESHEET, params,
 					new JsonHttpResponseHandler() {
 
@@ -141,6 +142,8 @@ public class PurIdAc extends BaseActivity {
 										.getResultMsg(response))) {
 									listAll = JSONUtils.getAllNotCompleteSheet(response);
 									setListData(listAll);
+								}else {
+									ToastUtils.show(PurIdAc.this,"读取失败");
 								}
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block

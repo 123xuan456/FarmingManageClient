@@ -1,9 +1,5 @@
 package com.ruicheng.farmingmanageclient;
 
-import org.apache.http.Header;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -21,7 +17,6 @@ import com.loopj.android.http.RequestParams;
 import com.ruicheng.farmingmanageclient.base.BaseActivity;
 import com.ruicheng.farmingmanageclient.bean.CnameInfo;
 import com.ruicheng.farmingmanageclient.bean.GoodsReceiveInfo;
-import com.ruicheng.farmingmanageclient.bean.PurchaseInfo;
 import com.ruicheng.farmingmanageclient.bean.PurchaseOrderInfo;
 import com.ruicheng.farmingmanageclient.bean.StationInfo;
 import com.ruicheng.farmingmanageclient.constants.Constant;
@@ -32,6 +27,10 @@ import com.ruicheng.farmingmanageclient.utils.JSONUtils;
 import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * 添加物品界面
@@ -152,7 +151,6 @@ public class AddDetailCropAc extends BaseActivity implements OnClickListener {
 				Intent purIdIntent = new Intent();
 				purIdIntent.setClass(getApplicationContext(), PurIdAc.class);
 				startActivityForResult(purIdIntent, PURID);
-
 				break ;
 			case R.id.et_cname:
 				Intent cnameIntent = new Intent();
@@ -197,7 +195,6 @@ public class AddDetailCropAc extends BaseActivity implements OnClickListener {
 	/**
 	 * 判断提交信息是否为空
 	 *
-	 * @param v
 	 * @return
 	 */
 	public boolean estimateInfoIsNullUtils(){

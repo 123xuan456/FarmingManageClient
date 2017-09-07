@@ -254,7 +254,7 @@ public class JSONUtils {
 			DataListInfo dataListInfo = new DataListInfo();
 			if (optionType == 1) {//查询天阳播种
 				dataListInfo.setDetailId(stationJson.getString("detailId"));
-				//dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
+				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
 				dataListInfo.setSysId(stationJson.getString("sysId"));
 				dataListInfo.setProductType(stationJson.getString("productType"));
 				dataListInfo.setRecordDate(stationJson.getString("recordDate"));
@@ -270,7 +270,7 @@ public class JSONUtils {
 				dataListInfo.setActionBak(stationJson.getString("actionBak"));
 			} else if (optionType ==2){//田洋农事项目:2
 				dataListInfo.setSysId(stationJson.getString("sysId"));
-				//dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
+				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
 				dataListInfo.setDetailId(stationJson.getString("detailId"));
 				dataListInfo.setRecordId(stationJson.getString("recordId"));
 				dataListInfo.setReceiveDate(stationJson.getString("receiveDate"));
@@ -320,7 +320,7 @@ public class JSONUtils {
 
 			}else if (optionType == 5){//田洋收成: 5
 				dataListInfo.setSysId(stationJson.getString("sysId"));
-				//dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
+				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
 				dataListInfo.setDetailId(stationJson.getString("detailId"));
 				dataListInfo.setRecordId(stationJson.getString("recordId"));
 				dataListInfo.setReceiveDate(stationJson.getString("receiveDate"));
@@ -864,6 +864,7 @@ public class JSONUtils {
 			PloughListDetailInfo ploughListDetailInfo = new PloughListDetailInfo();
 
 			ploughListDetailInfo.setPloughId(array.getString(Integer.parseInt("0")));
+			ploughListDetailInfo.setDicId(array.getString(Integer.parseInt("0")));
 			ploughListDetailInfo.setPloughCode(array.getString(Integer.parseInt("1")));
 			ploughListDetailInfo.setPloughArea(array.getString(Integer.parseInt("2")));
 			ploughListDetailInfo.setSoilState(array.getString(Integer.parseInt("3")));

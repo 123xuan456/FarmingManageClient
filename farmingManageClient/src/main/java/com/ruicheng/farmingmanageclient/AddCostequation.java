@@ -84,7 +84,7 @@ public class AddCostequation extends BaseActivity implements OnClickListener {
 	private String cid ;
 	private EditText et_minValue ;
 	private EditText et_maxValue ;
-
+	int num = 0 ;
 	@Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
@@ -99,9 +99,9 @@ public class AddCostequation extends BaseActivity implements OnClickListener {
 			}
 		}
 		init();
-		setListener();
 
 		getAddFromulaSetting();
+		setListener();
 
 	}
 
@@ -607,7 +607,7 @@ public class AddCostequation extends BaseActivity implements OnClickListener {
 			params.put("fromula.agriId", agriId);
 			params.put("fromula.formType", type);
 
-			for (int i = 0; i <(num+1); i++) {
+			for (int i = 0; i <ServiceNameHandler.minAndMaxInfoList.size(); i++) {
 //					minAndMaxInfo = (MinAndMaxInfo)linearLayout.getTag();
 				minAndMaxInfo = ServiceNameHandler.minAndMaxInfoList.get(i);
 				et_minValue = minAndMaxInfo.getMinValue() ;
@@ -888,6 +888,8 @@ public class AddCostequation extends BaseActivity implements OnClickListener {
 										.getResultMsg(response))) {
 									ToastUtils.show(getApplicationContext(),
 											"添加成功");
+									Intent i=new Intent(AddCostequation.this,CostequationActivity.class);
+									startActivity(i);
 									finish();
 								}
 							} catch (JSONException e) {
@@ -1082,7 +1084,7 @@ public class AddCostequation extends BaseActivity implements OnClickListener {
 					});
 		}
 	}
-	int num = 0 ;
+
 	public void setListAll(List<CustomCostListInfo> customCostListInfoList,
 						   List<ChargeListInfo> chargeListInfoList) {
 

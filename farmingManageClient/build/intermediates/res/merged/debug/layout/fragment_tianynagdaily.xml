@@ -30,7 +30,7 @@
                     android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020气温:" />
 
                 <EditText 
-                    android:id="@+id/et_temperValue "
+                    android:id="@+id/et_temperValue"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" 
                     android:numeric="decimal"
                     />

@@ -3,33 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-     <RelativeLayout
-         style="@style/Relative_Title" >
+
+    <RelativeLayout style="@style/Relative_Title">
+
         <LinearLayout
-            android:id="@+id/ImageView_Linearlayout_Back"
-            style="@style/ImageView_Linearlayout_Back" >
+           android:id="@+id/ImageView_Linearlayout_Back"
+           style="@style/ImageView_Linearlayout_Back">
 
-            <ImageView
-                android:id="@+id/img_comment_back"
-                style="@style/ImageView_Back" />
+           <ImageView
+               android:id="@+id/img_comment_back"
+               style="@style/ImageView_Back" />
 
-            <TextView
-                android:id="@+id/textView_Title_Left"
-                style="@style/TextView_Title_Left" />
-        </LinearLayout>
-
-       <TextView
-            android:id="@+id/tv_title"
-            style="@style/TextView_Title"
-            android:text="@string/tv_addtianyangmanage"
-            />
+           <TextView
+               android:id="@+id/textView_Title_Left"
+               style="@style/TextView_Title_Left" />
+       </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_pro_add"
-             style="@style/TextView_InReleativeRight"
-            android:background="@drawable/add"
-            />
-    </RelativeLayout>
+           android:id="@+id/tv_title"
+           style="@style/TextView_Title"
+           android:text="@string/tv_addtianyangmanage" />
+
+       <TextView
+           android:id="@+id/tv_pro_add"
+           style="@style/TextView_InReleativeRight"
+           android:background="@drawable/add" />
+   </RelativeLayout>
+
     <ScrollView style="@style/ff" >
 
         <LinearLayout
