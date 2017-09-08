@@ -1,9 +1,5 @@
 package com.ruicheng.farmingmanageclient;
 
-import org.apache.http.Header;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -20,7 +16,6 @@ import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.AnimationUtils;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -43,6 +38,10 @@ import com.ruicheng.farmingmanageclient.utils.JSONUtils;
 import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * 添加作物交售详细界面
@@ -85,6 +84,8 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 	private final int CROPTYPENAME = 1;
 	private String dicId ;
 	private boolean isEmpty ;
+	private Button btn_save;
+
 	@Override
 	protected void onCreate(Bundle arg0) {
 		// TODO Auto-generated method stub
@@ -110,6 +111,8 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 	@Override
 	public void init() {
 		loadingDialog = DialogUtils.requestDialog(this);
+		btn_save = (Button) findViewById(R.id.btn_save);
+		btn_save.setOnClickListener(this);
 		tv_modify = (Button) findViewById(R.id.tv_modify);
 		et_goodName = (TextView) findViewById(R.id.et_goodName);
 		et_goodPricem = (EditText) findViewById(R.id.et_goodPricem);
@@ -258,6 +261,10 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 				i.setClass(getApplicationContext(),IsPackageAc.class);
 				startActivityForResult(i, IAPACKING);
 
+				break;
+			//保存按钮
+			case R.id.btn_save:
+				save();
 				break;
 			case R.id.btn_last:
 				// 点击获取上一条数据
@@ -436,229 +443,8 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 				// 添加完成
 				pop.dismiss();
 				tianynagmenu_popup.clearAnimation();
+				save();
 
-				if (!estimateInfoIsNullUtils()) {
-					return;
-				}
-
-				purchasePartOfInfo
-						.setGoodName(et_goodName.getText().toString());
-
-				purchasePartOfInfo.setGoodPrice(et_goodPricem.getText()
-						.toString());
-				if ("是".equals(et_goodUnit.getText().toString())) {
-					purchasePartOfInfo
-							.setGoodUnit("1");
-				} else {
-					purchasePartOfInfo
-							.setGoodUnit("0");
-				}
-				purchasePartOfInfo.setGoodNumber(et_purchasingWeight.getText()
-						.toString());
-
-				purchasePartOfInfo.setPackageWeight(et_packageWeight.getText()
-						.toString());
-				purchasePartOfInfo.setReceivePackagesm(et_receivePackagesm
-						.getText().toString());
-				purchasePartOfInfo.setGoodMoney(et_goodMoney.getText()
-						.toString());
-				if (!"".equals(dicId)&&dicId!=null) {
-					purchasePartOfInfo.setGoodId(dicId);
-				}else{
-					purchasePartOfInfo.setGoodId(purchaseInfo
-							.getUrchasePartOfInfoList().get(position).getGoodId());
-				}
-				if (isEmpty ==true) {
-					purchasePartOfInfo.setPurId("");
-					purchasePartOfInfo.setPurInfoId("");
-				} else {
-					purchasePartOfInfo.setPurId(purchaseInfo
-							.getUrchasePartOfInfoList().get(position).getPurId());
-					purchasePartOfInfo.setPurInfoId(purchaseInfo
-							.getUrchasePartOfInfoList().get(position)
-							.getPurInfoId());
-				}
-				// 将所添加的商品实例添加到集合中
-				ServiceNameHandler.purchaseInfoList.add(purchasePartOfInfo);
-
-				Intent i = new Intent();
-				Bundle bundle = new Bundle();
-
-				goodNamePaths = new StringBuffer();
-				receivePackagesmPaths = new StringBuffer();
-				goodUnitmPaths = new StringBuffer();
-				packageWeightmPaths = new StringBuffer();
-				totalGoodWeightmPaths = new StringBuffer();
-				goodPricemPaths = new StringBuffer();
-				goodMoneymPaths = new StringBuffer();
-				goodIdmPaths = new StringBuffer();
-				purIdmPaths = new StringBuffer();
-				purInfoIdmPaths = new StringBuffer();
-				for (int j = 0; j < ServiceNameHandler.purchaseInfoList.size(); j++) {
-					if (ServiceNameHandler.purchaseInfoList.get(j)
-							!= null) {
-
-						if (ServiceNameHandler.purchaseInfoList.size() ==1) {
-							goodNamePaths
-									.append(ServiceNameHandler.purchaseInfoList
-											.get(0).getGoodName());
-							receivePackagesmPaths
-									.append(ServiceNameHandler.purchaseInfoList
-											.get(0).getReceivePackagesm());
-							goodUnitmPaths
-									.append(ServiceNameHandler.purchaseInfoList
-											.get(0).getGoodUnit());
-							packageWeightmPaths
-									.append(ServiceNameHandler.purchaseInfoList
-											.get(0).getPackageWeight());
-							totalGoodWeightmPaths
-									.append(ServiceNameHandler.purchaseInfoList
-											.get(0).getGoodNumber());
-							goodPricemPaths
-									.append(ServiceNameHandler.purchaseInfoList
-											.get(0).getGoodPrice());
-							goodMoneymPaths
-									.append(ServiceNameHandler.purchaseInfoList
-											.get(0).getGoodMoney());
-							if (!"".equals(dicId)&&dicId!=null) {
-								goodIdmPaths
-										.append(dicId);
-							} else {
-								goodIdmPaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getGoodId());
-							}
-							purIdmPaths
-									.append(ServiceNameHandler.purchaseInfoList
-											.get(0).getPurId());
-							purInfoIdmPaths
-									.append(ServiceNameHandler.purchaseInfoList
-											.get(0).getPurInfoId());
-						} else {
-							if (goodNamePaths.length() !=0) {
-								goodNamePaths.append(",").append(
-										ServiceNameHandler.purchaseInfoList.get(j)
-												.getGoodName());
-							} else {
-								goodNamePaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getGoodName());
-							}
-							if (receivePackagesmPaths.length()!=0) {
-								receivePackagesmPaths.append(",").append(
-										ServiceNameHandler.purchaseInfoList.get(j)
-												.getReceivePackagesm());
-							} else {
-								receivePackagesmPaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getReceivePackagesm());
-							}
-							if (goodUnitmPaths.length() !=0) {
-								goodUnitmPaths.append(",").append(
-										ServiceNameHandler.purchaseInfoList.get(j)
-												.getGoodUnit());
-							} else {
-								goodUnitmPaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getGoodUnit());
-							}
-							if (packageWeightmPaths.length() !=0) {
-
-								packageWeightmPaths.append(",").append(
-										ServiceNameHandler.purchaseInfoList.get(j)
-												.getPackageWeight());
-							} else {
-								packageWeightmPaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getPackageWeight());
-							}
-
-							if (totalGoodWeightmPaths.length() !=0) {
-
-								totalGoodWeightmPaths.append(",").append(
-										ServiceNameHandler.purchaseInfoList.get(j)
-												.getGoodNumber());
-							} else {
-								totalGoodWeightmPaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getGoodNumber());
-							}
-
-							if (goodPricemPaths.length()!=0) {
-								goodPricemPaths.append(",").append(
-										ServiceNameHandler.purchaseInfoList.get(j)
-												.getGoodPrice());
-
-							} else {
-								goodPricemPaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getGoodPrice());
-							}
-							if (goodMoneymPaths.length() !=0) {
-								goodMoneymPaths.append(",").append(
-										ServiceNameHandler.purchaseInfoList.get(j)
-												.getGoodMoney());
-							} else {
-								goodMoneymPaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getGoodMoney());
-							}
-							if (goodIdmPaths.length()!=0) {
-								if (!"".equals(dicId)&&dicId!=null) {
-									goodIdmPaths.append(",").append(dicId);
-
-								} else {
-									goodIdmPaths.append(",").append(
-											ServiceNameHandler.purchaseInfoList.get(j)
-													.getGoodId());
-								}
-							} else {
-								if (!"".equals(dicId)&&dicId!=null) {
-									goodIdmPaths
-											.append(dicId);
-								} else {
-									goodIdmPaths
-											.append(ServiceNameHandler.purchaseInfoList
-													.get(0).getGoodId());
-								}
-							}
-							if (purIdmPaths.length()!=0) {
-								purIdmPaths.append(",").append(
-										ServiceNameHandler.purchaseInfoList.get(j)
-												.getPurId());
-							} else {
-								purIdmPaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getPurId());
-							}
-							if (purInfoIdmPaths.length()!=0) {
-								purInfoIdmPaths.append(",").append(
-										ServiceNameHandler.purchaseInfoList.get(j)
-												.getPurInfoId());
-							} else {
-								purInfoIdmPaths
-										.append(ServiceNameHandler.purchaseInfoList
-												.get(0).getPurInfoId());
-							}
-						}
-					}
-				}
-				bundle.putString("goodIdm", goodIdmPaths.toString());
-				bundle.putString("purIdm", purIdmPaths.toString());
-				bundle.putString("purInfoIdm", purInfoIdmPaths.toString());
-				bundle.putString("goodNamem", goodNamePaths.toString()); // 名称
-				bundle.putString("receivePackagesm",
-						receivePackagesmPaths.toString());// 收货件数
-				bundle.putString("goodUnitm", goodUnitmPaths.toString()); // 是否包装
-				bundle.putString("packageWeightm",
-						packageWeightmPaths.toString());// 件重
-				bundle.putString("totalGoodWeightm",
-						totalGoodWeightmPaths.toString());// 收货重量
-				bundle.putString("goodPricem", goodPricemPaths.toString()); // 单价
-				bundle.putString("goodMoneym", goodMoneymPaths.toString()); // 总价
-				i.putExtras(bundle);
-				setResult(RESULT_OK, i);
-				finish();
 
 			}
 		});
@@ -764,6 +550,232 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 			}
 		});
 	}
+
+	private void save() {
+		if (!estimateInfoIsNullUtils()) {
+			return;
+		}
+
+		purchasePartOfInfo
+				.setGoodName(et_goodName.getText().toString());
+
+		purchasePartOfInfo.setGoodPrice(et_goodPricem.getText()
+				.toString());
+		if ("是".equals(et_goodUnit.getText().toString())) {
+			purchasePartOfInfo
+					.setGoodUnit("1");
+		} else {
+			purchasePartOfInfo
+					.setGoodUnit("0");
+		}
+		purchasePartOfInfo.setGoodNumber(et_purchasingWeight.getText()
+				.toString());
+
+		purchasePartOfInfo.setPackageWeight(et_packageWeight.getText()
+				.toString());
+		purchasePartOfInfo.setReceivePackagesm(et_receivePackagesm
+				.getText().toString());
+		purchasePartOfInfo.setGoodMoney(et_goodMoney.getText()
+				.toString());
+		if (!"".equals(dicId)&&dicId!=null) {
+			purchasePartOfInfo.setGoodId(dicId);
+		}else{
+			purchasePartOfInfo.setGoodId(purchaseInfo
+					.getUrchasePartOfInfoList().get(position).getGoodId());
+		}
+		if (isEmpty ==true) {
+			purchasePartOfInfo.setPurId("");
+			purchasePartOfInfo.setPurInfoId("");
+		} else {
+			purchasePartOfInfo.setPurId(purchaseInfo
+					.getUrchasePartOfInfoList().get(position).getPurId());
+			purchasePartOfInfo.setPurInfoId(purchaseInfo
+					.getUrchasePartOfInfoList().get(position)
+					.getPurInfoId());
+		}
+		// 将所添加的商品实例添加到集合中
+		ServiceNameHandler.purchaseInfoList.add(purchasePartOfInfo);
+
+		Intent i = new Intent();
+		Bundle bundle = new Bundle();
+
+		goodNamePaths = new StringBuffer();
+		receivePackagesmPaths = new StringBuffer();
+		goodUnitmPaths = new StringBuffer();
+		packageWeightmPaths = new StringBuffer();
+		totalGoodWeightmPaths = new StringBuffer();
+		goodPricemPaths = new StringBuffer();
+		goodMoneymPaths = new StringBuffer();
+		goodIdmPaths = new StringBuffer();
+		purIdmPaths = new StringBuffer();
+		purInfoIdmPaths = new StringBuffer();
+		for (int j = 0; j < ServiceNameHandler.purchaseInfoList.size(); j++) {
+			if (ServiceNameHandler.purchaseInfoList.get(j)
+					!= null) {
+
+				if (ServiceNameHandler.purchaseInfoList.size() ==1) {
+					goodNamePaths
+							.append(ServiceNameHandler.purchaseInfoList
+									.get(0).getGoodName());
+					receivePackagesmPaths
+							.append(ServiceNameHandler.purchaseInfoList
+									.get(0).getReceivePackagesm());
+					goodUnitmPaths
+							.append(ServiceNameHandler.purchaseInfoList
+									.get(0).getGoodUnit());
+					packageWeightmPaths
+							.append(ServiceNameHandler.purchaseInfoList
+									.get(0).getPackageWeight());
+					totalGoodWeightmPaths
+							.append(ServiceNameHandler.purchaseInfoList
+									.get(0).getGoodNumber());
+					goodPricemPaths
+							.append(ServiceNameHandler.purchaseInfoList
+									.get(0).getGoodPrice());
+					goodMoneymPaths
+							.append(ServiceNameHandler.purchaseInfoList
+									.get(0).getGoodMoney());
+					if (!"".equals(dicId)&&dicId!=null) {
+						goodIdmPaths
+								.append(dicId);
+					} else {
+						goodIdmPaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getGoodId());
+					}
+					purIdmPaths
+							.append(ServiceNameHandler.purchaseInfoList
+									.get(0).getPurId());
+					purInfoIdmPaths
+							.append(ServiceNameHandler.purchaseInfoList
+									.get(0).getPurInfoId());
+				} else {
+					if (goodNamePaths.length() !=0) {
+						goodNamePaths.append(",").append(
+								ServiceNameHandler.purchaseInfoList.get(j)
+										.getGoodName());
+					} else {
+						goodNamePaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getGoodName());
+					}
+					if (receivePackagesmPaths.length()!=0) {
+						receivePackagesmPaths.append(",").append(
+								ServiceNameHandler.purchaseInfoList.get(j)
+										.getReceivePackagesm());
+					} else {
+						receivePackagesmPaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getReceivePackagesm());
+					}
+					if (goodUnitmPaths.length() !=0) {
+						goodUnitmPaths.append(",").append(
+								ServiceNameHandler.purchaseInfoList.get(j)
+										.getGoodUnit());
+					} else {
+						goodUnitmPaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getGoodUnit());
+					}
+					if (packageWeightmPaths.length() !=0) {
+
+						packageWeightmPaths.append(",").append(
+								ServiceNameHandler.purchaseInfoList.get(j)
+										.getPackageWeight());
+					} else {
+						packageWeightmPaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getPackageWeight());
+					}
+
+					if (totalGoodWeightmPaths.length() !=0) {
+
+						totalGoodWeightmPaths.append(",").append(
+								ServiceNameHandler.purchaseInfoList.get(j)
+										.getGoodNumber());
+					} else {
+						totalGoodWeightmPaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getGoodNumber());
+					}
+
+					if (goodPricemPaths.length()!=0) {
+						goodPricemPaths.append(",").append(
+								ServiceNameHandler.purchaseInfoList.get(j)
+										.getGoodPrice());
+
+					} else {
+						goodPricemPaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getGoodPrice());
+					}
+					if (goodMoneymPaths.length() !=0) {
+						goodMoneymPaths.append(",").append(
+								ServiceNameHandler.purchaseInfoList.get(j)
+										.getGoodMoney());
+					} else {
+						goodMoneymPaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getGoodMoney());
+					}
+					if (goodIdmPaths.length()!=0) {
+						if (!"".equals(dicId)&&dicId!=null) {
+							goodIdmPaths.append(",").append(dicId);
+
+						} else {
+							goodIdmPaths.append(",").append(
+									ServiceNameHandler.purchaseInfoList.get(j)
+											.getGoodId());
+						}
+					} else {
+						if (!"".equals(dicId)&&dicId!=null) {
+							goodIdmPaths
+									.append(dicId);
+						} else {
+							goodIdmPaths
+									.append(ServiceNameHandler.purchaseInfoList
+											.get(0).getGoodId());
+						}
+					}
+					if (purIdmPaths.length()!=0) {
+						purIdmPaths.append(",").append(
+								ServiceNameHandler.purchaseInfoList.get(j)
+										.getPurId());
+					} else {
+						purIdmPaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getPurId());
+					}
+					if (purInfoIdmPaths.length()!=0) {
+						purInfoIdmPaths.append(",").append(
+								ServiceNameHandler.purchaseInfoList.get(j)
+										.getPurInfoId());
+					} else {
+						purInfoIdmPaths
+								.append(ServiceNameHandler.purchaseInfoList
+										.get(0).getPurInfoId());
+					}
+				}
+			}
+		}
+		bundle.putString("goodIdm", goodIdmPaths.toString());
+		bundle.putString("purIdm", purIdmPaths.toString());
+		bundle.putString("purInfoIdm", purInfoIdmPaths.toString());
+		bundle.putString("goodNamem", goodNamePaths.toString()); // 名称
+		bundle.putString("receivePackagesm",
+				receivePackagesmPaths.toString());// 收货件数
+		bundle.putString("goodUnitm", goodUnitmPaths.toString()); // 是否包装
+		bundle.putString("packageWeightm",
+				packageWeightmPaths.toString());// 件重
+		bundle.putString("totalGoodWeightm",
+				totalGoodWeightmPaths.toString());// 收货重量
+		bundle.putString("goodPricem", goodPricemPaths.toString()); // 单价
+		bundle.putString("goodMoneym", goodMoneymPaths.toString()); // 总价
+		i.putExtras(bundle);
+		setResult(RESULT_OK, i);
+		finish();
+	}
+
 	TextWatcher et_goodPricemTextWatcher = new TextWatcher() {
 		private CharSequence temp;
 		private int editStart ;
@@ -838,7 +850,6 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 	/**
 	 * 判断提交信息是否为空
 	 *
-	 * @param v
 	 * @return
 	 */
 	public boolean estimateInfoIsNullUtils() {

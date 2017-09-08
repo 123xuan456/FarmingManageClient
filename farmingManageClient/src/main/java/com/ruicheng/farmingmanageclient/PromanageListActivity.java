@@ -622,7 +622,7 @@ public class PromanageListActivity extends BaseActivity implements
 							Constant.USERID, Constant.FAILUREINT) + "");//1
 			params.put("userName", PreferencesUtils.getString(
 					getApplicationContext(), Constant.USERNAME));//admin
-			params.put("dcId", PreferencesUtils.getString(
+				params.put("dcId", PreferencesUtils.getString(
 					getApplicationContext(), Constant.DCID, Constant.FAILURE));//
 			//optionType (田洋播种移栽:1,田洋农事项目:2,田洋收成: 5)
 			params.put("optionType", optionType + "");//

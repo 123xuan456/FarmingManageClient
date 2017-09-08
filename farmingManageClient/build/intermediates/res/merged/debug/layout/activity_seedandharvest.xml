@@ -33,14 +33,15 @@
             android:visibility="gone"
             />
     </RelativeLayout>
-    <ScrollView style="@style/ff" >
+
+    <ScrollView style="@style/ff">
 
         <LinearLayout
             style="@style/ff"
             android:gravity="center"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
@@ -53,26 +54,26 @@
 
             <View style="@style/Sperate_view" />
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="服务站编号:" />
 
-                <TextView 
+                <TextView
                     android:id="@+id/et_servicenumber"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>
 
             <View style="@style/Sperate_view" />
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="农作物品种:" />
 
-                <EditText 
+                <EditText
                     android:id="@+id/et_cropPtype"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>
@@ -80,41 +81,40 @@
             <View style="@style/Sperate_view" />
 
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="实施人员    :" />
 
-                <EditText 
-                     android:id="@+id/et_actionPerson"
+                <EditText
+                    android:id="@+id/et_actionPerson"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>
 
             <View style="@style/Sperate_view" />
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="记  录  人    :" />
 
-                <TextView 
+                <TextView
                     android:id="@+id/tv_registUser"
-                    style="@style/EditText__Promaangelist_Table_LeftTwo" 
-                    android:text="管理员"
-                    />
+                    style="@style/EditText__Promaangelist_Table_LeftTwo"
+                    android:text="管理员" />
             </LinearLayout>
 
             <View style="@style/Sperate_view" />
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="农作物名称:" />
 
-                <TextView 
+                <TextView
                     android:id="@+id/tv_cropType"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>
@@ -122,48 +122,47 @@
             <View style="@style/Sperate_view" />
 
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="播种日期    :" />
 
-                <TextView 
+                <TextView
                     android:id="@+id/tv_seeddate"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>
 
             <View style="@style/Sperate_view" />
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="移栽日期    :" />
 
-                <TextView 
+                <TextView
                     android:id="@+id/tv_transplantdate"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>
 
             <View style="@style/Sperate_view" />
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="登记日期    :" />
 
                 <TextView
-                     android:id="@+id/tv_registdate"
-                    style="@style/EditText__Promaangelist_Table_LeftTwo"
-                    />
+                    android:id="@+id/tv_registdate"
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
                 <!-- android:text="2015-08-27"  -->
             </LinearLayout>
 
             <View style="@style/Sperate_view" />
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
@@ -171,29 +170,28 @@
 
                 <TextView
                     android:id="@+id/tv_ploughId"
-                    style="@style/EditText__Promaangelist_Table_LeftTwo"/>
+                    style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>
 
             <View style="@style/Sperate_view" />
 
-            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
+            <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop">
 
                 <TextView
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="备        注    :" />
 
                 <EditText
-                     android:id="@+id/tv_actionBak"
+                    android:id="@+id/tv_actionBak"
                     style="@style/EditText__Promaangelist_Table_LeftTwo"
                     android:text="" />
             </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_save"
-        style="@style/Button_Style"
-        android:text="@string/tv_save" 
-        android:layout_marginBottom="5dp"
-        />
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/Button_Style"
+                android:layout_marginBottom="5dp"
+                android:text="@string/tv_save" />
         </LinearLayout>
     </ScrollView>
 

@@ -321,8 +321,19 @@ public class AddDetailCropAc extends BaseActivity implements OnClickListener {
 					if (loadingDialog.isShowing()) {
 						loadingDialog.dismiss();
 					}
-					ToastUtils.show(getApplicationContext(), "保存成功");
-					finish();
+					try {
+						if ("success".equals(JSONUtils
+								.getResultMsg(response))) {
+							ToastUtils.show(getApplicationContext(), "保存成功");
+							finish();
+						}else {
+							ToastUtils.show(getApplicationContext(),"读取失败");
+						}
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
 
 				}
 			});

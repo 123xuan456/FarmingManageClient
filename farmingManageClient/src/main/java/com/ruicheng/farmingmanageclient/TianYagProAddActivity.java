@@ -654,8 +654,13 @@ public class TianYagProAddActivity extends BaseActivity implements
 					Constant.FAILURE));
 
 			params.put("record.productType",optionType);
-			params.put("record.stationId",stationData.getStationId());
-			params.put("record.stationCode", stationData.getStationCode());
+			if (stationData==null){
+				params.put("record.stationId",stationId);
+				params.put("record.stationCode", servicename);
+			}else {
+				params.put("record.stationId",stationData.getStationId());
+				params.put("record.stationCode", stationData.getStationCode());
+			}
 			params.put("record.registUser",PreferencesUtils.getInt(getApplicationContext(),
 					Constant.USERID, Constant.FAILUREINT) + "");
 			params.put("record.registDate", tv_registdate.getText().toString()+" "+DateUtils.getTimeShort());

@@ -3,31 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <RelativeLayout
-        style="@style/Relative_Title">
-        <LinearLayout 
-		    android:id="@+id/ImageView_Linearlayout_Back"
-		     style="@style/ImageView_Linearlayout_Back"
-		    >
-		     <ImageView
-		         android:id="@+id/img_comment_back"
-            style="@style/ImageView_Back" />
-		     <TextView 
-		         android:id="@+id/textView_Title_Left"
-		        style="@style/TextView_Title_Left"
-		        />
-		</LinearLayout>
+
+    <RelativeLayout style="@style/Relative_Title">
+
+        <LinearLayout
+            android:id="@+id/ImageView_Linearlayout_Back"
+            style="@style/ImageView_Linearlayout_Back">
+
+            <ImageView
+                android:id="@+id/img_comment_back"
+                style="@style/ImageView_Back" />
+
+            <TextView
+                android:id="@+id/textView_Title_Left"
+                style="@style/TextView_Title_Left" />
+        </LinearLayout>
+
         <TextView
             style="@style/TextView_Title"
-            android:text="添加物品"
-            />
+            android:text="添加物品" />
+
         <Button
             android:id="@+id/tv_modify"
             style="@style/TextView_InReleativeRight_More"
-            android:background="@drawable/iv_more"
-			/>
+            android:background="@drawable/iv_more" />
     </RelativeLayout>
- <ScrollView style="@style/ff" >
+
+    <ScrollView style="@style/ff" >
         <LinearLayout
             style="@style/ff"
             android:gravity="center"
@@ -73,7 +75,7 @@
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="采购重量(斤):" />
 
-                <TextView 
+                <EditText
                     style="@style/EditText__Promaangelist_Table_LeftTwo"
                     android:text="------"
                      />
@@ -134,6 +136,7 @@
             <LinearLayout 
             	style="@style/fw"    
                 android:orientation="horizontal"
+                android:visibility="gone"
                 >
  			<Button 
  			    android:id="@+id/btn_last"
@@ -146,6 +149,11 @@
                 android:text="下一条"
                 />
             </LinearLayout>
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/Button_Style"
+                android:layout_marginBottom="5dp"
+                android:text="添加完成" />
             </LinearLayout>
     </ScrollView>
 </LinearLayout>
