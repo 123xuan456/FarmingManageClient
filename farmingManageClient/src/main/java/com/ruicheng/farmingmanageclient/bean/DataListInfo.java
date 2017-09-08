@@ -7,7 +7,7 @@ public class DataListInfo implements Serializable{
 	//播种移栽界面列表数据
 	private String detailId ;
 	private String ploughId ;
-	//private String ploughCode ;
+	private String ploughCode ;
 	private String productType ;
 	private String recordDate ;
 	private String cropType ;
@@ -45,7 +45,6 @@ public class DataListInfo implements Serializable{
 	private String pesticideName;
 	private String delFlag;
 	private String phasesId;
-	private String ploughCode;
 
 
 	public String getSysId() {
@@ -71,12 +70,12 @@ public class DataListInfo implements Serializable{
 	public void setPloughghIdId(String ploughId) {
 		this.ploughId = ploughId;
 	}
-//	public String getPloughCode() {
-//		return ploughCode;
-//	}
-//	public void setPloughCode(String ploughCode) {
-//		this.ploughCode = ploughCode;
-//	}
+	public String getPloughCode() {
+		return ploughCode;
+	}
+	public void setPloughCode(String ploughCode) {
+		this.ploughCode = ploughCode;
+	}
 	public String getProductType() {
 		return productType;
 	}
@@ -294,10 +293,4 @@ public class DataListInfo implements Serializable{
 		this.phasesId = phasesId;
 	}
 
-	public String getPloughCode() {
-		return ploughCode;
-	}
-	public void setPloughCode(String ploughCode) {
-		this.ploughCode = ploughCode;
-	}
 }

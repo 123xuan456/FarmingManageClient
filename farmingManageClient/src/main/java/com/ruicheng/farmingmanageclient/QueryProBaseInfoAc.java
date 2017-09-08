@@ -150,10 +150,6 @@ public class QueryProBaseInfoAc extends BaseActivity {
 				//img_comment_back按钮，返回到其上一界面
 				case R.id.ImageView_Linearlayout_Back:
 					img_comment_back.setVisibility(View.GONE);
-					Intent i = new Intent();
-					Intent intent = new Intent();
-					intent.setClass(getApplicationContext(), ServiceManageAc.class);
-					startActivity(intent);
 					finish();
 					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
 					break;

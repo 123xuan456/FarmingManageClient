@@ -41,6 +41,9 @@ import java.util.List;
 
 public class JSONUtils {
 
+	private static String ploughId;
+	private static String ploughCode;
+
 	public static String getResult(JSONObject jsonResult) throws JSONException {
 
 		return jsonResult.getString("result");
@@ -249,28 +252,54 @@ public class JSONUtils {
 			JSONObject jsonStationInfo,int optionType) throws JSONException {
 		List<Object> stationList = new ArrayList<Object>();
 		JSONArray stationJsonArr = jsonStationInfo.getJSONArray("dataList");
+		JSONArray ploughListJsonArr = jsonStationInfo.getJSONArray("ploughList");
+
 		for (int i = 0; i < stationJsonArr.length(); i++) {
 			JSONObject stationJson = stationJsonArr.getJSONObject(i);
 			DataListInfo dataListInfo = new DataListInfo();
 			if (optionType == 1) {//查询天阳播种
-				dataListInfo.setDetailId(stationJson.getString("detailId"));
-				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
-				dataListInfo.setSysId(stationJson.getString("sysId"));
-				dataListInfo.setProductType(stationJson.getString("productType"));
-				dataListInfo.setRecordDate(stationJson.getString("recordDate"));
-				dataListInfo.setCropCode(stationJson.getString("cropCode"));
-				dataListInfo.setCropType(stationJson.getString("cropType"));
-				dataListInfo.setCropPtype(stationJson.getString("cropPtype"));
-				dataListInfo.setSeedDate(stationJson.getString("seedDate"));
-				dataListInfo.setMoveDate(stationJson.getString("moveDate"));
-				dataListInfo.setTemperValue(stationJson.getString("temperValue"));
-				dataListInfo.setProductItem(stationJson.getString("productItem"));
-				dataListInfo.setReceiveDate(stationJson.getString("receiveDate"));
-				dataListInfo.setActionPerson(stationJson.getString("actionPerson"));
-				dataListInfo.setActionBak(stationJson.getString("actionBak"));
+				String ploughId1 = stationJson.getString("ploughId");
+					for (int j=0;j<ploughListJsonArr.length();j++){
+						JSONObject ploughListJson = ploughListJsonArr.getJSONObject(j);
+						ploughCode = ploughListJson.getString("ploughCode");
+						ploughId = ploughListJson.getString("ploughId");
+						if (ploughId1.equals(ploughId)){
+							dataListInfo.setPloughCode(ploughCode);
+							dataListInfo.setPloughghIdId(ploughId1);
+						}
+					}
+					dataListInfo.setDetailId(stationJson.getString("detailId"));
+					dataListInfo.setSysId(stationJson.getString("sysId"));
+					dataListInfo.setProductType(stationJson.getString("productType"));
+					dataListInfo.setRecordDate(stationJson.getString("recordDate"));
+					dataListInfo.setCropCode(stationJson.getString("cropCode"));
+					dataListInfo.setCropType(stationJson.getString("cropType"));
+					dataListInfo.setCropPtype(stationJson.getString("cropPtype"));
+					dataListInfo.setSeedDate(stationJson.getString("seedDate"));
+					dataListInfo.setMoveDate(stationJson.getString("moveDate"));
+					dataListInfo.setTemperValue(stationJson.getString("temperValue"));
+					dataListInfo.setProductItem(stationJson.getString("productItem"));
+					dataListInfo.setReceiveDate(stationJson.getString("receiveDate"));
+					dataListInfo.setActionPerson(stationJson.getString("actionPerson"));
+					dataListInfo.setActionBak(stationJson.getString("actionBak"));
+
+
+
+
 			} else if (optionType ==2){//田洋农事项目:2
+				String ploughId1 = stationJson.getString("ploughId");
+				for (int j=0;j<ploughListJsonArr.length();j++){
+					JSONObject ploughListJson = ploughListJsonArr.getJSONObject(j);
+					ploughCode = ploughListJson.getString("ploughCode");
+					ploughId = ploughListJson.getString("ploughId");
+					if (ploughId1.equals(ploughId)){
+						dataListInfo.setPloughCode(ploughCode);
+					}
+				}
+
+				dataListInfo.setPloughghIdId(ploughId1);
 				dataListInfo.setSysId(stationJson.getString("sysId"));
-				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
+//				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
 				dataListInfo.setDetailId(stationJson.getString("detailId"));
 				dataListInfo.setRecordId(stationJson.getString("recordId"));
 				dataListInfo.setReceiveDate(stationJson.getString("receiveDate"));
@@ -319,8 +348,20 @@ public class JSONUtils {
 				dataListInfo.setActionBak(stationJson.getString("actionBak"));*/
 
 			}else if (optionType == 5){//田洋收成: 5
+				String ploughId1 = stationJson.getString("ploughId");
+				for (int j=0;j<ploughListJsonArr.length();j++){
+					JSONObject ploughListJson = ploughListJsonArr.getJSONObject(j);
+					ploughCode = ploughListJson.getString("ploughCode");
+					ploughId = ploughListJson.getString("ploughId");
+					if (ploughId1.equals(ploughId)){
+						dataListInfo.setPloughCode(ploughCode);
+					}
+				}
+
+				dataListInfo.setPloughghIdId(ploughId1);
+
 				dataListInfo.setSysId(stationJson.getString("sysId"));
-				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
+//				dataListInfo.setPloughCode(stationJson.getString("ploughCode"));
 				dataListInfo.setDetailId(stationJson.getString("detailId"));
 				dataListInfo.setRecordId(stationJson.getString("recordId"));
 				dataListInfo.setReceiveDate(stationJson.getString("receiveDate"));
@@ -336,6 +377,11 @@ public class JSONUtils {
 			}
 			stationList.add(dataListInfo);
 		}
+
+
+
+
+
 		return stationList;
 	}
 

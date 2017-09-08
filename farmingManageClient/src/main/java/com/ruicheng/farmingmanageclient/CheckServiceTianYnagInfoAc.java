@@ -1,7 +1,6 @@
 package com.ruicheng.farmingmanageclient;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -103,11 +102,7 @@ public class CheckServiceTianYnagInfoAc extends BaseActivity {
 			switch (v.getId()) {
 				case R.id.ImageView_Linearlayout_Back:
 					img_comment_back.setVisibility(View.GONE);
-					Intent intent = new Intent();
-					intent.setClass(getApplicationContext(), TianYangManageAc.class);
-					startActivity(intent);
 					finish();
-					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
 					break;
 				case R.id.btn_last:
 					if (pos == 0) {

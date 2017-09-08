@@ -143,6 +143,7 @@ public class QueryProplanAc extends BaseActivity {
 				case R.id.btn_last:
 					if (pos == 0) {
 						ToastUtils.show(getApplicationContext(), "当前已是第一条");
+						btn_last.setBackgroundColor(Color.parseColor("#F2F2F2"));
 						return ;
 					}
 					btn_next.setBackgroundColor(Color.parseColor("#009933"));
@@ -405,7 +406,7 @@ public class QueryProplanAc extends BaseActivity {
 		et_predStarDate.setText("");
 		et_predEndDate.setText("");
 		et_planDrawDate.setText("");
-		btn_last.setBackgroundColor(Color.parseColor("#F2F2F2"));
+		//btn_last.setBackgroundColor(Color.parseColor("#F2F2F2"));
 		if (type == 0) {
 			et_planAmou.setText("");
 			et_cropName.setText("");

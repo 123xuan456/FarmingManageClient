@@ -21,6 +21,7 @@
             android:id="@+id/tv_more"
             style="@style/TextView_InReleativeRight_More"
             android:background="@drawable/iv_more"
+             android:visibility="gone"
             />
         </LinearLayout>
         <!--  android:background="@drawable/iv_more" -->
