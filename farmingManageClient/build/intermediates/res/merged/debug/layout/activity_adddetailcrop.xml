@@ -29,10 +29,8 @@
             android:visibility="gone"
             />
     </RelativeLayout>
-     <ScrollView style="@style/ff" >
         <LinearLayout
             style="@style/ff"
-            android:gravity="center"
             android:orientation="vertical" >
 		     <LinearLayout style="@style/Layout_Promaangelist_Table_MarTop" >
                 <TextView
@@ -127,6 +125,12 @@
                 android:text="保存"
                 />
             </LinearLayout>
+            <ListView
+                android:id="@+id/listview1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+
+
             </LinearLayout>
-    </ScrollView>
 </LinearLayout>

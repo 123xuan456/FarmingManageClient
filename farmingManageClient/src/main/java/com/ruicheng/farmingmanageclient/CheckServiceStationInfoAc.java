@@ -15,6 +15,7 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.ruicheng.farmingmanageclient.base.BaseActivity;
 import com.ruicheng.farmingmanageclient.bean.BaseStationInfo;
+import com.ruicheng.farmingmanageclient.cache.ImageLoader;
 import com.ruicheng.farmingmanageclient.constants.Constant;
 import com.ruicheng.farmingmanageclient.net.TwitterRestClient;
 import com.ruicheng.farmingmanageclient.util.BimpHandler;
@@ -102,14 +103,19 @@ public class CheckServiceStationInfoAc extends BaseActivity implements OnClickLi
 
 									Bitmap selectBitmap = BitmapUtils.getThumBitmapFromFile(managerPicture);
 
-									iv_managerPicture.setImageBitmap(selectBitmap);
+//									iv_managerPicture.setImageBitmap(selectBitmap);
+									System.out.println("managerPicture="+managerPicture);
 
-									/*ImageLoader mImageLoader = ImageLoader
-											.getInstance(3, Type.LIFO);
+//									ImageLoader.getInstance().displayImage(managerPicture, iv_managerPicture);
+									ImageLoader mImageLoader = ImageLoader
+											.getInstance(3, ImageLoader.Type.LIFO);
 									mImageLoader.loadImage(
 											TwitterRestClient.BASE_URL
 													+ managerPicture,
-													iv_managerPicture, true);*/
+													iv_managerPicture, true);
+									BimpHandler.listSelectBitmap.clear();
+									BimpHandler.listSelectBitmap
+											.add(selectBitmap);
 
 								}
 							} catch (JSONException e) {

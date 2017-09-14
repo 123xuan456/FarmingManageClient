@@ -2235,15 +2235,7 @@
                     "endOffset": 27690
                 },
                 "from": {
-                    "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml",
-                    "position": {
-                        "startLine": 245,
-                        "startColumn": 4,
-                        "startOffset": 12072,
-                        "endLine": 255,
-                        "endColumn": 12,
-                        "endOffset": 12644
-                    }
+                    "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
                 }
             },
             {
@@ -2303,9 +2295,30 @@
                     "startLine": 560,
                     "startColumn": 4,
                     "startOffset": 29218,
-                    "endLine": 567,
+                    "endLine": 569,
                     "endColumn": 12,
-                    "endOffset": 29610
+                    "endOffset": 29717
+                },
+                "from": {
+                    "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 515,
+                        "startColumn": 4,
+                        "startOffset": 25834,
+                        "endLine": 524,
+                        "endColumn": 12,
+                        "endOffset": 26342
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 570,
+                    "startColumn": 4,
+                    "startOffset": 29722,
+                    "endLine": 576,
+                    "endColumn": 12,
+                    "endOffset": 30061
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2313,12 +2326,12 @@
             },
             {
                 "to": {
-                    "startLine": 568,
+                    "startLine": 577,
                     "startColumn": 4,
-                    "startOffset": 29615,
-                    "endLine": 574,
+                    "startOffset": 30066,
+                    "endLine": 586,
                     "endColumn": 12,
-                    "endOffset": 29954
+                    "endOffset": 30572
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2326,12 +2339,12 @@
             },
             {
                 "to": {
-                    "startLine": 575,
+                    "startLine": 587,
                     "startColumn": 4,
-                    "startOffset": 29959,
-                    "endLine": 584,
+                    "startOffset": 30577,
+                    "endLine": 593,
                     "endColumn": 12,
-                    "endOffset": 30468
+                    "endOffset": 30891
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2339,12 +2352,12 @@
             },
             {
                 "to": {
-                    "startLine": 585,
+                    "startLine": 594,
                     "startColumn": 4,
-                    "startOffset": 30473,
-                    "endLine": 591,
+                    "startOffset": 30896,
+                    "endLine": 601,
                     "endColumn": 12,
-                    "endOffset": 30787
+                    "endOffset": 31310
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2352,12 +2365,12 @@
             },
             {
                 "to": {
-                    "startLine": 592,
+                    "startLine": 602,
                     "startColumn": 4,
-                    "startOffset": 30792,
-                    "endLine": 599,
+                    "startOffset": 31315,
+                    "endLine": 608,
                     "endColumn": 12,
-                    "endOffset": 31206
+                    "endOffset": 31670
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2365,12 +2378,12 @@
             },
             {
                 "to": {
-                    "startLine": 600,
+                    "startLine": 609,
                     "startColumn": 4,
-                    "startOffset": 31211,
-                    "endLine": 606,
+                    "startOffset": 31675,
+                    "endLine": 618,
                     "endColumn": 12,
-                    "endOffset": 31566
+                    "endOffset": 32175
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2378,12 +2391,12 @@
             },
             {
                 "to": {
-                    "startLine": 607,
+                    "startLine": 619,
                     "startColumn": 4,
-                    "startOffset": 31571,
-                    "endLine": 616,
+                    "startOffset": 32180,
+                    "endLine": 624,
                     "endColumn": 12,
-                    "endOffset": 32071
+                    "endOffset": 32467
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2391,12 +2404,12 @@
             },
             {
                 "to": {
-                    "startLine": 617,
+                    "startLine": 625,
                     "startColumn": 4,
-                    "startOffset": 32076,
-                    "endLine": 622,
+                    "startOffset": 32472,
+                    "endLine": 632,
                     "endColumn": 12,
-                    "endOffset": 32363
+                    "endOffset": 32862
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2404,12 +2417,12 @@
             },
             {
                 "to": {
-                    "startLine": 623,
+                    "startLine": 633,
                     "startColumn": 4,
-                    "startOffset": 32368,
-                    "endLine": 630,
+                    "startOffset": 32867,
+                    "endLine": 636,
                     "endColumn": 12,
-                    "endOffset": 32758
+                    "endOffset": 33058
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2417,12 +2430,12 @@
             },
             {
                 "to": {
-                    "startLine": 631,
+                    "startLine": 637,
                     "startColumn": 4,
-                    "startOffset": 32763,
-                    "endLine": 634,
+                    "startOffset": 33063,
+                    "endLine": 640,
                     "endColumn": 12,
-                    "endOffset": 32954
+                    "endOffset": 33216
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2430,12 +2443,12 @@
             },
             {
                 "to": {
-                    "startLine": 635,
+                    "startLine": 641,
                     "startColumn": 4,
-                    "startOffset": 32959,
-                    "endLine": 638,
+                    "startOffset": 33221,
+                    "endLine": 646,
                     "endColumn": 12,
-                    "endOffset": 33112
+                    "endOffset": 33487
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2443,12 +2456,12 @@
             },
             {
                 "to": {
-                    "startLine": 639,
+                    "startLine": 647,
                     "startColumn": 4,
-                    "startOffset": 33117,
-                    "endLine": 644,
+                    "startOffset": 33492,
+                    "endLine": 650,
                     "endColumn": 12,
-                    "endOffset": 33383
+                    "endOffset": 33646
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2456,46 +2469,33 @@
             },
             {
                 "to": {
-                    "startLine": 645,
+                    "startLine": 651,
                     "startColumn": 4,
-                    "startOffset": 33388,
-                    "endLine": 648,
+                    "startOffset": 33651,
+                    "endLine": 663,
                     "endColumn": 12,
-                    "endOffset": 33542
-                },
-                "from": {
-                    "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 649,
-                    "startColumn": 4,
-                    "startOffset": 33547,
-                    "endLine": 661,
-                    "endColumn": 12,
-                    "endOffset": 34132
+                    "endOffset": 34236
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 497,
                         "startColumn": 4,
-                        "startOffset": 25031,
+                        "startOffset": 25028,
                         "endLine": 509,
                         "endColumn": 12,
-                        "endOffset": 25628
+                        "endOffset": 25625
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 662,
+                    "startLine": 664,
                     "startColumn": 4,
-                    "startOffset": 34137,
-                    "endLine": 665,
+                    "startOffset": 34241,
+                    "endLine": 667,
                     "endColumn": 12,
-                    "endOffset": 34291
+                    "endOffset": 34395
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2503,12 +2503,12 @@
             },
             {
                 "to": {
-                    "startLine": 666,
+                    "startLine": 668,
                     "startColumn": 4,
-                    "startOffset": 34296,
-                    "endLine": 669,
+                    "startOffset": 34400,
+                    "endLine": 671,
                     "endColumn": 12,
-                    "endOffset": 34530
+                    "endOffset": 34634
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"
@@ -2516,12 +2516,12 @@
             },
             {
                 "to": {
-                    "startLine": 670,
+                    "startLine": 672,
                     "startColumn": 4,
-                    "startOffset": 34535,
-                    "endLine": 673,
+                    "startOffset": 34639,
+                    "endLine": 675,
                     "endColumn": 12,
-                    "endOffset": 34690
+                    "endOffset": 34794
                 },
                 "from": {
                     "file": "J:\\Work\\FarmingManageClient\\farmingManageClient\\src\\main\\res\\values\\styles.xml"

@@ -12,8 +12,8 @@
         android:gravity="left"
         android:text="测试水水水水水水水水水水水水水"
         android:layout_marginLeft="10dp"
-		android:layout_marginTop="3dp"
-		android:layout_marginBottom="3dp"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
         />
 
 </LinearLayout>

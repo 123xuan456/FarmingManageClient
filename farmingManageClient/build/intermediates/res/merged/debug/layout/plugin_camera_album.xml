@@ -28,6 +28,7 @@
         android:id="@+id/bottom_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="3dp"
         android:background="@color/black" >
@@ -39,6 +40,7 @@
 
         <TextView
             android:id="@+id/btn_ok"
+
             style="@style/TextView_InReleativeRight" />
     </RelativeLayout>
 

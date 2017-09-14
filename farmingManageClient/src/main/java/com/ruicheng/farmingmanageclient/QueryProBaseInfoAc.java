@@ -162,6 +162,7 @@ public class QueryProBaseInfoAc extends BaseActivity {
 					// 点击获取上一条数据
 					if (position == 0) {
 						ToastUtils.show(getApplicationContext(), "当前已是第一条数据..");
+						btn_last.setBackgroundColor(Color.parseColor("#F2F2F2"));
 						return;
 					}
 					btn_next.setBackgroundColor(Color.parseColor("#009933"));

@@ -1,20 +1,17 @@
 package com.ruicheng.farmingmanageclient;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.List;
-
-import org.apache.http.Header;
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Gravity;
@@ -38,6 +35,7 @@ import com.ruicheng.farmingmanageclient.base.BaseActivity;
 import com.ruicheng.farmingmanageclient.bean.BaseStationInfo;
 import com.ruicheng.farmingmanageclient.bean.CameraImage;
 import com.ruicheng.farmingmanageclient.bean.MapServerInfo;
+import com.ruicheng.farmingmanageclient.cache.ImageLoader;
 import com.ruicheng.farmingmanageclient.constants.Constant;
 import com.ruicheng.farmingmanageclient.net.TwitterRestClient;
 import com.ruicheng.farmingmanageclient.util.BimpHandler;
@@ -49,6 +47,14 @@ import com.ruicheng.farmingmanageclient.utils.JSONUtils;
 import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.List;
 
 /**
  *
@@ -80,6 +86,7 @@ public class UpdateServiceManageAc extends BaseActivity implements
 	private LinearLayout ll_popup;
 	private String imagePath;// 选择要上传的头像的路径
 	private MapServerInfo mapServerInfo;
+	private String storeName;//服务器图片路劲
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -93,6 +100,7 @@ public class UpdateServiceManageAc extends BaseActivity implements
 					.getSerializable("baseStationInfo");
 		}
 
+		PreferencesUtils.putString(getApplicationContext(),"isAddOrUpdate","UpdateService");
 		init();
 		getEditServerStationPage();
 		setListener();
@@ -147,10 +155,13 @@ public class UpdateServiceManageAc extends BaseActivity implements
 									 * JSONUtils.getQueryClient(response);
 									 * setListData(listAll);
 									 */
-
 									mapServerInfo = JSONUtils
 											.getEditServerStationPage(response);
-
+									System.out.println("路径="+mapServerInfo.getManagerPicture());
+									ImageLoader mImageLoader = ImageLoader
+											.getInstance(3, ImageLoader.Type.LIFO);
+									mImageLoader.loadImage(TwitterRestClient.BASE_URL+mapServerInfo.getManagerPicture()
+											,iv_managerPicture, true);
 									/*
 									 * Bitmap bitmap = BitmapUtils.getImg(
 									 * mapServerInfo.getManagerPicture(),
@@ -162,12 +173,12 @@ public class UpdateServiceManageAc extends BaseActivity implements
 									 * iv_managerPicture.setImageBitmap(bitmap);
 									 */
 
-									Bitmap selectBitmap = BitmapUtils
-											.getThumBitmapFromFile(mapServerInfo
-													.getManagerPicture());
-
-									iv_managerPicture
-											.setImageBitmap(selectBitmap);
+//									Bitmap selectBitmap = BitmapUtils
+//											.getThumBitmapFromFile(mapServerInfo
+//													.getManagerPicture());
+//
+//									iv_managerPicture
+//											.setImageBitmap(selectBitmap);
 
 								}
 							} catch (JSONException e) {
@@ -181,10 +192,31 @@ public class UpdateServiceManageAc extends BaseActivity implements
 	}
 
 	@Override
+	protected void onResume() {
+		super.onResume();
+		IntentFilter filter = new IntentFilter("data.broadcast.UpdateService");
+		registerReceiver(broadcastReceiver, filter);
+	}
+	//处理ShowAllPhotoActivity选中的图片路径
+	BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			imagePath = intent.getStringExtra("imagePath");
+			getFileUpLoadPosition(imagePath);
+		}
+	};
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		unregisterReceiver(broadcastReceiver);
+	}
+
+	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 
 		if (keyCode == event.KEYCODE_BACK) {
-			/* android.os.Process.killProcess(android.os.Process.myPid()); */
 			finish();
 			overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
 		}
@@ -245,14 +277,14 @@ public class UpdateServiceManageAc extends BaseActivity implements
 
 		iv_managerPicture = (ImageView) findViewById(R.id.iv_managerPicture);
 
-		if (BimpHandler.listSelectBitmap != null
-				&& BimpHandler.listSelectBitmap.size() > 0) {
-
-			iv_managerPicture.setImageBitmap(BimpHandler.listSelectBitmap
-					.get(0));
-		} else {
-			iv_managerPicture.setImageResource(R.drawable.ic_launcher);
-		}
+//		if (BimpHandler.listSelectBitmap != null
+//				&& BimpHandler.listSelectBitmap.size() > 0) {
+//
+//			iv_managerPicture.setImageBitmap(BimpHandler.listSelectBitmap
+//					.get(0));
+//		} else {
+//			iv_managerPicture.setImageResource(R.drawable.ic_launcher);
+//		}
 
 	}
 
@@ -265,7 +297,6 @@ public class UpdateServiceManageAc extends BaseActivity implements
 	/**
 	 * 判断提交信息是否为空
 	 *
-	 * @param v
 	 * @return
 	 */
 	public boolean estimateInfoIsNullUtils() {
@@ -342,6 +373,7 @@ public class UpdateServiceManageAc extends BaseActivity implements
 	 * 服务站管理修改数据保存
 	 *
 	 */
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	public void getEditServerStation() {
 		if (!estimateInfoIsNullUtils()) {
 			return;
@@ -382,7 +414,12 @@ public class UpdateServiceManageAc extends BaseActivity implements
 					.toString());
 			params.put("serverStation.technicianAmount", tv_technicianAmount
 					.getText().toString());
-			params.put("serverStation.managerPicture", imagePath);
+			if (!storeName.isEmpty()){
+				params.put("serverStation.managerPicture", storeName);
+			}else {
+				ToastUtils.show(getApplicationContext(),"请先选择图片");
+                params.put("serverStation.managerPicture","");
+			}
 			params.put("serverStation.stationLon", 0);
 			params.put("serverStation.stationLat", 0);
 			params.put("serverStation.stationBak", tv_stationBak.getText()
@@ -566,18 +603,19 @@ public class UpdateServiceManageAc extends BaseActivity implements
 						takePhoto.setBitmap(bm);
 						takePhoto.setImagePath(filePath);
 						BimpHandler.tempSelectBitmap.add(takePhoto);
-						getFileUpLoadPosition();
+						getFileUpLoadPosition(filePath);
 					}
 					break;
 				case Album_PICTURE:
 					// 选择相册的请求码
-					imagePath = BimpHandler.tempSelectBitmap.get(0).getImagePath();
-					Bitmap selectBitmap = BitmapUtils
-							.getThumBitmapFromFile(imagePath);
-					BimpHandler.listSelectBitmap.clear();
-					BimpHandler.listSelectBitmap.add(selectBitmap);
-					iv_managerPicture.setImageBitmap(selectBitmap);
-					getFileUpLoadPosition();
+					//imagePath = BimpHandler.tempSelectBitmap.get(0).getImagePath();
+//					Bitmap selectBitmap = BitmapUtils
+//							.getThumBitmapFromFile(imagePath);
+//					BimpHandler.listSelectBitmap.clear();
+//					BimpHandler.listSelectBitmap.add(selectBitmap);
+//					iv_managerPicture.setImageBitmap(selectBitmap);
+					imagePath = data.getStringExtra("imagePath");
+					getFileUpLoadPosition(imagePath);
 					break;
 			}
 		}
@@ -587,8 +625,8 @@ public class UpdateServiceManageAc extends BaseActivity implements
 	 * 头像上传接口
 	 *
 	 */
-	public void getFileUpLoadPosition() {
-		if (NetUtils.checkNetConnection(getApplicationContext())) {
+	public void getFileUpLoadPosition(String imagePath) {
+		if (NetUtils.checkNetConnection(getApplicationContext())&&imagePath!=null) {
 			loadingDialog.show();
 			RequestParams params = new RequestParams();
 			params.put("androidAccessType", Constant.ANDROIDACCESSTYPE);
@@ -603,8 +641,9 @@ public class UpdateServiceManageAc extends BaseActivity implements
 
 			try {
 				params.put("uploads", new File(imagePath)); // 文件
-				params.put("uploadsFileName", imagePath.substring(
-						imagePath.lastIndexOf("/") + 1, imagePath.length())); // 文件名称
+				String s = imagePath.substring(imagePath.lastIndexOf("/") + 1, imagePath.length());
+				System.out.println("s1="+s);
+				params.put("uploadsFileName", s); // 文件名称
 			} catch (FileNotFoundException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -636,14 +675,24 @@ public class UpdateServiceManageAc extends BaseActivity implements
 							try {
 								if ("success".equals(JSONUtils
 										.getResultMsg(response))) {
+									ToastUtils.show(getApplicationContext(),
+											"头像上传成功");
+									storeName=response.getString("storeName");
+									ImageLoader mImageLoader = ImageLoader
+											.getInstance(3, ImageLoader.Type.LIFO);
+									mImageLoader.loadImage(
+											TwitterRestClient.BASE_URL
+													+ storeName,
+											iv_managerPicture, true);
 
 									Bitmap selectBitmap = BitmapUtils
-											.getThumBitmapFromFile(imagePath);
+											.getThumBitmapFromFile(storeName);
 									BimpHandler.listSelectBitmap.clear();
 									BimpHandler.listSelectBitmap
 											.add(selectBitmap);
-									iv_managerPicture
-											.setImageBitmap(selectBitmap);
+
+									System.out.println("selectBitmap="+selectBitmap);
+//									iv_managerPicture.setImageBitmap(selectBitmap);
 								}
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block

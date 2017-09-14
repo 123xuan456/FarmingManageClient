@@ -11,6 +11,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import com.ruicheng.farmingmanageclient.adapter.ImageFolderAdapter;
+import com.ruicheng.farmingmanageclient.util.PublicWay;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
 //相册页面
 public class ImageFolderActivity extends Activity {
@@ -21,6 +22,8 @@ public class ImageFolderActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.plugin_camera_image_file);
+		//添加集合中，等选中图片之后统一退出页面
+		PublicWay.activityList.add(this);
 		mContext = this;
 		bt_cancel = (TextView) findViewById(R.id.cancel);
 		bt_cancel.setOnClickListener(new CancelListener());

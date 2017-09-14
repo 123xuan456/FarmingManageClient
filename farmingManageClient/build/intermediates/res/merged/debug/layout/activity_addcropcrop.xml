@@ -149,11 +149,26 @@
                 android:text="下一条"
                 />
             </LinearLayout>
-            <Button
-                android:id="@+id/btn_save"
-                style="@style/Button_Style"
-                android:layout_marginBottom="5dp"
-                android:text="添加完成" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btn_add"
+                    style="@style/Button_Style"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp"
+                    android:text="继续添加" />
+                <Button
+                    android:id="@+id/btn_save"
+                    style="@style/Button_Style"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp"
+                    android:text="添加完成" />
+
+            </LinearLayout>
+
             </LinearLayout>
     </ScrollView>
 </LinearLayout>

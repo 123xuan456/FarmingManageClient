@@ -30,6 +30,7 @@
         android:id="@+id/showallphoto_bottom_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:background="@color/black" >
 

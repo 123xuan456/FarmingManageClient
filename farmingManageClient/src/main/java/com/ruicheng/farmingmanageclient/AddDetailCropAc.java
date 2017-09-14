@@ -4,12 +4,16 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -31,6 +35,8 @@ import com.ruicheng.farmingmanageclient.utils.ToastUtils;
 import org.apache.http.Header;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 /**
  * 添加物品界面
@@ -58,7 +64,22 @@ public class AddDetailCropAc extends BaseActivity implements OnClickListener {
 	private GoodsReceiveInfo goodsReceiveInfo;
 	private String vendorId ;
 	private String vendorType ;
-
+	private ListView listview1;
+	ArrayList<String> lists=new ArrayList<>();
+	Handler handler=new Handler(){
+		@Override
+		public void handleMessage(final Message msg) {
+			super.handleMessage(msg);
+			Bundle b = msg.getData();
+			String goodNamem = b.getString("goodNamem");
+			String[] strings=goodNamem.split(",");
+			for (int i=0;i<strings.length;i++){
+				lists.add(strings[i]);
+			}
+			ArrayAdapter arrayAdapter=new ArrayAdapter<String>(AddDetailCropAc.this,android.R.layout.simple_list_item_1,lists);
+			listview1.setAdapter(arrayAdapter);
+		}
+	};
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -86,6 +107,7 @@ public class AddDetailCropAc extends BaseActivity implements OnClickListener {
 		tv_dcName = (TextView) findViewById(R.id.tv_dcName);
 		loadingDialog = DialogUtils.requestDialog(this);
 		tv_dcName.setText(PreferencesUtils.getString(getApplicationContext(), Constant.DCNAME));
+		listview1=(ListView)findViewById(R.id.listview1);
 
 
 		img_comment_back = (ImageView) findViewById(R.id.img_comment_back);
@@ -170,7 +192,11 @@ public class AddDetailCropAc extends BaseActivity implements OnClickListener {
 			switch (requestCode) {
 				case ADDDETAIL:
 					detailBundle = data.getExtras();
-
+					Message message=new Message();
+					Bundle b = new Bundle();
+					b.putString("goodNamem",detailBundle.getString("goodNamem"));
+					message.setData(b);
+					handler.sendMessage(message);
 					break;
 				case PURID:
 					bundle = data.getExtras();

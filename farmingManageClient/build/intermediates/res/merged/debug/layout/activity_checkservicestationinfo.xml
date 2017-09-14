@@ -263,6 +263,7 @@
 
             <LinearLayout
                 style="@style/fw"
+                android:visibility="gone"
                 android:orientation="horizontal" >
 
                 <Button

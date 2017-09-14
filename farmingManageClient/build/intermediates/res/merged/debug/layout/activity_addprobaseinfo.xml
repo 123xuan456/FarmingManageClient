@@ -52,7 +52,7 @@
                     style="@style/TextView__Promaangelist_Table_LeftOne"
                     android:text="\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020服务站名称:" />
 
-                <TextView
+                <EditText
                     android:id="@+id/tv_stationName"
                     style="@style/EditText__Promaangelist_Table_LeftTwo" />
             </LinearLayout>

@@ -85,6 +85,7 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 	private String dicId ;
 	private boolean isEmpty ;
 	private Button btn_save;
+	private Button btn_add;
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -113,6 +114,8 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 		loadingDialog = DialogUtils.requestDialog(this);
 		btn_save = (Button) findViewById(R.id.btn_save);
 		btn_save.setOnClickListener(this);
+		btn_add = (Button) findViewById(R.id.btn_add);
+		btn_add.setOnClickListener(this);
 		tv_modify = (Button) findViewById(R.id.tv_modify);
 		et_goodName = (TextView) findViewById(R.id.et_goodName);
 		et_goodPricem = (EditText) findViewById(R.id.et_goodPricem);
@@ -265,6 +268,10 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 			//保存按钮
 			case R.id.btn_save:
 				save();
+				break;
+			//添加按钮
+			case R.id.btn_add:
+				add();
 				break;
 			case R.id.btn_last:
 				// 点击获取上一条数据
@@ -455,59 +462,7 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 				pop.dismiss();
 				tianynagmenu_popup.clearAnimation();
 				/* "继续添加货物 */
-				purchasePartOfInfo
-						.setGoodName(et_goodName.getText().toString());
-
-				purchasePartOfInfo.setGoodPrice(et_goodPricem.getText()
-						.toString());
-				if ("是".equals(et_goodUnit.getText().toString())) {
-					purchasePartOfInfo
-							.setGoodUnit("1");
-				} else {
-					purchasePartOfInfo
-							.setGoodUnit("0");
-				}
-				purchasePartOfInfo.setGoodNumber(et_purchasingWeight.getText()
-						.toString());
-
-				purchasePartOfInfo.setPackageWeight(et_packageWeight.getText()
-						.toString());
-				purchasePartOfInfo.setReceivePackagesm(et_receivePackagesm
-						.getText().toString());
-				purchasePartOfInfo.setGoodMoney(et_goodMoney.getText()
-						.toString());
-				if (isEmpty) {
-
-				} else {
-
-				}
-				if (!"".equals(dicId)&&dicId!=null) {
-					purchasePartOfInfo.setGoodId(dicId);
-				} else {
-					purchasePartOfInfo.setGoodId(purchaseInfo
-							.getUrchasePartOfInfoList().get(position).getGoodId());
-				}
-				if (isEmpty ==true) {
-					purchasePartOfInfo.setPurId("");
-					purchasePartOfInfo.setPurInfoId("");
-				} else{
-					purchasePartOfInfo.setPurId(purchaseInfo
-							.getUrchasePartOfInfoList().get(position).getPurId());
-					purchasePartOfInfo.setPurInfoId(purchaseInfo
-							.getUrchasePartOfInfoList().get(position)
-							.getPurInfoId());
-				}
-				// 将所添加的商品实例添加到集合中
-				ServiceNameHandler.purchaseInfoList.add(purchasePartOfInfo);
-				et_goodName.setText("");
-				et_goodPricem.setText("0.0");
-				et_goodUnit.setText("");
-				et_purchasingWeight.setText("0");
-				et_receivePackagesm.setText("0");
-				et_packageWeight.setText("0");
-				et_goodMoney.setText("0.0");
-				//重新创建新的商品实例
-				purchasePartOfInfo = new PurchasePartOfInfo();
+				add();
 			}
 		});
 		bt1.setOnClickListener(new OnClickListener() {
@@ -549,6 +504,66 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 
 			}
 		});
+	}
+
+	private void add() {
+		if (!estimateInfoIsNullUtils()) {
+			return;
+		}
+		purchasePartOfInfo
+				.setGoodName(et_goodName.getText().toString());
+
+		purchasePartOfInfo.setGoodPrice(et_goodPricem.getText()
+				.toString());
+		if ("是".equals(et_goodUnit.getText().toString())) {
+			purchasePartOfInfo
+					.setGoodUnit("1");
+		} else {
+			purchasePartOfInfo
+					.setGoodUnit("0");
+		}
+		purchasePartOfInfo.setGoodNumber(et_purchasingWeight.getText()
+				.toString());
+
+		purchasePartOfInfo.setPackageWeight(et_packageWeight.getText()
+				.toString());
+		purchasePartOfInfo.setReceivePackagesm(et_receivePackagesm
+				.getText().toString());
+		purchasePartOfInfo.setGoodMoney(et_goodMoney.getText()
+				.toString());
+		if (isEmpty) {
+
+		} else {
+
+		}
+		if (!"".equals(dicId)&&dicId!=null) {
+			purchasePartOfInfo.setGoodId(dicId);
+		} else {
+			purchasePartOfInfo.setGoodId(purchaseInfo
+					.getUrchasePartOfInfoList().get(position).getGoodId());
+		}
+		if (isEmpty ==true) {
+			purchasePartOfInfo.setPurId("");
+			purchasePartOfInfo.setPurInfoId("");
+		} else{
+			purchasePartOfInfo.setPurId(purchaseInfo
+					.getUrchasePartOfInfoList().get(position).getPurId());
+			purchasePartOfInfo.setPurInfoId(purchaseInfo
+					.getUrchasePartOfInfoList().get(position)
+					.getPurInfoId());
+		}
+		// 将所添加的商品实例添加到集合中
+		ServiceNameHandler.purchaseInfoList.add(purchasePartOfInfo);
+		et_goodName.setText("");
+		et_goodPricem.setText("0.0");
+		et_goodUnit.setText("");
+		et_purchasingWeight.setText("0");
+		et_receivePackagesm.setText("0");
+		et_packageWeight.setText("0");
+		et_goodMoney.setText("0.0");
+		//重新创建新的商品实例
+		purchasePartOfInfo = new PurchasePartOfInfo();
+
 	}
 
 	private void save() {
@@ -771,6 +786,7 @@ public class AddCropActivity extends BaseActivity implements OnClickListener {
 				totalGoodWeightmPaths.toString());// 收货重量
 		bundle.putString("goodPricem", goodPricemPaths.toString()); // 单价
 		bundle.putString("goodMoneym", goodMoneymPaths.toString()); // 总价
+
 		i.putExtras(bundle);
 		setResult(RESULT_OK, i);
 		finish();

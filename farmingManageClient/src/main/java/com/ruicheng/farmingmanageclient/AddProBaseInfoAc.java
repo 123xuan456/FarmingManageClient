@@ -1,15 +1,11 @@
 package com.ruicheng.farmingmanageclient;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-
-import org.apache.http.Header;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -17,7 +13,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -35,6 +30,7 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.ruicheng.farmingmanageclient.base.BaseActivity;
 import com.ruicheng.farmingmanageclient.bean.CameraImage;
+import com.ruicheng.farmingmanageclient.cache.ImageLoader;
 import com.ruicheng.farmingmanageclient.constants.Constant;
 import com.ruicheng.farmingmanageclient.net.TwitterRestClient;
 import com.ruicheng.farmingmanageclient.util.BimpHandler;
@@ -45,6 +41,13 @@ import com.ruicheng.farmingmanageclient.utils.JSONUtils;
 import com.ruicheng.farmingmanageclient.utils.NetUtils;
 import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 import com.ruicheng.farmingmanageclient.utils.ToastUtils;
+
+import org.apache.http.Header;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.io.FileNotFoundException;
 
 /**
  * 基础信息--- 添加服务站信息界面
@@ -73,7 +76,7 @@ public class AddProBaseInfoAc extends BaseActivity {
 	private LinearLayout ll_popup;
 	private String imagePath;// 选择要上传的头像的路径
 	private Button btn_save ;
-
+	private String storeName;
 
 
 	@Override
@@ -84,6 +87,29 @@ public class AddProBaseInfoAc extends BaseActivity {
 		init();
 		setListener();
 		initPop();
+		PreferencesUtils.putString(getApplicationContext(),"isAddOrUpdate","AddPro");
+	}
+
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		IntentFilter filter = new IntentFilter("data.broadcast.AddPro");
+		registerReceiver(broadcastReceiver, filter);
+	}
+	//处理ShowAllPhotoActivity选中的图片路径
+	BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			imagePath = intent.getStringExtra("imagePath");
+			getFileUpLoadPosition(imagePath);
+		}
+	};
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		unregisterReceiver(broadcastReceiver);
 	}
 
 	@Override
@@ -92,7 +118,7 @@ public class AddProBaseInfoAc extends BaseActivity {
 		img_comment_back = (ImageView) findViewById(R.id.img_comment_back);
 
 		tv_dcName = (EditText) findViewById(R.id.tv_dcName);
-		tv_stationName = (TextView) findViewById(R.id.tv_stationName);
+		tv_stationName = (EditText) findViewById(R.id.tv_stationName);
 		tv_plantingArea = (EditText) findViewById(R.id.tv_plantingArea);
 		tv_cropTypes = (EditText) findViewById(R.id.tv_cropTypes);
 		tv_stationAddr = (EditText) findViewById(R.id.tv_stationAddr);
@@ -113,7 +139,6 @@ public class AddProBaseInfoAc extends BaseActivity {
 		btn_save = (Button) findViewById(R.id.btn_save);
 
 		iv_managerPicture = (ImageView) findViewById(R.id.iv_managerPicture);
-
 	}
 
 	@Override
@@ -122,7 +147,7 @@ public class AddProBaseInfoAc extends BaseActivity {
 		ImageView_Linearlayout_Back.setOnClickListener(intentViewListener);
 
 		tv_cropTypes.setOnClickListener(intentViewListener);
-		tv_stationName.setOnClickListener(intentViewListener);
+		//tv_stationName.setOnClickListener(intentViewListener);
 		iv_managerPicture.setOnClickListener(intentViewListener);
 		btn_save.setOnClickListener(intentViewListener);
 
@@ -212,7 +237,7 @@ public class AddProBaseInfoAc extends BaseActivity {
 						if (cursor.moveToFirst()) {
 							filePath = cursor.getString(cursor
 									.getColumnIndex("_data"));// 获取绝对路径
-							// System.out.println("拍照返回路径:"+filePath);
+							 System.out.println("拍照返回路径:"+filePath);
 						}
 						cursor.close();
 						// 保存到文件夹
@@ -223,18 +248,22 @@ public class AddProBaseInfoAc extends BaseActivity {
 						takePhoto.setBitmap(bm);
 						takePhoto.setImagePath(filePath);
 						BimpHandler.tempSelectBitmap.add(takePhoto);
-						getFileUpLoadPosition();
+
+						getFileUpLoadPosition(filePath);
 					}
 					break;
 				case Album_PICTURE:
 					// 选择相册的请求码
-					Bitmap selectBitmap = BitmapUtils
-							.getThumBitmapFromFile(imagePath);
-					BimpHandler.listSelectBitmap.clear();
-					BimpHandler.listSelectBitmap
-							.add(selectBitmap);
-					iv_managerPicture.setImageBitmap(selectBitmap);
-					getFileUpLoadPosition();
+//					Bitmap selectBitmap = BitmapUtils
+//							.getThumBitmapFromFile(imagePath);
+//					BimpHandler.listSelectBitmap.clear();
+//					BimpHandler.listSelectBitmap
+//							.add(selectBitmap);
+//					iv_managerPicture.setImageBitmap(selectBitmap);
+
+					//图片路径
+					imagePath = data.getStringExtra("imagePath");
+					getFileUpLoadPosition(imagePath);
 					break;
 				default:
 					break;
@@ -297,7 +326,6 @@ public class AddProBaseInfoAc extends BaseActivity {
 	/**
 	 * 判断提交信息是否为空
 	 *
-	 * @param v
 	 * @return
 	 */
 	public boolean estimateInfoIsNullUtils(){
@@ -380,8 +408,8 @@ public class AddProBaseInfoAc extends BaseActivity {
 			params.put("serverStation.managerResume",tv_managerResume.getText().toString());
 			params.put("serverStation.managerPhone",tv_managerPhone.getText().toString());
 			params.put("serverStation.technicianAmount",tv_technicianAmount.getText().toString());
-			if (!"".equals(imagePath)&&!"null".equals(imagePath)) {
-				params.put("serverStation.managerPicture",imagePath);
+			if (!"".equals(storeName)&&!"null".equals(storeName)) {
+				params.put("serverStation.managerPicture",storeName);
 			} else {
 				params.put("serverStation.managerPicture","");
 			}
@@ -463,7 +491,6 @@ public class AddProBaseInfoAc extends BaseActivity {
 		bt2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				Intent intent = new Intent(getApplicationContext(), AlbumActivity.class);
-				intent.putExtra("pic", 1);
 				startActivityForResult(intent, Album_PICTURE);
 				overridePendingTransition(
 						R.anim.activity_translate_in,
@@ -492,16 +519,15 @@ public class AddProBaseInfoAc extends BaseActivity {
 	 * 头像上传接口
 	 *
 	 */
-	public void getFileUpLoadPosition() {
-		if (NetUtils.checkNetConnection(getApplicationContext())) {
+	public void getFileUpLoadPosition(String imagePath) {
+		if (NetUtils.checkNetConnection(getApplicationContext())&&imagePath!=null) {
 			loadingDialog.show();
 			RequestParams params = new RequestParams();
 			params.put("androidAccessType", Constant.ANDROIDACCESSTYPE);
 			params.put("userId",PreferencesUtils.getInt(getApplicationContext(), Constant.USERID)+"");
 			params.put("userName",PreferencesUtils.getString(getApplicationContext(),Constant.USERNAME));
 
-			imagePath = BimpHandler.tempSelectBitmap.get(0).getImagePath();
-
+			System.out.println("拍照/相册返回路径:"+imagePath);
 			try {
 				File file = new File(imagePath) ;
 				params.put("uploads",file); //文件
@@ -510,7 +536,7 @@ public class AddProBaseInfoAc extends BaseActivity {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			TwitterRestClient.get(Constant.FILEUPLOADPOSITION, params,
+			TwitterRestClient.post(Constant.FILEUPLOADPOSITION, params,
 					new JsonHttpResponseHandler() {
 
 						@Override
@@ -536,12 +562,22 @@ public class AddProBaseInfoAc extends BaseActivity {
 								if ("success".equals(JSONUtils
 										.getResultMsg(response))) {
 									ToastUtils.show(getApplicationContext(), "头像上传成功");
+									storeName=response.getString("storeName");
+									ImageLoader mImageLoader = ImageLoader
+											.getInstance(3, ImageLoader.Type.LIFO);
+									mImageLoader.loadImage(
+											TwitterRestClient.BASE_URL
+													+ storeName,
+											iv_managerPicture, true);
+
 									Bitmap selectBitmap = BitmapUtils
-											.getThumBitmapFromFile(imagePath);
+											.getThumBitmapFromFile(storeName);
 									BimpHandler.listSelectBitmap.clear();
 									BimpHandler.listSelectBitmap
 											.add(selectBitmap);
-									iv_managerPicture.setImageBitmap(selectBitmap);
+
+									System.out.println("selectBitmap="+selectBitmap);
+//									iv_managerPicture.setImageBitmap(selectBitmap);
 								}
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block

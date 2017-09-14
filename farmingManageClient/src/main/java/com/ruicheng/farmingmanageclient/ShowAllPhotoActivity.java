@@ -1,11 +1,11 @@
 package com.ruicheng.farmingmanageclient;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,12 +13,13 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.ruicheng.farmingmanageclient.adapter.AlbumGridViewAdapter;
 import com.ruicheng.farmingmanageclient.bean.CameraImage;
 import com.ruicheng.farmingmanageclient.util.BimpHandler;
+import com.ruicheng.farmingmanageclient.util.PublicWay;
+import com.ruicheng.farmingmanageclient.utils.PreferencesUtils;
 
 import java.util.ArrayList;
 
@@ -44,11 +45,13 @@ public class ShowAllPhotoActivity extends Activity {
 	private Intent intent;
 	private Context mContext;
 	public static ArrayList<CameraImage> dataList = new ArrayList<CameraImage>();
+	private String isAddOrUpdate;//判断是修改还是添加
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.plugin_camera_show_all_photo);
-//		PublicWay.activityList.add(this);
+		PublicWay.activityList.add(this);
 		mContext = this;
 		back = (TextView) findViewById(R.id.showallphoto_back);
 		cancel = (TextView) findViewById(R.id.showallphoto_cancel);
@@ -66,16 +69,17 @@ public class ShowAllPhotoActivity extends Activity {
 		preview.setOnClickListener(new PreviewListener());
 		init();
 		initListener();
-		isShowOkBt();
+		isAddOrUpdate=PreferencesUtils.getString(getApplicationContext(),"isAddOrUpdate","");
+		//isShowOkBt();
 	}
 
-	BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			gridImageAdapter.notifyDataSetChanged();
-		}
-	};
+//	BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+//
+//		@Override
+//		public void onReceive(Context context, Intent intent) {
+//			gridImageAdapter.notifyDataSetChanged();
+//		}
+//	};
 
 	private class PreviewListener implements OnClickListener {
 		public void onClick(View v) {
@@ -115,8 +119,8 @@ public class ShowAllPhotoActivity extends Activity {
 	}
 
 	private void init() {
-		IntentFilter filter = new IntentFilter("data.broadcast.action");
-		registerReceiver(broadcastReceiver, filter);
+//		IntentFilter filter = new IntentFilter("data.broadcast.action");
+//		registerReceiver(broadcastReceiver, filter);
 		progressBar = (ProgressBar) findViewById(R.id.showallphoto_progressbar);
 		progressBar.setVisibility(View.GONE);
 		gridView = (GridView) findViewById(R.id.showallphoto_myGrid);
@@ -129,34 +133,51 @@ public class ShowAllPhotoActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		unregisterReceiver(broadcastReceiver);
+	//	unregisterReceiver(broadcastReceiver);
 	}
 
 	private void initListener() {
 
 		gridImageAdapter
 				.setOnItemClickListener(new AlbumGridViewAdapter.OnItemClickListener() {
+					@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 					public void onItemClick(final ToggleButton toggleButton,
 											int position, boolean isChecked,
 											Button button) {
-						if (BimpHandler.tempSelectBitmap.size() >= BimpHandler.num&&isChecked) {
-							button.setVisibility(View.GONE);
-							toggleButton.setChecked(false);
-							Toast.makeText(ShowAllPhotoActivity.this, R.string.only_choose_num, Toast.LENGTH_SHORT).show();
-							return;
-						}
+						String imagePath = dataList.get(position).getImagePath();
 
-						if (isChecked) {
-							button.setVisibility(View.VISIBLE);
-							BimpHandler.tempSelectBitmap.add(dataList.get(position));
-							okButton.setText(getResources().getString(R.string.finish)+"(" + BimpHandler.tempSelectBitmap.size()
-									+ "/"+BimpHandler.num+")");
-						} else {
-							button.setVisibility(View.GONE);
-							BimpHandler.tempSelectBitmap.remove(dataList.get(position));
-							okButton.setText(getResources().getString(R.string.finish)+"(" + BimpHandler.tempSelectBitmap.size() + "/"+BimpHandler.num+")");
+						if (!isAddOrUpdate.isEmpty()){
+							if (isAddOrUpdate.equals("UpdateService")){
+								Intent intent1 = new Intent("data.broadcast.UpdateService");
+								intent1.putExtra("imagePath",imagePath);
+								ShowAllPhotoActivity.this.sendBroadcast(intent1);
+							}else {
+								Intent i = new Intent("data.broadcast.AddPro");
+								i.putExtra("imagePath",imagePath);
+								ShowAllPhotoActivity.this.sendBroadcast(i);
+							}
+							//退出页面
+							PublicWay.finish();
+
 						}
-						isShowOkBt();
+//						if (BimpHandler.tempSelectBitmap.size() >= BimpHandler.num&&isChecked) {
+//							button.setVisibility(View.GONE);
+//							toggleButton.setChecked(false);
+//							Toast.makeText(ShowAllPhotoActivity.this, R.string.only_choose_num, Toast.LENGTH_SHORT).show();
+//							return;
+//						}
+//
+//						if (isChecked) {
+//							button.setVisibility(View.VISIBLE);
+//							BimpHandler.tempSelectBitmap.add(dataList.get(position));
+//							okButton.setText(getResources().getString(R.string.finish)+"(" + BimpHandler.tempSelectBitmap.size()
+//									+ "/"+BimpHandler.num+")");
+//		0				} else {
+//							button.setVisibility(View.GONE);
+//							BimpHandler.tempSelectBitmap.remove(dataList.get(position));
+//							okButton.setText(getResources().getString(R.string.finish)+"(" + BimpHandler.tempSelectBitmap.size() + "/"+BimpHandler.num+")");
+//						}
+//						isShowOkBt();
 					}
 				});
 
@@ -222,7 +243,7 @@ public class ShowAllPhotoActivity extends Activity {
 
 	@Override
 	protected void onRestart() {
-		isShowOkBt();
+	//	isShowOkBt();
 		super.onRestart();
 	}
 

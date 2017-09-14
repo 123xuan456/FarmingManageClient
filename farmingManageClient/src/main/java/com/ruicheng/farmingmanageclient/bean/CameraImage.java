@@ -9,8 +9,6 @@ import java.io.Serializable;
 
 
 public class CameraImage implements Serializable {
-	
-	//
 	public String imageId;
 	
 	public String thumbnailPath;

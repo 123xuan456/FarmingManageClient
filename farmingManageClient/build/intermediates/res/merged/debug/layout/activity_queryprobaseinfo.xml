@@ -15,6 +15,7 @@
 
             <TextView
                 android:id="@+id/textView_Title_Left"
+
                 style="@style/TextView_Title_Left"
                  />
         </LinearLayout>
