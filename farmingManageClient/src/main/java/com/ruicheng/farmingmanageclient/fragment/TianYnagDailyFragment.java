@@ -59,10 +59,11 @@ public class TianYnagDailyFragment extends Fragment implements OnClickListener {
 	private final int SERVICESTATION =1;
 	private Bundle bundle;
 	private int optionType ;
-	private String stationId;//服务站编号
+	private String stationId;//
 	private StationData stationData ;
 	private PloughListInfo ploughListInfo ;
 	private String servicename;//服务站名称
+	private String stationCode;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -71,6 +72,7 @@ public class TianYnagDailyFragment extends Fragment implements OnClickListener {
 		optionType = bundle.getInt("optionType", -1);
 		servicename = bundle.getString("servicename");
 		stationId = bundle.getString("stationId");
+		stationCode = bundle.getString("stationCode");
 		view = inflater.inflate(R.layout.fragment_tianynagdaily, null);
 
 		init();
@@ -100,7 +102,7 @@ public class TianYnagDailyFragment extends Fragment implements OnClickListener {
 
 		et_recordDate.setText(DateUtils.getStringDateShort());
 		tv_servicename.setText(servicename);
-		et_stationCode.setText(stationId);
+		et_stationCode.setText(stationCode);
 
 		EditTextUtils.setEditTextInhibitInputSpeChat(et_temperValue);
 		EditTextUtils.setEditTextInhibitInputSpeChat(et_actionPerson);
@@ -305,7 +307,8 @@ public class TianYnagDailyFragment extends Fragment implements OnClickListener {
 					String servicename = data.getStringExtra("servicename");
 					tv_servicename.setText(servicename);
 					stationId = data.getStringExtra("stationId");
-					et_stationCode.setText(stationId);
+					stationCode = data.getStringExtra("stationCode");
+					et_stationCode.setText(stationCode);
 
 					stationData = (StationData) data
 							.getSerializableExtra("stationInfo");

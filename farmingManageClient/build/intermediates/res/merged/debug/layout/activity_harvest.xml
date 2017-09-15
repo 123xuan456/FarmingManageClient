@@ -25,7 +25,7 @@
         <TextView
             android:id="@+id/tv_title"
             style="@style/TextView_Title"
-            android:text="@string/tv_addtianyangmanage" />
+            android:text="添加田洋收成" />
 
         <TextView
             android:id="@+id/tv_pro_save"

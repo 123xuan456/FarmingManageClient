@@ -96,6 +96,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 	private PloughListInfo ploughListInfo ;
 	private TextView tv_servicenam;
 	private String servicename;
+	private String stationCode;
 
 
 	@Override
@@ -106,6 +107,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 			kind = intent.getIntExtra("KIND", -1);
 			optionType = intent.getIntExtra("optionType", -1);
 			servicename=intent.getStringExtra("servicename");
+			stationCode=intent.getStringExtra("stationCode");
 			stationId=intent.getStringExtra("stationId");
 			if (kind == 0) {
 				// 播种移栽界面
@@ -169,7 +171,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 //			 getOptionPlough();
 
 			tv_servicestation.setText(servicename);
-			et_servicenumber.setText(stationId);
+			et_servicenumber.setText(stationCode);
 
 		} else if (kind == 1) {
 //			tv_title.setText("添加田洋农事项目");
@@ -195,7 +197,7 @@ public class TianYagProAddActivity extends BaseActivity implements
 			tv_actionPerson =(EditText)findViewById(R.id.tv_actionPerson);
 			tv_registUser = (TextView) findViewById(R.id.tv_registUser);
 			tv_servicestation.setText(servicename);
-			et_servicenumber.setText(stationId);
+			et_servicenumber.setText(stationCode);
 
 		}
 
@@ -247,7 +249,8 @@ public class TianYagProAddActivity extends BaseActivity implements
 					servicename = data.getStringExtra("servicename");
 					tv_servicestation.setText(servicename);
 					stationId = data.getStringExtra("stationId");
-					et_servicenumber.setText(stationId);
+					stationCode = data.getStringExtra("stationCode");
+					et_servicenumber.setText(stationCode);
 
 					stationData = (StationData) data
 							.getSerializableExtra("stationInfo");
@@ -419,7 +422,8 @@ public class TianYagProAddActivity extends BaseActivity implements
 		bundle = new Bundle();
 		bundle.putInt("optionType",optionType);//
 		bundle.putString("servicename",servicename);//服务站名称
-		bundle.putString("stationId",stationId);//服务站编号
+		bundle.putString("stationId",stationId);//
+		bundle.putString("stationCode",stationCode);//服务站编号
 
 		tianYnagDailyFragment.setArguments(bundle);
 		listFrag.add(tianYnagDailyFragment);
@@ -428,7 +432,8 @@ public class TianYagProAddActivity extends BaseActivity implements
 		bundle = new Bundle();
 		bundle.putInt("optionType",optionType);
 		bundle.putString("servicename",servicename);//服务站名称
-		bundle.putString("stationId",stationId);//服务站编号
+		bundle.putString("stationId",stationId);//
+		bundle.putString("stationCode",stationCode);//服务站编号
 		tianYangFertilizerFragment.setArguments(bundle);
 		listFrag.add(tianYangFertilizerFragment);
 
@@ -436,7 +441,8 @@ public class TianYagProAddActivity extends BaseActivity implements
 		bundle = new Bundle();
 		bundle.putInt("optionType",optionType);
 		bundle.putString("servicename",servicename);//服务站名称
-		bundle.putString("stationId",stationId);//服务站编号
+		bundle.putString("stationId",stationId);//
+		bundle.putString("stationCode",stationCode);//服务站编号
 		tianYangPesticidesFragment.setArguments(bundle);
 		listFrag.add(tianYangPesticidesFragment);
 

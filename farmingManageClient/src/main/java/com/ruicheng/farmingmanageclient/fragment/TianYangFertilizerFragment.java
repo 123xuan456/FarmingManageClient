@@ -60,6 +60,7 @@ public class TianYangFertilizerFragment extends Fragment implements OnClickListe
 	private StationData stationData ;
 	private PloughListInfo ploughListInfo ;
 	private String servicename;
+	private String stationCode;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -69,6 +70,7 @@ public class TianYangFertilizerFragment extends Fragment implements OnClickListe
 		optionType = bundle.getInt("optionType", -1);
 		servicename = bundle.getString("servicename");
 		stationId = bundle.getString("stationId");
+		stationCode = bundle.getString("stationCode");
 		view = inflater.inflate(R.layout.fragment_tianyangfertilizer, null);
 
 		init();
@@ -105,7 +107,7 @@ public class TianYangFertilizerFragment extends Fragment implements OnClickListe
 
 		tv_recordDate.setText(DateUtils.getStringDateShort());
 		tv_serviceName.setText(servicename);
-		tv_stationCode.setText(stationId);
+		tv_stationCode.setText(stationCode);
 
 		EditTextUtils.setEditTextInhibitInputSpeChat(tv_manureName);
 		EditTextUtils.setEditTextInhibitInputSpeChat(tv_manureAmountUnit);
@@ -255,7 +257,8 @@ public class TianYangFertilizerFragment extends Fragment implements OnClickListe
 					String servicename = data.getStringExtra("servicename");
 					tv_serviceName.setText(servicename);
 					stationId = data.getStringExtra("stationId");
-					tv_stationCode.setText(stationId);
+					stationCode = data.getStringExtra("stationCode");
+					tv_stationCode.setText(stationCode);
 
 					stationData = (StationData) data
 							.getSerializableExtra("stationInfo");

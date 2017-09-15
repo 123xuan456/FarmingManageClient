@@ -112,6 +112,7 @@ public class PromanageListActivity extends BaseActivity implements
 	private int pageNo = 1;
 	private int optionTyppe ;
 	private String servicename;//服务站名称
+	private String stationCode;
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -178,7 +179,8 @@ public class PromanageListActivity extends BaseActivity implements
 					intent.putExtra("KIND", kind);
 					intent.putExtra("optionType", optionType);
 					intent.putExtra("servicename",servicename);
-					intent.putExtra("stationId",stationId);//服务站编号
+					intent.putExtra("stationCode",stationCode);//服务站编号
+					intent.putExtra("stationId",stationId);//
 
 					startActivityForResult(intent, ADDPROJECT);
 					overridePendingTransition(R.anim.zoomout, R.anim.zoomin);
@@ -241,6 +243,7 @@ public class PromanageListActivity extends BaseActivity implements
 					servicename = data.getStringExtra("servicename");
 					tv_servicename.setText(servicename);
 					stationId = data.getStringExtra("stationId");
+					stationCode = data.getStringExtra("stationCode");
 					break;
 				case PROTIANYANGNUMBER:
 					String pro_tianyangnumber = data.getStringExtra("PloughCode");

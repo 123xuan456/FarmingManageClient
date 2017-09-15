@@ -48,6 +48,7 @@ public class AddTianYangManageAc extends BaseActivity {
 	private final int PROSERVICENAME = 1;
 	private final int PROTIANYANGNUMBER = 2;
 	private String stationId ;
+	private String stationCode;
 
 
 	@Override
@@ -157,6 +158,7 @@ public class AddTianYangManageAc extends BaseActivity {
 					String servicename = data.getStringExtra("servicename");
 					et_station.setText(servicename);
 					stationId = data.getStringExtra("stationId");
+					stationCode = data.getStringExtra("stationCode");
 					break;
 				case PROTIANYANGNUMBER:
 					String pro_tianyangnumber = data.getStringExtra("PloughCode");

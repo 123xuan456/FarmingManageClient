@@ -138,6 +138,7 @@ public class ServiceStationNameAc extends BaseActivity {
 				}
 				i.putExtra("servicename", ((StationData)listAll.get(position)).getStationName());
 				i.putExtra("stationId", ((StationData)listAll.get(position)).getStationId());
+				i.putExtra("stationCode", ((StationData)listAll.get(position)).getStationCode());
 				i.putExtra("stationInfo", ((StationData)listAll.get(position)));
 				setResult(RESULT_OK, i);
 				finish();
